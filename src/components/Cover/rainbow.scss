@@ -1,0 +1,155 @@
+$root: '.c-rainbow';
+
+:root {
+ --color-background: #31037D;
+ 
+ --axis-x: 1px;
+ --axis-y: 0.5rem;
+ --delay: 10;
+ 
+ --color-black: #000;
+ --color-white: #fff;
+ --color-orange: #D49C3D;
+ --color-red: #D14B3D;
+ --color-violet: #CF52EB;
+ --color-blue: #44A3F7;
+ --color-green: #5ACB3C;
+ --color-yellow: #DEBF40;
+ 
+ --color-foreground: var(--color-white);
+ --font-name: Righteous;
+}
+
+
+
+.crain {
+
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ 
+ font-family: var(--font-name);
+ 
+
+}
+
+#{$root} {
+ counter-reset: rainbow;
+ position: relative;
+ display: block;
+ 
+ list-style: none;
+ 
+ padding: 0;
+ margin: 0;
+ 
+ &__layer {
+  --text-color: var(--color-foreground);
+  counter-increment: rainbow; 
+  font-size:3vmin;
+
+  fill: var(--text-color);
+
+  text-shadow:
+   -1px -1px 0 var(--color-black),  
+    1px -1px 0 var(--color-black),
+    -1px 1px 0 var(--color-black),
+     1px 1px 0 var(--color-black),
+   
+     4px 4px 0 rgba(0, 0, 0, .2);
+  
+  animation: rainbow 1.5s ease-in-out infinite;
+  
+  @for $i from 1 through 7 {
+   &:nth-child(#{$i}) {
+    animation-delay: calc( #{$i} / var(--delay) * 1s);
+    left: calc(var(--axis-x) * #{$i});
+    z-index: -#{$i * 10};
+   }
+  }
+  
+  &:not(:first-child) {
+   position: absolute;
+   top: 0;
+  }
+
+  &--white  { --text-color: var(--color-white)}
+  &--orange { --text-color: var(--color-orange)}
+  &--red    { --text-color: var(--color-red)}
+  &--violet { --text-color: var(--color-violet)}
+  &--blue   { --text-color: var(--color-blue)}
+  &--green  { --text-color: var(--color-green)}
+  &--yellow { --text-color: var(--color-yellow)}
+ }
+}
+
+@keyframes rainbow {
+ 0%, 100% {
+  transform: translatey(var(--axis-y)); 
+ }
+ 50% {
+  transform: translatey(calc(var(--axis-y) * -1));
+ }
+} 
+.facetext{
+   font-size: calc(2vmin + 1.8vmin);
+   line-height: calc(2vmin + 2vmin);
+ /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+     0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+   color: #fccaff; */
+   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+     fill: #fff6a9;
+   font-family: "Sacramento", cursive;
+   text-align: center;
+   animation: blink 12s infinite;
+   -webkit-animation: blink 12s infinite;
+}
+@-webkit-keyframes blink {
+   20%,
+   24%,
+   55% {
+     fill: #111;
+     text-shadow: none;
+   }
+ 
+   0%,
+   19%,
+   21%,
+   23%,
+   25%,
+   54%,
+   56%,
+   100% {
+ /*     fill: #fccaff;
+     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+       0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+     fill: #fff6a9;
+   }
+ }
+ 
+ @keyframes blink {
+   20%,
+   24%,
+   55% {
+     fill: #111;
+     text-shadow: none;
+   }
+ 
+   0%,
+   19%,
+   21%,
+   23%,
+   25%,
+   54%,
+   56%,
+   100% {
+ /*     fill: #fccaff;
+     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+       0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+     fill: #fff6a9;
+   }
+ }
+ 

@@ -1,0 +1,55 @@
+$tc-color: rgb(255, 255, 255);
+$bl-color: #FFDC00;
+.page{
+  align-items: center;
+}
+.TypistExample {   
+  a {
+    color: inherit;
+    &:hover {
+      background-color: $bl-color;
+      color: white;
+      text-decoration: none;
+    }
+  }
+  &-header {
+    filter: drop-shadow(3px 3px 1px #4444dd);
+    margin-top: 9vh;
+    text-align: center;
+    font-size: 10vmin;
+    cursor: pointer;
+    color: $tc-color;
+    line-height: 8vh;
+    width: 1200px;
+    @media (max-width: 1024px) {
+      margin-top: 6vh;
+      line-height: 6vh;
+    }
+    @media  (max-device-width: 1024px) and (orientation: landscape) {
+      margin-top: 8vh;
+      line-height: 8vh;
+    }
+  }
+  &-message {
+  margin-top: 8vh;
+  font-size: 5vmin;
+  color: $tc-color;
+  margin: auto;
+  width: 800px;
+    .flash {
+      color: $bl-color;
+      font-weight: bold;
+      text-decoration: underline;
+      margin: auto;
+      animation-name: blinker;
+      animation-duration: 1.7s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes blinker {
+        0% { filter: drop-shadow(3px 3px 10px  rgb(0, 238, 255)) brightness(3); }
+        50% { filter: drop-shadow(3px 3px 10px  rgb(5, 5, 5)) brightness(3);}
+        100% { filter: drop-shadow(3px 3px 10px  rgb(0, 238, 255)) brightness(3); }
+      }
+    }
+  }
+}

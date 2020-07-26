@@ -1,0 +1,427 @@
+
+
+html, body, #root, #root>div {
+  background:black;
+  background-image:url("https://i2.wp.com/www.handsomephantom.com/wp-content/uploads/2017/07/Space-Wallpapers-HD-Wallpapers-Art-Prints-Posters-Desktop.jpg?fit=2048%2C1130&ssl=1");
+  
+
+  background-size: cover; 
+  animation: 
+  darkrise 90s ease infinite alternate, 
+  dark 10s linear  alternate;
+  background-position:-100% -100%;
+
+} 
+
+
+@keyframes darkrise {
+    0%{
+      
+      background-size: 100%; 
+    }  
+    50%{
+      background-position:-80% -80%;
+      background-size: 150%; 
+      }
+    100%{
+ 
+      background-size: 100%;
+    }
+  }
+  @keyframes dark {
+    0%{
+      transform: scale(0.75);
+     
+      
+    }  
+    50%{
+      transform: scale(0.85);
+    
+      }
+    100%{
+      transform: scale(1);
+      
+    }
+  }
+.hoss{
+  font-family: 'Changa', sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+#card{
+  width:65vw;
+  height: 77vh;
+  background:rgba(41,41,41, 0.9) ;
+  border-radius: 35px ;
+  color :white;
+  font-size: 3.5rem;
+  margin-bottom: 30%;
+  
+}
+
+
+.textCard{
+  color :white;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 2rem;
+  margin-left: 10%;
+}
+
+
+.textCardtwo{
+  color :white;
+  width: 100%;
+  font-size:1.9rem;
+  margin-top: 5rem;
+  padding: 2rem;
+  
+}
+
+#hossik{
+    font-size:3vmin ;
+    color: rgb(233, 25, 25);
+    font-weight: bold;
+    z-index: -1;   
+    filter: drop-shadow(3px 3px 10px rgb(233, 25, 25)) brightness(3);
+}
+
+#nohossik{
+  font-size: 4.5vmin;
+    color: rgb(255, 220, 0);
+    font-weight: bold;
+    z-index: -1;
+    filter: drop-shadow(3px 3px 10px  rgb(255, 220, 0)) brightness(3);
+
+}
+
+.btn-circle.btn-xl {
+  top: 2%;
+  width: 15vw;
+  height: 10vh;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 350ms;
+  
+}
+
+
+
+
+.links{
+  color: inherit;
+  text-decoration: inherit;
+  margin-left: 5%;
+}
+
+.links:hover{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.page-enter{
+    opacity: 0.01;
+    transform: translateX(-100%);
+}
+
+.page-enter-active{
+    opacity: 1;
+    transform: translateX(0%);
+    transition: all 300ms ease-in;
+}
+
+.page-exit {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.page-exit-active {
+    opacity: 0.01;
+    transform: translateX(100%);
+    transition: all 300ms ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+div.transition-group {
+  position: relative;
+}
+
+section.route-section {
+  position: absolute; 
+}
+
+
+#head{
+  position: relative;
+  z-index: 100;
+}
+
+#man{
+  height: 8vmin;
+  width: 8vmin;
+  border-radius: 35px;
+}
+#me{
+  height: 8vmin;
+  width: 8vmin;
+  border-radius: 35px;
+  margin-right: 100%;
+}
+.intro-transition-enter{
+  opacity: 0.05;
+  
+}
+
+.intro-transition-enter-active{
+  opacity: 1;
+  
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.intro-transition-exit {
+  opacity: 1;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.intro-transition-exit-active {
+  opacity: 0.05;
+  
+  transition: all 300ms ease-in-out;
+}
+/* This fires as soon as the element enters the dorm */
+.list-transition-enter,
+.list-transition-appear {
+  /*We give the list the initial dimension of the list button*/
+   width: 15rem;
+   transition: all 900ms;
+
+  max-height: 5rem;
+  bottom: 5.5rem;
+  left: 5rem;
+  color: transparent;
+  transform:   scale(1) 
+  translateY(0)
+}
+/* This is where we can add the transition*/
+.list-transition-enter-active,
+.list-transition-appear-active {
+  width:65rem;
+  max-height:  40rem;
+  transition: all 900ms;
+  border-radius: 55px;
+  bottom: 5.5rem;
+  left: 5rem;
+  transform: scale(1) ;
+
+}
+
+/* This fires as soon as the this.state.showList is false */
+.list-transition-exit {
+  width:65rem;
+  bottom: 5.5rem;
+  left: 3rem;
+  transform:   scale(1) ;
+  max-height: 40rem;
+  transition: all 900ms;
+}
+/* fires as element leaves the DOM*/
+.list-transition-exit-active {
+  width: 15rem;
+  bottom: 5.5rem; 
+   max-height: 5rem;
+   transform:   scale(1) translateY(0);
+  color: transparent;
+  transition: all 900ms;
+  border-radius: 55px;
+}
+
+
+
+@media (max-width: 767px){
+  /* This fires as soon as the element enters the dorm */
+.list-transition-enter,
+.list-transition-appear {
+  /*We give the list the initial dimension of the list button*/
+   width: 7.5rem;
+   transition: all 900ms;
+
+  max-height: 2.5rem;
+  bottom: 4.75rem;
+  left: 2.5rem;
+  color: transparent;
+  transform:   scale(1) 
+  translateY(0)
+}
+/* This is where we can add the transition*/
+.list-transition-enter-active,
+.list-transition-appear-active {
+  width:32.5rem;
+  max-height:  20rem;
+  transition: all 900ms;
+  border-radius: 22.5px;
+  bottom: 2.75rem;
+  left: 2.5rem;
+  transform: scale(1) ;
+
+}
+
+/* This fires as soon as the this.state.showList is false */
+.list-transition-exit {
+  width:32.5rem;
+  bottom: 2.75rem;
+  left: 1.5rem;
+  transform:   scale(1) ;
+  max-height: 20rem;
+  transition: all 900ms;
+}
+/* fires as element leaves the DOM*/
+.list-transition-exit-active {
+  width: 7.5rem;
+  bottom: 2.75rem; 
+   max-height: 2.5rem;
+   transform:   scale(1) translateY(0);
+  color: transparent;
+  transition: all 900ms;
+  border-radius: 27.5px;
+}
+}
+
+
+
+.list-body {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+
+
+.footer{
+  font-size: 6vmin;
+  width: 95%;
+ 
+}
+.footerbox{
+  border-top: 4px dotted rgb(255, 220, 0);
+  font-size: 6vmin;
+  width: 100%;
+  margin-top: 65vh;
+}
+@media (max-width: 1024px) {
+  .footerbox{
+    border-top: 4px dotted rgb(255, 220, 0);
+    margin-top: 60vh;
+    line-height: 5vh;
+  }
+  .links{
+    display: block;
+  }
+}
+@media  (max-device-width: 1024px) and (orientation: landscape) {
+#burger{
+  width: 2rem;
+    height: 2rem;
+}
+#burger div {
+  width: 2rem;
+      height: 0.25rem;
+}
+  .links{
+    display: inline;
+    text-align: center;
+  }
+  .footerbox{
+    line-height: 8vh;
+  }
+}
+
+.alertup-enter {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.alertup-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 300ms ease-in;
+}
+.alertup-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.alertup-exit-active {
+  opacity: 0;
+  transform: translateY(-100%);
+    transition: all 500ms ease-in-out;
+}
+
+
+
+.alertdown-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.alertdown-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 300ms ease-in;
+}
+.alertdown-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.alertdown-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+    transition: all 500ms ease-in-out;
+}
+
+.helpplayer-enter {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.helpplayer-enter-active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: all 300ms ease-in;
+}
+.helpplayer-exit {
+  opacity: 1;
+  transform: translateY(0%);
+}
+.helpplayer-exit-active {
+  opacity: 0;
+  transform: translateY(100%);
+    transition: all 500ms ease-in-out;
+}
+
+
+
