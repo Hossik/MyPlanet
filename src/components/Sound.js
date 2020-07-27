@@ -3,7 +3,7 @@ import Sound from 'react-sound';
  
 export class ComponentSound extends React.Component {
   render() {
-    return <Sound url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    return <Sound url="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
     playStatus={Sound.status.PLAYING}
     playFromPosition={300 /* in milliseconds */}
     onLoading={this.handleSongLoading}
