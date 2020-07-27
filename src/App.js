@@ -17,9 +17,7 @@ render(){
   <React.Fragment>
  <ComponentSound />
   <HashRouter >
-  
    <section className="landing" >
-     
     <Cover /><GlobalStyles />
     </section>
   </HashRouter>
