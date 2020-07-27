@@ -15,6 +15,8 @@ render(){
   
   return (
   <React.Fragment>
+
+
  <ComponentSound />
   <HashRouter >
    <section className="landing" >
