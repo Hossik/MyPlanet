@@ -15,11 +15,11 @@ render(){
   
   return (
   <React.Fragment>
- 
+ <ComponentSound />
   <HashRouter >
   
    <section className="landing" >
-     <ComponentSound />
+     
     <Cover /><GlobalStyles />
     </section>
   </HashRouter>
