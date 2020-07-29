@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/MyPlanet/static/css/main.b67c0f81.chunk.css",
-    "main.js": "/MyPlanet/static/js/main.6f156188.chunk.js",
-    "main.js.map": "/MyPlanet/static/js/main.6f156188.chunk.js.map",
+    "main.js": "/MyPlanet/static/js/main.fad835a9.chunk.js",
+    "main.js.map": "/MyPlanet/static/js/main.fad835a9.chunk.js.map",
     "runtime-main.js": "/MyPlanet/static/js/runtime-main.ceebb0a9.js",
     "runtime-main.js.map": "/MyPlanet/static/js/runtime-main.ceebb0a9.js.map",
     "static/css/2.bc472223.chunk.css": "/MyPlanet/static/css/2.bc472223.chunk.css",
     "static/js/2.7a444dcf.chunk.js": "/MyPlanet/static/js/2.7a444dcf.chunk.js",
     "static/js/2.7a444dcf.chunk.js.map": "/MyPlanet/static/js/2.7a444dcf.chunk.js.map",
     "index.html": "/MyPlanet/index.html",
-    "precache-manifest.12f8c24d78d8d8396dca09dd7011c0d7.js": "/MyPlanet/precache-manifest.12f8c24d78d8d8396dca09dd7011c0d7.js",
+    "precache-manifest.f532f262bd9e4897e347c4ce4b7d2c4c.js": "/MyPlanet/precache-manifest.f532f262bd9e4897e347c4ce4b7d2c4c.js",
     "service-worker.js": "/MyPlanet/service-worker.js",
     "static/css/2.bc472223.chunk.css.map": "/MyPlanet/static/css/2.bc472223.chunk.css.map",
     "static/css/main.b67c0f81.chunk.css.map": "/MyPlanet/static/css/main.b67c0f81.chunk.css.map",
@@ -23,6 +23,6 @@
     "static/css/2.bc472223.chunk.css",
     "static/js/2.7a444dcf.chunk.js",
     "static/css/main.b67c0f81.chunk.css",
-    "static/js/main.6f156188.chunk.js"
+    "static/js/main.fad835a9.chunk.js"
   ]
 }
