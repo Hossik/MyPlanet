@@ -102,8 +102,6 @@ export class BannerImage extends Component  {
           ready: false,
           muted:false,
           images: [
-            "https://raw.githubusercontent.com/Hossik/MyPlanet/blob/master/src/components/FelaKuti.mp3"
-            ,
             "https://soundcloud.com/scumgang6ix9ine/yaya-6ix9ine",
             "https://www.youtube.com/watch?v=SBtjfadiyfk&feature=youtu.be"
 
