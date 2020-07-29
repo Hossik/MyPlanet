@@ -11,14 +11,14 @@ import { Test } from './TestComponent';
 import Header from './Header';
 import AboutMe from './AboutMe';
 import Footer from './Footer';
-
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      collapseID: "",
+      collapseID: false,
       highlightedHobby: false,
-      tbn:false
+      tbn:false,
+  
 
     };
   };
@@ -28,10 +28,11 @@ class Main extends Component {
       highlightedHobby: !state.highlightedHobby
     }));
   };
-  toggleCollapse = collapseID => () => {
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-    }));
+  toggleCollapse = () => {
+    this.setState(state => ({
+      collapseID : !state.collapseID,
+    
+    }))
   }
   remove = () => {
     clearInterval(this.intervalID)
@@ -53,12 +54,12 @@ class Main extends Component {
   return (
       
   <React.Fragment className="container">
-    
+   
 
-    
+   
      
     {this.state.tbn ? <MDBBtn className= " btn  btn-circle btn-xl" color="elegant"
-      onClick={this.toggleCollapse("basicCollapse")}>
+      onClick={this.toggleCollapse}>
       <i> <Test
       isOpen={this.state.collapseID}/></i>    
     </MDBBtn> : <div></div>}

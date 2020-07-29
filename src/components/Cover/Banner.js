@@ -3,7 +3,11 @@ import TweenOne from 'rc-tween-one';
 import PathPlugin from 'rc-tween-one/lib/plugin/PathPlugin';
 import { ExternalLink } from 'react-external-link';
 import Rainbow from './rainbow';
+import ReactPlayer from 'react-player'
+
 import './rainbow.scss';
+
+
 TweenOne.plugins.push(PathPlugin);
 
 const duration = 7000;
@@ -72,7 +76,9 @@ const animate = {
 export class BannerImage extends Component  {
   constructor(props) {
     super(props);
-   
+    this.switchImage = this.switchImage.bind(this);
+    this.play = this.play.bind(this);
+
     
     this.state = {
       apearGit:false,
@@ -86,10 +92,28 @@ export class BannerImage extends Component  {
       pausegit:false,
       StartStarApear:false,
       starapear:false,
+      currentImage: 0,
+          play:false,
+          back:false,
+          titletime :false,
+          player : false,
+          helpplayer:false,
+          duration: 0,
+          ready: false,
+          muted:false,
+          images: [
+            "https://soundcloud.com/t-c-ramazan-mutlu/k-sa",
+            "https://soundcloud.com/scumgang6ix9ine/yaya-6ix9ine",
+            "https://www.youtube.com/watch?v=SBtjfadiyfk&feature=youtu.be"
+
+          ]
+
     }
   }
   componentDidMount() {
-    
+    this.intervalvoice = setInterval(() => {this.setState({
+      voice: true
+    }); }, 1000);
     this.intervalGit = setInterval(() => {this.setState({
       apearGit: true
     }); }, 9000);
@@ -112,8 +136,81 @@ export class BannerImage extends Component  {
     this.intervalStarApear = setInterval(this.starapear, 0);
     this.intervalremoveStartStarApear = setInterval(this.removeStartStarApear,601)
     this.intervalremovestarapear = setInterval(this.removestarapear,600)
+   
+      this.intervalTITLE = setInterval(() => {this.setState({
+        titletime: true
+      }); }, 2000);
+      this.intervalRTITLE = setInterval(() => {this.setState({
+        titletime: false
+      }); }, 8000);
+      this.intervalPlayer = setInterval(() => {this.setState({
+        player: true
+      }); }, 10000);
+      this.intervalHelpPlayer = setInterval(() => {this.setState({
+        helpplayer: true
+      }); }, 12000);
+      this.intervalplay = setInterval( this.play, 500);
+      setInterval (this.remove);
+      setInterval (this.removetitle, 6000);
+      setInterval (this.removertitle, 17000);
   
-  
+  }
+  remove = () => { 
+    clearInterval(this.intervalID)
+  }
+  removetitle = () => { 
+    clearInterval(this.intervalTITLE)
+  }
+  removertitle = () => { 
+    clearInterval(this.intervalRTITLE)
+  }
+  removeplayer = () => {
+    clearInterval(this.intervalPlayer)
+  }
+  switchImage() {
+        
+    if (this.state.currentImage < this.state.images.length - 1 ) {
+      this.setState({
+        currentImage: this.state.currentImage + 1,
+      
+            })
+    } else {
+      this.setState({
+        currentImage: 0,
+        
+      });
+    }
+    return this.currentImage;
+  }
+    
+   
+    play = () => {
+if (this.state.ready !== true){
+  this.setState(state => ({
+    play: !state.play,
+  }))}
+  }
+
+  muted = () => {
+    this.setState(state => ({
+      muted: !state.muted
+    }))
+    }
+
+  handleDuration = (duration) => {
+    
+    this.setState({ duration })
+  }
+      
+ready = () => {
+  this.setState ({
+    ready:true
+  })
+}
+pause = () => {
+  this.setState(state => ({
+    pause: !state.pause
+  }))
   }
 
   StartStarApear = () => {
@@ -168,11 +265,27 @@ starapear = () => {
         }))
         }
         onMouseOverlinked = () => this.setState({pauselinked : "true" });
-  render (){
+      
 
+  render (){
+console.log("this.state.play", this.state.play, "this.state.ready",this.state.ready)
   return (
     <div className= "dark-wrapper-design"> 
-    
+              <ReactPlayer
+          onPlay	={this.ready}
+          className='react-player'
+          onError={this.switchImage}
+          onEnded={this.switchImage}
+          url={this.state.images[this.state.currentImage]}
+          width='0vw'
+          height='0vh'
+          onDuration={this.handleDuration}
+          volume= "0.5"
+          muted={this.state.muted}
+          playing={this.state.play}
+          
+        />
+              
       <svg width="100vw" height="100vh" viewBox="0 0 582 500">
         <defs>
           <path
@@ -182,6 +295,7 @@ starapear = () => {
         </defs>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
+        
         
         
           {this.state.apearinsta ?<TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation={animate.insta}>
@@ -391,7 +505,8 @@ starapear = () => {
           <g id="Group-14" transform="translate(150.000000, 230.000000)">
             
             <g id="Group-22" transform="translate(62.000000, 7.000000)">
-            <image
+            
+            <image 
                 id="cc4"
                 alt="globe"
                 xlinkHref="https://gw.alipayobjects.com/zos/rmsportal/FpKOqFadwoFFIZFExjaf.png" 
