@@ -5,10 +5,19 @@ export const StyledCover = styled.div`
 position: relative;
 
 
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-.Rrrrr { font: italic 1em serif; fill: red; }
 
+@media (max-width: 767px){
+  #gclick{
+    margin-bottom: 80px;
+  }
 
+}
 .neons{
  font-size: 1em;
  font-family: 'Codystar';
@@ -31,15 +40,7 @@ to {
 
 
 
-g {
-  pointer-events: bounding-box;
-  opacity: 1;
-  
-}
-g .stop :hover {
-    opacity: 0.9;
-    
-}
+
 
 
 .linetext{

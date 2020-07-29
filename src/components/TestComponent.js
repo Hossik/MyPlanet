@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactTextTransition, { presets } from "react-text-transition";
 
 const texts = ["Click", "or", "Die"]
 const secondtexts = ["Click", "to", "Close"]
@@ -24,15 +23,11 @@ export class Test extends Component  {
       
         return (
         <React.Fragment>
-            <section id={this.props.isOpen ? "hossik" :  "nohossik"}>
-            <ReactTextTransition
-                text= {this.props.isOpen ? secondtexts[this.state.textIndex % secondtexts.length] : texts[this.state.textIndex % texts.length] }
-                springConfig={presets.wobbly}
-                className="big"
-                delay={300}
-                inline
-            />   
-            </section>
+            <div className="body">
+              <div class="sign">
+        <span class="fast-flicker">C</span>lic<span class="flicker">K</span><span>-</span>Here
+              </div>
+            </div >
         </React.Fragment>
         )
     }

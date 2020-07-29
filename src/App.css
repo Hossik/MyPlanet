@@ -85,7 +85,6 @@ html, body, #root, #root>div {
     color: rgb(233, 25, 25);
     font-weight: bold;
     z-index: -1;   
-    filter: drop-shadow(3px 3px 10px rgb(233, 25, 25)) brightness(3);
 }
 
 #nohossik{
@@ -93,7 +92,7 @@ html, body, #root, #root>div {
     color: rgb(255, 220, 0);
     font-weight: bold;
     z-index: -1;
-    filter: drop-shadow(3px 3px 10px  rgb(255, 220, 0)) brightness(3);
+   
 
 }
 
@@ -262,16 +261,26 @@ section.route-section {
   border-radius: 55px;
 }
 
+.container--ph {
+  height: 0;
+  padding-top: 48%;
+  position: relative;
+}
 
+.svg--responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 @media (max-width: 767px){
+ 
   /* This fires as soon as the element enters the dorm */
 .list-transition-enter,
 .list-transition-appear {
   /*We give the list the initial dimension of the list button*/
    width: 7.5rem;
    transition: all 900ms;
-
   max-height: 2.5rem;
   bottom: 4.75rem;
   left: 2.5rem;
@@ -425,3 +434,212 @@ section.route-section {
 
 
 
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+.body {
+  background-color: #141114;
+  background-image: linear-gradient(335deg, black 23px, transparent 23px),
+    linear-gradient(155deg, black 23px, transparent 23px),
+    linear-gradient(335deg, black 23px, transparent 23px),
+    linear-gradient(155deg, black 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+.sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #186b4b,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size:2.5vmin;
+  color: #e6fffb; 
+  text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
+    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
+    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes secondblink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #e6fff8;
+    text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
+    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
+    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;
+  }
+  28%,
+  33% {
+    color: #65ffea;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #24ffb6;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, secondblink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, secondblink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #186b4b;
+    text-shadow: none;
+  }
+  100% {
+    color: #ffe6ff;
+    text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
+    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
+    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+
+  6% {
+    opacity: 0.85;
+  }
+
+  8% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  11% {
+    opacity: 0.922;
+  }
+
+  12% {
+    opacity: 0.9;
+  }
+
+  14% {
+    opacity: 0.95;
+  }
+
+  16% {
+    opacity: 0.98;
+  }
+
+  17% {
+    opacity: 0.9;
+  }
+
+  19% {
+    opacity: 0.93;
+  }
+
+  20% {
+    opacity: 0.99;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+
+  28% {
+    opacity: 0.98;
+  }
+
+  37% {
+    opacity: 0.93;
+  }
+
+  38% {
+    opacity: 0.5;
+  }
+
+  39% {
+    opacity: 0.96;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0.97;
+  }
+
+  46% {
+    opacity: 0.94;
+  }
+
+  56% {
+    opacity: 0.9;
+  }
+
+  58% {
+    opacity: 0.9;
+  }
+
+  60% {
+    opacity: 0.99;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  72% {
+    opacity: 0.95;
+  }
+
+  93% {
+    opacity: 0.93;
+  }
+
+  95% {
+    opacity: 0.95;
+  }
+
+  97% {
+    opacity: 0.93;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
