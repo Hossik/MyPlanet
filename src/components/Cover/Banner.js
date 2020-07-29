@@ -332,7 +332,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
                 {this.state.titleinsta ?
                 <g> <defs>
                 
-                <marker id="pointer" markerWidth="30" markerHeight="8" 
+                <marker  id="pointer" markerWidth="30" markerHeight="8" 
               refX="5.5" refY="7.1" orient="-35" markerUnits="userSpaceOnUse">
                     <polyline fill= "white"
             stroke= "white"
