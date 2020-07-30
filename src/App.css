@@ -12,7 +12,16 @@ html, body, #root, #root>div {
   background-position:-100% -100%;
 
 } 
-
+@media (max-width: 767px){
+  html, body, #root, #root>div {
+    background:black;
+    background-image:url("https://i2.wp.com/www.handsomephantom.com/wp-content/uploads/2017/07/Space-Wallpapers-HD-Wallpapers-Art-Prints-Posters-Desktop.jpg?fit=2048%2C1130&ssl=1");
+    
+  
+    background-size: cover; 
+    animation: not;
+    background-position:-100% -100%;}
+}
 
 @keyframes darkrise {
     0%{

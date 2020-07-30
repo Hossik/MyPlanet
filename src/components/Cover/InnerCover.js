@@ -29,7 +29,6 @@ const welcome = ["WELCOME TO"]
           <div className='inner'>
       
             <Main className="hoss"  />
-    <button style={{background:"red"}}></button>
         <CSSTransition
           in={props.titletime}
           timeout={300}

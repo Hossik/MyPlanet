@@ -3,7 +3,6 @@ import TweenOne from 'rc-tween-one';
 import PathPlugin from 'rc-tween-one/lib/plugin/PathPlugin';
 import { ExternalLink } from 'react-external-link';
 import Rainbow from './rainbow';
-import ReactPlayer from 'react-player'
 
 import './rainbow.scss';
 
@@ -40,19 +39,18 @@ const animate = {
   },
   facebook: {
     ...loop,
-    y: 35,
+    y: 15,
     duration: 4000,
     delay: 200,
   },
   insta: {
     ...loop,
-    y: -35,
+    y: -15,
     duration: 4000,
     delay: 200,
   },
   git: {
     ...loop,
-    y: -35,
     x: -15,
     duration: 4000,
     delay: 200,
@@ -66,7 +64,7 @@ const animate = {
   linkedin: {
     ...loop,
    
-    x: 35,
+    x: 15,
     duration: 4000,
     delay: 400,
   },
@@ -94,23 +92,6 @@ export class BannerImage extends Component  {
       pauseface: false,
       pauselinked: false,
       pausegit:false,
-      StartStarApear:false,
-      starapear:false,
-      currentImage: 0,
-          play:false,
-          back:false,
-          titletime :false,
-          player : false,
-          helpplayer:false,
-          duration: 0,
-          ready: false,
-          muted:false,
-          images: [
-            "https://soundcloud.com/scumgang6ix9ine/yaya-6ix9ine",
-            "https://www.youtube.com/watch?v=SBtjfadiyfk&feature=youtu.be"
-
-          ]
-
     }
   }
   componentDidMount() {
@@ -244,20 +225,6 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
   return (
     <div className= "dark-wrapper-design"> 
     
-              <ReactPlayer
-          onPlay	={this.ready}
-          className='react-player'
-          onError={this.switchImage}
-          onEnded={this.switchImage}
-          url={this.state.images[this.state.currentImage]}
-          width='0vw'
-          height='0vh'
-          onDuration={this.handleDuration}
-          volume= "0.5"
-          muted={this.state.muted}
-          playing={this.state.play}
-          
-        />
     <div className="container">
       <svg width="100vw" height="100vh" viewBox="0 10 582 500">
         <defs>
@@ -477,7 +444,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={animate.git} className="stop" style={{transform: 'translate(50px,30px)'  }}>
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={animate.git} className="stop" >
               <filter id="my-git">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -486,7 +453,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
                 </feComponentTransfer>
                 <feGaussianBlur stdDeviation="3"/>
               </filter>
-              <g transform="translate(100.000000, 20.000000)" >
+              <g transform="translate(100.000000, 5)" >
               <ExternalLink   href="https://github.com/Hossik">
              
               <image
@@ -522,50 +489,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
             
               </TweenOne> : <div></div>}
 
-          <g id="Group-14" transform="translate(150.000000, 230.000000)">
-            
-            <g id="Group-22" transform="translate(62.000000, 7.000000)">
-            
-            <image 
-                id="cc4"
-                alt="globe"
-                xlinkHref="https://gw.alipayobjects.com/zos/rmsportal/FpKOqFadwoFFIZFExjaf.png" 
-                width="151px"
-                height="234px"
-              />
-            </g>
-            <mask id="mask-2">
-              <use xlinkHref="#mask" fill="white" transform="translate(-42, -33)" />
-            </mask>
-            <g mask="url(#mask-2)">
-              <TweenOne component="g" animation={animate.track} style={{ transformOrigin: '122.7px 58px' }}>
-                <g transform="translate(-16, -52)">
-                  <g transform="translate(16, 52)">
-                    <path
-                      d="M83.1700911,35.9320015 C63.5256194,37.9279025 44.419492,43.1766434 25.8517088,51.6782243 C14.3939956,57.7126276 7.77167019,64.8449292 7.77167019,72.4866248 C7.77167019,94.1920145 61.1993389,111.787709 127.105708,111.787709 C193.012078,111.787709 246.439746,94.1920145 246.439746,72.4866248 C246.439746,55.2822262 212.872939,40.6598106 166.13127,35.3351955"
-                      id="line-s"
-                      stroke="#0D1A26"
-                      strokeWidth="1.35"
-                      strokeLinecap="round"
-                      transform="translate(127.105708, 73.561453) rotate(-16.000000) translate(-127.105708, -73.561453) "
-                    />
-                  </g>
-                  <TweenOne component="g" animation={animate.greenBall}>
-                  
-                  <image
-                      alt="globe"
-                      id="id2"
-                      xlinkHref="https://www.kindpng.com/picc/b/70/700621.png"
-                      x="16"
-                      y="52"
-                      width="36px"
-                      height="36px"
-                    />
-                  </TweenOne>
-                </g>
-              </TweenOne>
-            </g>
-          </g>
+          
         </g>
       </svg>
       </div>

@@ -59,7 +59,7 @@ $root: '.c-rainbow';
    
      4px 4px 0 rgba(0, 0, 0, .2);
   
-  animation: rainbow 1.5s ease-in-out infinite;
+  animation: rainbow 3.5s ease-in-out infinite;
   
   @for $i from 1 through 7 {
    &:nth-child(#{$i}) {
