@@ -105,12 +105,7 @@ export class BannerImage extends Component  {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions.bind(this));
 
-    window.addEventListener('resize', () => {
-      this.setState({
-          isMobile: window.innerWidth < 1200
-      });
-  }, false);
-
+    
     this.intervalGit = setInterval(() => {this.setState({
       apearGit: true
     }); }, 9000);
@@ -211,9 +206,8 @@ updateWindowDimensions() {
           onMouseOverreddit = () => this.setState({pausereddit : "true" });
 
   render (){
-    {this.state.isMobile ? console.log("its mobile") : console.log("its not mobile")}
+   
     console.log("width:", this.state.width)
-const className = this.state.isMobile ? 'mobile' : '';
   return (
     
    
