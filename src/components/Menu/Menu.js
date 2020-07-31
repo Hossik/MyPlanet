@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <Link className="links" to="/aboutMe">
+      <Link className="links" to="/about">
         <img id="me" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /><br/>
         About me
       </Link>

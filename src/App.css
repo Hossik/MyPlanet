@@ -7,7 +7,15 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
-
+#smallcard{
+  width:85vw;
+  height: 77vh;
+  background:rgba(41,41,41, 0.9) ;
+  border-radius: 35px ;
+  color :white;
+  font-size: 3.5rem;
+  margin-bottom: 30%;
+}
 
 
 .reddittex {
@@ -66,13 +74,8 @@ html, body, #root, #root>div {
 }
 
 
-#smallcollapse{
-  display: none;
 
-}
-#bigcollapse {
-  display: block;
-}
+
 @media (max-width: 767px){
   html, body, #root, #root>div {
     background:black;
@@ -84,12 +87,7 @@ html, body, #root, #root>div {
 }
 @media (max-width: 1366px){
   
-    #bigcollapse {
-      display: none;
-    }
-    #smallcollapse{
-      display: block;
-    }
+    
     #bigbanner{
       display: none;
     }
@@ -130,7 +128,7 @@ html, body, #root, #root>div {
 }
 
 #card{
-  width:65vw;
+  width:85vw;
   height: 77vh;
   background:rgba(41,41,41, 0.9) ;
   border-radius: 35px ;

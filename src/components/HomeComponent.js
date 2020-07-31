@@ -30,19 +30,19 @@ export class Home extends Component {
               className="TypistExample-message"
               cursor={{ hideWhenDone: true }}
             >
-              * Easy to style
+              <span className="star">*</span>I am a Front-end engineer
               <Typist.Delay ms={1250} />
               <br />
-              * Easy to customize
+              <span className="star">*</span>UX/UI Web Designer
               <Typist.Delay ms={1250} />
               <br />
-              * Easy to use backp<Typist.Delay ms={500} />sace
-              <Typist.Backspace count={5} delay={1000} />
+              <span className="star">*</span> Live and work in <Typist.Delay ms={500} />Ukraine
+              <Typist.Backspace count={7} delay={1000} />
               <Typist.Delay ms={750} />
-              space
+              Kyiv
               <Typist.Delay ms={1250} /> 
-              <br />
-              <span >for more information < Link style={{color:'#FFDC00', textDecoration:"none"}}>*About me <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></span>
+              <br /><br /><br />
+              <span >for more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}>*About <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></span>
               
               {''}
             </Typist>

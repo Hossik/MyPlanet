@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-const texts = ["Click", "or", "Die"]
-const secondtexts = ["Click", "to", "Close"]
+
 export class Test extends Component  {
     
 

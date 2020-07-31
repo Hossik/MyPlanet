@@ -30,7 +30,7 @@ svg {
   font-size: 1.5em;
   font-family: 'Codystar';
   font-weight: bold;
-  fill: #fff;
+  fill: #003cff;
 
  }
 
@@ -43,13 +43,13 @@ svg {
 @keyframes glow {
   from {
     fill: #fff;
-    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+    text-shadow: 0 0 10px #008cff, 0 0 20px #006eff, 0 0 30px #0084ff, 0 0 40px #0051ff, 0 0 50px #0057ff, 0 0 60px #0066ff, 0 0 70px #003cff, 0 0 90px #003cff;
     opacity:1;
     }
 
   to {
     fill: black;
-  text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+    text-shadow: 0 0 10px #008cff, 0 0 20px #006eff, 0 0 30px #0084ff, 0 0 40px #0051ff, 0 0 50px #0057ff, 0 0 60px #0066ff, 0 0 70px #003cff, 0 0 90px #003cff;
   opacity:0;
   }
 }

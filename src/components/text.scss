@@ -3,6 +3,12 @@ $bl-color: #FFDC00;
 .page{
   align-items: center;
 }
+.star {
+  color: #e6fffb; 
+  text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
+    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
+    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;
+}
 .TypistExample {   
   a {
     color: inherit;
@@ -20,7 +26,7 @@ $bl-color: #FFDC00;
     cursor: pointer;
     color: $tc-color;
     line-height: 8vh;
-    width: 1200px;
+    width: 90vw;
     @media (max-width: 1024px) {
       margin-top: 6vh;
       line-height: 6vh;
@@ -35,7 +41,7 @@ $bl-color: #FFDC00;
   font-size: 5vmin;
   color: $tc-color;
   margin: auto;
-  width: 800px;
+  width: 70vw;
     .flash {
       color: $bl-color;
       font-weight: bold;

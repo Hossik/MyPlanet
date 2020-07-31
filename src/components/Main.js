@@ -9,16 +9,18 @@ import { Tools } from './ToolsComponent'
 import { TransitionGroup, CSSTransition }from 'react-transition-group';
 import { Test } from './TestComponent';
 import Header from './Header';
-import AboutMe from './AboutMe';
+import AboutMe from './About';
 import Footer from './Footer';
 class Main extends Component {
   constructor(props) {
+    
     super(props);
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.toggleCollapse = this.toggleCollapse.bind(this);
     this.state = {
       collapseID: false,
       highlightedHobby: false,
       tbn:false,
-  
 
     };
   };
@@ -44,13 +46,22 @@ class Main extends Component {
                 tbn : !state.tbn
             }));
             }, 8500);
-            
-            setInterval (this.remove, 10000)
-            
+            setInterval (this.remove, 10000);
+            this.updateWindowDimensions();
+            window.addEventListener("resize", this.updateWindowDimensions.bind(this));
+            this.toggleCollapse = this.toggleCollapse.bind(this);
         }
+        componentWillUnmount() {
+          window.removeEventListener("resize", this.updateWindowDimensions.bind(this));
+          this.toggleCollapse = this.toggleCollapse.bind(this);
+      }
+  
+      updateWindowDimensions() {
+          this.setState({ width: window.innerWidth, height: window.innerHeight });
+      }
 
   render() {
-   
+   console.log("state.collapseID" ,this.state.collapseID)
   return (
       
   <React.Fragment className="container">
@@ -63,7 +74,7 @@ class Main extends Component {
       <i> <Test
       isOpen={this.state.collapseID}/></i>    
     </MDBBtn> : <div></div>}
-    <div id="bigcollapse">
+    {this.state.width>1366?
     <CSSTransition
           in={this.state.collapseID}
           timeout={300}
@@ -84,7 +95,7 @@ class Main extends Component {
             <section className="route-section">
           <Switch location={this.props.location}>
             <Route  path="/home" component={Home} />
-            <Route path="/aboutMe" component={AboutMe} />
+            <Route path="/about" component={AboutMe} />
             <Route path="/tools" component={Tools} />
             <Route path="/contacts" component={Contacts} />
             <Redirect to="/home" />
@@ -102,22 +113,19 @@ class Main extends Component {
       </div>
     
     </CSSTransition>
-    </div>
-
-    <div id="smallcollapse">
+    :
     
-     
-    <div className=" list-body"  >
+    
     <MDBCollapse id="basicCollapse" isOpen={this.state.collapseID}>
-        <Card  id="card" >
+        <Card  id="smallcard" >
           <Header id="head"/>
           <div >
           <TransitionGroup  >
             <CSSTransition  key={this.props.location.pathname} classNames="fade" timeout={{ enter: 300, exit: 300 }}>
             <section className="route-section">
           <Switch location={this.props.location}>
-            <Route  path="/home" component={Home} />
-            <Route path="/aboutMe" component={AboutMe} />
+            <Route  path="/home"  component={Home } />
+            <Route path="/about" component={AboutMe} />
             <Route path="/tools" component={Tools} />
             <Route path="/contacts" component={Contacts} />
             <Redirect to="/home" />
@@ -127,17 +135,13 @@ class Main extends Component {
           </CSSTransition>
           </TransitionGroup>
           </div>
-          <div className=" footerbox">
           
-          <Footer/>
-          </div>
         </Card>
         </MDBCollapse>
-      </div>
+      
     
     
-    </div>
-
+    }
 
   </React.Fragment>
     )

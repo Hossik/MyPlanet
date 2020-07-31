@@ -404,7 +404,7 @@ updateWindowDimensions() {
   
   </filter>
   <ExternalLink   href="https://www.linkedin.com/in/hossik">
-	<g transform="translate(360, 80)">
+	<g transform={(this.state.width<767 && this.state.height>628) ?"translate(360, 0)"  : "translate(360, 80)" } >
   <rect
   fill="red"
   fillOpacity="0"
@@ -448,7 +448,7 @@ updateWindowDimensions() {
                 </feComponentTransfer>
                 <feGaussianBlur stdDeviation="3"/>
               </filter>
-              <g transform="translate(100.000000, 5)" >
+              <g transform = {(this.state.width<767 && this.state.height>628) ?  "translate(100, -100)":"translate(100, 5)" }  >  
               <ExternalLink   href="https://github.com/Hossik">
              
               <image
