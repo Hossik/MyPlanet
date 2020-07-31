@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { MDBBtn} from 'mdbreact';
+import { MDBBtn,MDBCollapse} from 'mdbreact';
 import { Card} from 'reactstrap';
 import { withRouter} from 'react-router-dom';
 import { Contacts } from './ContactComponent';
@@ -63,7 +63,7 @@ class Main extends Component {
       <i> <Test
       isOpen={this.state.collapseID}/></i>    
     </MDBBtn> : <div></div>}
-    
+    <div id="bigcollapse">
     <CSSTransition
           in={this.state.collapseID}
           timeout={300}
@@ -102,7 +102,43 @@ class Main extends Component {
       </div>
     
     </CSSTransition>
+    </div>
+
+    <div id="smallcollapse">
     
+     
+    <div className=" list-body"  >
+    <MDBCollapse id="basicCollapse" isOpen={this.state.collapseID}>
+        <Card  id="card" >
+          <Header id="head"/>
+          <div >
+          <TransitionGroup  >
+            <CSSTransition  key={this.props.location.pathname} classNames="fade" timeout={{ enter: 300, exit: 300 }}>
+            <section className="route-section">
+          <Switch location={this.props.location}>
+            <Route  path="/home" component={Home} />
+            <Route path="/aboutMe" component={AboutMe} />
+            <Route path="/tools" component={Tools} />
+            <Route path="/contacts" component={Contacts} />
+            <Redirect to="/home" />
+          </Switch>
+         
+          </section>
+          </CSSTransition>
+          </TransitionGroup>
+          </div>
+          <div className=" footerbox">
+          
+          <Footer/>
+          </div>
+        </Card>
+        </MDBCollapse>
+      </div>
+    
+    
+    </div>
+
+
   </React.Fragment>
     )
   }

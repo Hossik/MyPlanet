@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TweenOne from 'rc-tween-one';
 import PathPlugin from 'rc-tween-one/lib/plugin/PathPlugin';
 import { ExternalLink } from 'react-external-link';
-import Rainbow from './rainbow';
 
 import './rainbow.scss';
 
@@ -49,6 +48,12 @@ const animate = {
     duration: 4000,
     delay: 200,
   },
+  reddit:{
+    ...loop,
+    y: -15,
+    duration: 4000,
+    delay: 200,
+  },
   git: {
     ...loop,
     x: -15,
@@ -78,24 +83,34 @@ const animate = {
 export class BannerImage extends Component  {
   constructor(props) {
     super(props);
-    this.switchImage = this.switchImage.bind(this);
-    this.play = this.play.bind(this);
-
+  
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     
     this.state = {
       apearGit:false,
       apearlinked:false,
       apearface:false,
       apearinsta:false,
-      dark:false,
       pause: false,
       pauseface: false,
       pauselinked: false,
       pausegit:false,
+      pausereddit:false,
+      apearreddit:false,
+      titlereddit:false,
+      height: 512
     }
   }
   componentDidMount() {
-   
+    this.updateWindowDimensions();
+    window.addEventListener("resize", this.updateWindowDimensions.bind(this));
+
+    window.addEventListener('resize', () => {
+      this.setState({
+          isMobile: window.innerWidth < 1200
+      });
+  }, false);
+
     this.intervalGit = setInterval(() => {this.setState({
       apearGit: true
     }); }, 9000);
@@ -111,8 +126,12 @@ export class BannerImage extends Component  {
     this.intervaltitleinsta = setInterval(() => {this.setState({
       titleinsta: true
     }); }, 12000);
-    
-   
+    this.intervaltitlereddit = setInterval(() => {this.setState({
+      titlereddit: true
+    }); }, 12000);
+    this.intervalreddit = setInterval(() => {this.setState({
+      apearreddit: true
+    }); }, 11000);
    
       this.intervalTITLE = setInterval(() => {this.setState({
         titletime: true
@@ -144,51 +163,15 @@ export class BannerImage extends Component  {
   removeplayer = () => {
     clearInterval(this.intervalPlayer)
   }
-  switchImage() {
-        
-    if (this.state.currentImage < this.state.images.length - 1 ) {
-      this.setState({
-        currentImage: this.state.currentImage + 1,
-      
-            })
-    } else {
-      this.setState({
-        currentImage: 0,
-        
-      });
-    }
-    return this.currentImage;
-  }
-    
-   
-    play = () => {
-if (this.state.ready === false){
-  this.setState(state => ({
-    play: !state.play,
-  }))}
-  }
 
-  muted = () => {
-    this.setState(state => ({
-      muted: !state.muted
-    }))
-    }
 
-  handleDuration = (duration) => {
-    
-    this.setState({ duration })
-  }
-      
-ready = () => {
-  this.setState ({
-    ready:true
-  })
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowDimensions.bind(this));
 }
-pause = () => {
-  this.setState(state => ({
-    pause: !state.pause
-  }))
-  }
+
+updateWindowDimensions() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+}
 
  
 
@@ -218,11 +201,22 @@ pause = () => {
         }))
         }
         onMouseOverlinked = () => this.setState({pauselinked : "true" });
-      
+
+        
+        onMouseOutreddit = () => {
+          this.setState(state => ({
+            pausereddit: !state.pausereddit
+          }))
+          }
+          onMouseOverreddit = () => this.setState({pausereddit : "true" });
 
   render (){
-console.log("this.state.play", this.state.play, "this.state.ready",this.state.ready)
+    {this.state.isMobile ? console.log("its mobile") : console.log("its not mobile")}
+    console.log("width:", this.state.width)
+const className = this.state.isMobile ? 'mobile' : '';
   return (
+    
+   
     <div className= "dark-wrapper-design"> 
     
     <div className="container">
@@ -235,31 +229,8 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
         </defs>
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
-        
-
-        { this.state.ready ? <g  onClick={this.muted} component="g"  >
-              
-              
-              <g transform="translate(430.000000, -30)" >
-              <rect
-                fill="red"
-                
-                  stroke="red"
-                  x="-5"
-                  y="-5"
-                  width="44.4"
-                  height="44.4"
-                  rx="55.6"
-                /> 
-         
-         
-        
-       
- <text transform="translate(-20,0)" >Mute Music </text></g>  
-          </g>: <div></div> }
-        
-        
-          {this.state.apearinsta ?<TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation={animate.insta}>
+  
+          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width>767? animate.insta : ""}>
           <filter id="my-secondinsta">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -328,7 +299,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
             
               </TweenOne> : <div></div>}
 
-              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={animate.facebook} >
+              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width>767? animate.facebook : ""} >
               <filter id="my-facebook">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -353,7 +324,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
               
               </filter>
               
-              <g transform="translate(430.000000, 200)" >
+              <g transform="translate(250.000000, 200)" >
               <rect
                 fill="red"
                 fillOpacity="0"
@@ -380,12 +351,41 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
          
         
        
- <text transform="translate(-20,0)" className="facetext">Click to facebook </text><text transform="translate(40,30)" className="facetext"> &#x2926;</text></g>  
+ <text transform="translate(-20,0)" className={this.state.width>767?"facetext" :"facetextmobile"}>Click to facebook </text><text transform="translate(40,30)" className={this.state.width>767?"facetext" :"facetextmobile"}> &#x2926;</text></g>  
           </TweenOne></ExternalLink>: <div></div> }
            
+
+          { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width>767? animate.reddit :""} >
+           
+          
+             
+       <g transform="translate(400, 230)">
+       
+      <rect
+                fill="red"
+                fillOpacity="0"
+                  stroke="none"
+                  x="-15"
+                  y="-5"
+                  width="104.4"
+                  height="104.4"
+                  rx="105.6"
+                /> 
+  <circle data-name="layer2"
+  cx="22.5" cy="36.4" r="4.3" fill="#FF4500"></circle> 
+   
+  <path filter={this.state.pausereddit ? "url(#my-facebook)" : "url(#my-facebooksecond)"} data-name="layer1" d="M64 32.9a9.585 9.585 0 0 0-9.4-9.7 8.356 8.356 0 0 0-4.9 1.5 34.055 34.055 0 0 0-16.1-4.4l3.5-10.1 7.3 1.7c0 .2-.1.5-.1.7a7.376 7.376 0 1 0 1.1-3.8L35 6.3l-4.9 14a33.784 33.784 0 0 0-16 4.7c.1-.1.2-.1.2-.2a9.068 9.068 0 0 0-5.1-1.6c-5 0-9.2 4.4-9.2 9.7a9.5 9.5 0 0 0 4.7 8.3c1.1 10 13 17.8 27.5 17.8 14.6 0 26.5-8 27.5-18a9.638 9.638 0 0 0 4.3-8.1zM51.6 8.6a4 4 0 1 1-4 4 4.012 4.012 0 0 1 4-4zM9.4 26.5a7.789 7.789 0 0 1 2.1.4 17.149 17.149 0 0 0-6.7 10.3 6.452 6.452 0 0 1 4.6-10.7zm22.8 29.3c-13.4 0-24.4-7.2-24.4-16.2 0-8.9 10.9-16.2 24.4-16.2 13.4 0 24.3 7.2 24.3 16.2S45.6 55.8 32.2 55.8zm27.2-19a17.742 17.742 0 0 0-6.6-10 5.663 5.663 0 0 1 1.8-.3 6.257 6.257 0 0 1 6.1 6.4 5.44 5.44 0 0 1-1.3 3.9z"
+  fill="white"></path>
+  <circle data-name="layer2" cx="41" cy="36.4" r="4.3" fill="#FF4500"></circle>
+  <path data-name="layer1" d="M40.3 46c-9.1 6-16.5.3-16.8.1a1.7 1.7 0 0 0-2.3.2 1.607 1.607 0 0 0 .2 2.3A17.783 17.783 0 0 0 31.8 52a18.23 18.23 0 0 0 10.3-3.3 1.623 1.623 0 1 0-1.8-2.7z"
+  fill="#FF4500"></path>
+  <g transform="translate(-20,95)"><text  className={this.state.width>767?"reddittex reddit reddittexone" : "reddittex reddit"}>Go  </text></g><g transform="translate(20,95)"><text style={{fill: "#FF4500"}}className={this.state.width>767?"reddittex reddit reddittextwo" : "reddittex reddit"}> reddit</text></g>
+       </g>
+       
+       </TweenOne></ExternalLink>: <div></div> }
           </g>
      
-  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={animate.linkedin} >
+  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width>767? animate.linkedin :"" } >
   <filter id="my-filter">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" />
@@ -410,7 +410,7 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
   
   </filter>
   <ExternalLink   href="https://www.linkedin.com/in/hossik">
-	<g transform="translate(360, 110)">
+	<g transform="translate(360, 80)">
   <rect
   fill="red"
   fillOpacity="0"
@@ -427,10 +427,10 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
       stroke="#0e76a8" strokeWidth="3.35" strokeLinecap="round"
       transform="translate(1.105708, 63.561453) rotate(16.000000) translate(-1.105708, -63.561453) "/>
       <g>
-  <Rainbow /></g> <g transform="translate(0, -50) rotate(16.000000) " className="rain" >
+  </g> <g transform="translate(0, -50) rotate(16.000000) " className="rain" >
   <path id="MyPath" fill="none" 
         d="M 7 67 Q 22 21 65 21 Q 102 21 119 69" />
-        <g className="c-rainbow crain" style={{textDecoration: "none"}}>
+        {this.state.width>767? <g className="c-rainbow crain" style={{textDecoration: "none"}}>
         <text className="c-rainbow__layer c-rainbow__layer--white"><textPath href="#MyPath"> Inter Linkedin </textPath></text>
         <text className="c-rainbow__layer c-rainbow__layer--orange"><textPath href="#MyPath">Inter Linkedin</textPath></text>
         <text className="c-rainbow__layer c-rainbow__layer--red"><textPath href="#MyPath">Inter Linkedin</textPath></text>
@@ -438,13 +438,14 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
         <text className="c-rainbow__layer c-rainbow__layer--blue"><textPath href="#MyPath">Inter Linkedin</textPath></text>
         <text className="c-rainbow__layer c-rainbow__layer--green"><textPath href="#MyPath">Inter Linkedin</textPath></text>
         <text className="c-rainbow__layer c-rainbow__layer--yellow"><textPath href="#MyPath">Inter Linkedin</textPath></text>
-        </g>
+        </g> : <g className="c-rainbow crain" style={{textDecoration: "none"}}>
+        <text className="linkedmobile"><textPath href="#MyPath"> Inter Linkedin </textPath></text> </g>}
         </g> 
 	</g> </ExternalLink>
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={animate.git} className="stop" >
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width>767? animate.git : ""} className="stop" >
               <filter id="my-git">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -467,18 +468,18 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
                 height="126px"
               /></ExternalLink>
              <g>
-               <text className="neons"  x="-50" y="95">
+               <text className={this.state.width>767?"neons" : "neonsmobile"}  x="-80" y="90">
                {`-Here ,\n
              `}
              </text>
              <br/>
-             <text className="neons"  x="-50" y="115">
+             <text className={this.state.width>767?"neons" : "neonsmobile"}  x="-80" y="115">
                {`
              is my \n
             `}
              </text>
              <br/>
-             <text className="neons"  x="-50" y="135">
+             <text className={this.state.width>767?"neons" : "neonsmobile"}  x="-80" y="145">
                
              codes ------
             
@@ -494,6 +495,10 @@ console.log("this.state.play", this.state.play, "this.state.ready",this.state.re
       </svg>
       </div>
     </div>
+ 
+
+
+
   );}
 }
 

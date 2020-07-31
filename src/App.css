@@ -1,31 +1,105 @@
-
-
 html, body, #root, #root>div {
   background:black;
   background-image:url("https://i2.wp.com/www.handsomephantom.com/wp-content/uploads/2017/07/Space-Wallpapers-HD-Wallpapers-Art-Prints-Posters-Desktop.jpg?fit=2048%2C1130&ssl=1");
-  
-
   background-size: cover; 
   animation: 
   darkrise 90s ease infinite alternate, 
   dark 10s linear  alternate;
   background-position:-100% -100%;
-
 } 
+
+
+
+.reddittex {
+  
+  font-size: 1.5em;
+
+  fill: white;
+  text-shadow: 0 0.1em 20px rgba(0, 0, 0, 1), 0.05em -0.03em 0 rgba(0, 0, 0, 1),
+    0.05em 0.005em 0 rgba(0, 0, 0, 1), 0em 0.08em 0 rgba(0, 0, 0, 1),
+    0.05em 0.08em 0 rgba(0, 0, 0, 1), 0px -0.03em 0 rgba(0, 0, 0, 1),
+    -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
+    
+}
+.reddit {
+    transform: scale(0.9);
+   
+  }
+  
+.reddittexone {
+    animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite
+      alternate;
+  }
+  .reddittextwo {
+    animation: bopB 1s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+      infinite alternate;
+  }
+
+
+
+
+
+@keyframes bop {
+  0% {
+    transform: scale(0.9);
+  }
+  50%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bopB {
+  0% {
+    transform: scale(0.9);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotateZ(-3deg);
+  }
+}
+#bigbanner{
+  display: block;
+}
+#smallbanner{
+  display: none;
+
+}
+
+
+#smallcollapse{
+  display: none;
+
+}
+#bigcollapse {
+  display: block;
+}
 @media (max-width: 767px){
   html, body, #root, #root>div {
     background:black;
     background-image:url("https://i2.wp.com/www.handsomephantom.com/wp-content/uploads/2017/07/Space-Wallpapers-HD-Wallpapers-Art-Prints-Posters-Desktop.jpg?fit=2048%2C1130&ssl=1");
-    
-  
     background-size: cover; 
     animation: not;
     background-position:-100% -100%;}
+   
 }
+@media (max-width: 1366px){
+  
+    #bigcollapse {
+      display: none;
+    }
+    #smallcollapse{
+      display: block;
+    }
+    #bigbanner{
+      display: none;
+    }
+    #smallbanner{
+      display: flex;
 
+    }
+}
 @keyframes darkrise {
-    0%{
-      
+    0%{      
       background-size: 100%; 
     }  
     50%{
@@ -33,25 +107,21 @@ html, body, #root, #root>div {
       background-size: 150%; 
       }
     100%{
- 
       background-size: 100%;
     }
   }
   @keyframes dark {
     0%{
       transform: scale(0.75);
-     
-      
     }  
     50%{
       transform: scale(0.85);
-    
       }
     100%{
       transform: scale(1);
-      
     }
   }
+
 .hoss{
   font-family: 'Changa', sans-serif;
   align-items: center;
@@ -67,9 +137,7 @@ html, body, #root, #root>div {
   color :white;
   font-size: 3.5rem;
   margin-bottom: 30%;
-  
 }
-
 
 .textCard{
   color :white;
@@ -79,14 +147,12 @@ html, body, #root, #root>div {
   margin-left: 10%;
 }
 
-
 .textCardtwo{
   color :white;
   width: 100%;
   font-size:1.9rem;
   margin-top: 5rem;
-  padding: 2rem;
-  
+  padding: 2rem; 
 }
 
 #hossik{
@@ -101,26 +167,19 @@ html, body, #root, #root>div {
     color: rgb(255, 220, 0);
     font-weight: bold;
     z-index: -1;
-   
-
 }
 
 .btn-circle.btn-xl {
   top: 2%;
-  width: 15vw;
+  width: 25vh;
   height: 10vh;
   padding: 10px 16px;
   border-radius: 35px;
-  font-size: 24px;
   border: none;
   outline: none;
   cursor: pointer;
   transition: background-color 350ms;
-  
 }
-
-
-
 
 .links{
   color: inherit;
@@ -198,9 +257,9 @@ section.route-section {
   border-radius: 35px;
   margin-right: 100%;
 }
+
 .intro-transition-enter{
   opacity: 0.05;
-  
 }
 
 .intro-transition-enter-active{
@@ -288,43 +347,43 @@ section.route-section {
 .list-transition-enter,
 .list-transition-appear {
   /*We give the list the initial dimension of the list button*/
-   width: 7.5rem;
+   width: 102.5vw;
    transition: all 900ms;
-  max-height: 2.5rem;
-  bottom: 4.75rem;
-  left: 2.5rem;
+  max-height: 20.5vh;
+  bottom: 0rem;
+  left: 0rem;
   color: transparent;
-  transform:   scale(1) 
+  transform:   scale(0) 
   translateY(0)
 }
 /* This is where we can add the transition*/
 .list-transition-enter-active,
 .list-transition-appear-active {
-  width:32.5rem;
-  max-height:  20rem;
+  width:102.5vw;
+  max-height:  20vh;
   transition: all 900ms;
   border-radius: 22.5px;
-  bottom: 2.75rem;
-  left: 2.5rem;
-  transform: scale(1) ;
+  bottom: 0rem;
+  left: 0rem;
+  transform: scale(0) ;
 
 }
 
 /* This fires as soon as the this.state.showList is false */
 .list-transition-exit {
-  width:32.5rem;
-  bottom: 2.75rem;
-  left: 1.5rem;
-  transform:   scale(1) ;
-  max-height: 20rem;
+  width:102.5vw;
+  bottom: 0rem;
+  left: 0rem;
+  transform:   scale(0) ;
+  max-height: 20vh;
   transition: all 900ms;
 }
 /* fires as element leaves the DOM*/
 .list-transition-exit-active {
-  width: 7.5rem;
-  bottom: 2.75rem; 
-   max-height: 2.5rem;
-   transform:   scale(1) translateY(0);
+  width: 102.5vw;
+  bottom: 0rem; 
+  max-height: 20.5vh;
+  transform:   scale(0) translateY(0);
   color: transparent;
   transition: all 900ms;
   border-radius: 27.5px;
@@ -457,6 +516,62 @@ section.route-section {
   background-size: 58px 58px;
   background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
 }
+.signclose {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(
+    ellipse 50% 35% at 50% 50%,
+    #6b1831,
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size:3vh;
+  color: #fff2e6; 
+  text-shadow: 0 0 0.4rem #ffe6f4, 0 0 0.5rem #ff65a5,
+    -0.2rem 0.1rem 1rem #ff65a5, 0.2rem 0.1rem 1rem #ff65ad,
+    0 -0.5rem 2rem #ff24b6, 0 0.5rem 1.5rem #ff2491;
+  animation: shine 2s forwards, flickerclose 3s infinite;
+}
+
+@keyframes secondblinkclose {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #fff2e6; 
+  text-shadow: 0 0 0.4rem #ffe6f4, 0 0 0.5rem #ff65a5,
+    -0.2rem 0.1rem 1rem #ff65a5, 0.2rem 0.1rem 1rem #ff65ad,
+    0 -0.5rem 2rem #ff24b6, 0 0.5rem 1.5rem #ff2491;
+  }
+  28%,
+  33% {
+    color: #ff65a5;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #ff24a4;
+    text-shadow: none;
+  }
+}
+
+.flickerclose {
+  animation: shine 2s forwards, secondblinkclose 3s 2s infinite;
+}
+
+.fast-flickerclose {
+  animation: shine 2s forwards, secondblinkclose 10s 1s infinite;
+}
 
 .sign {
   position: absolute;
@@ -475,8 +590,9 @@ section.route-section {
   left: 50%;
   top: 50%;
   font-family: "Clip";
+  font-weight: bold;
   text-transform: uppercase;
-  font-size:2.5vmin;
+  font-size:3vh;
   color: #e6fffb; 
   text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
     -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
@@ -505,6 +621,7 @@ section.route-section {
     text-shadow: none;
   }
 }
+
 
 .flicker {
   animation: shine 2s forwards, secondblink 3s 2s infinite;
