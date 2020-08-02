@@ -7,23 +7,21 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
-.containerIframe {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
+#imgcover{
+  background:rgba(41,41,41, 0.9) ;
+  z-index: 100;   
 
-/* Then style the iframe to fit in the container div with full height and width */
-.responsiveIframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 25em;
-  height: 50em;
-}
 
+}
+.img {
+  border-radius: 65px ;
+  height: 30vh;
+  width:30vw;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  z-index: -1;   
+
+}
 #smallcard{
   width:85vw;
   height: 77vh;
