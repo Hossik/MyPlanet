@@ -13,10 +13,8 @@ export const StyledMenu = styled.nav`
   left: 0;
   border-radius: 0% 45% 45% 0%;
   transition: transform 0.3s ease-in-out;
-  
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
-  }
+
+ 
   span{
     justify-content: start;
     @media (max-width: ${({ theme }) => theme.mobile}) {

@@ -6,17 +6,14 @@ export const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
-  @media (max-width: 1023px) {
-    width: 2rem;
-    height: 2rem;
-  }
+ 
   
  
   &:focus {
@@ -24,8 +21,8 @@ export const StyledBurger = styled.button`
   }
 
   div {
-    width: 4rem;
-    height: 0.50rem;
+    width: 3rem;
+    height: 0.35rem;
     background: ${({ theme, open }) => open ? theme.close : theme.open};
     border-radius: 20px;
     transition: all 0.3s linear;
@@ -52,10 +49,7 @@ export const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
-    @media (max-width: 1023px) {
-      width: 2rem;
-      height: 0.25rem;
-    }
+    
     
   }
 `;

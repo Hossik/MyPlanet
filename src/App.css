@@ -7,6 +7,23 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
+.containerIframe {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsiveIframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 25em;
+  height: 50em;
+}
+
 #smallcard{
   width:85vw;
   height: 77vh;
@@ -136,7 +153,14 @@ html, body, #root, #root>div {
   font-size: 3.5rem;
   margin-bottom: 30%;
 }
-
+/* @media (max-width: 685px){
+  #card{overflow-y: auto}
+  #smallcard{overflow-y: auto}
+}
+@media (max-height: 830px){
+  #card{overflow-y: auto}
+  #smallcard{overflow-y: auto}
+} */
 .textCard{
   color :white;
   width: 100%;

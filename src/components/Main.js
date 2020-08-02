@@ -10,7 +10,6 @@ import { TransitionGroup, CSSTransition }from 'react-transition-group';
 import { Test } from './TestComponent';
 import Header from './Header';
 import AboutMe from './About';
-import Footer from './Footer';
 class Main extends Component {
   constructor(props) {
     
@@ -61,7 +60,7 @@ class Main extends Component {
       }
 
   render() {
-   console.log("state.collapseID" ,this.state.collapseID)
+   console.log("height" ,this.state.height)
   return (
       
   <React.Fragment className="container">
@@ -74,7 +73,7 @@ class Main extends Component {
       <i> <Test
       isOpen={this.state.collapseID}/></i>    
     </MDBBtn> : <div></div>}
-    {this.state.width>1366?
+    {this.state.width>835?
     <CSSTransition
           in={this.state.collapseID}
           timeout={300}
@@ -88,14 +87,14 @@ class Main extends Component {
     <div className=" list-body"  >
           
         <Card  id="card" >
-          <Header id="head"/>
+          <Header id="head" width={this.state.width} />
           <div >
           <TransitionGroup  >
             <CSSTransition  key={this.props.location.pathname} classNames="fade" timeout={{ enter: 300, exit: 300 }}>
             <section className="route-section">
           <Switch location={this.props.location}>
-            <Route  path="/home" component={Home} />
-            <Route path="/about" component={AboutMe} />
+          <Route exact path="/home" render={(props) => <Home {...props} height={this.state.height} width={this.state.width} collapseID={this.state.collapseID}/>} /> 
+            <Route exact path="/about" render={(props) => <AboutMe {...props} height={this.state.height} width={this.state.width} />} />            
             <Route path="/tools" component={Tools} />
             <Route path="/contacts" component={Contacts} />
             <Redirect to="/home" />
@@ -105,10 +104,7 @@ class Main extends Component {
           </CSSTransition>
           </TransitionGroup>
           </div>
-          <div className=" footerbox">
           
-          <Footer/>
-          </div>
         </Card>
       </div>
     
@@ -118,14 +114,15 @@ class Main extends Component {
     
     <MDBCollapse id="basicCollapse" isOpen={this.state.collapseID}>
         <Card  id="smallcard" >
-          <Header id="head"/>
+          <Header id="head" width={this.state.width}/>
           <div >
           <TransitionGroup  >
             <CSSTransition  key={this.props.location.pathname} classNames="fade" timeout={{ enter: 300, exit: 300 }}>
             <section className="route-section">
           <Switch location={this.props.location}>
-            <Route  path="/home"  component={Home } />
-            <Route path="/about" component={AboutMe} />
+            
+          <Route exact path="/home" render={(props) => <Home {...props} height={this.state.height} width={this.state.width} collapseID={this.state.collapseID}/>} />
+            <Route exact path="/about" render={(props) => <AboutMe {...props} height={this.state.height} width={this.state.width} />} />
             <Route path="/tools" component={Tools} />
             <Route path="/contacts" component={Contacts} />
             <Redirect to="/home" />
