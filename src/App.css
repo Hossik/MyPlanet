@@ -29,12 +29,12 @@ html, body, #root, #root>div {
   border-radius: 15px ;
   height: 30vh;
   width:20vw;
-  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/web.jpeg);
+  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/myplanet.jpeg);
   background-repeat: no-repeat;
-  -webkit-transition:  all .2s ease-in-out;;
-  -moz-transition: all .2s ease-in-out;;
+  -webkit-transition:  all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;;
-  background-color: rgb(80, 25, 233);
+  background-color: rgb(233, 195, 25);
   background-size: 100% 100%;
   display: table-cell;
   vertical-align: middle;
@@ -55,13 +55,34 @@ html, body, #root, #root>div {
   text-justify: inter-word;
   font-size: 0.5em;
 }
+.textImgtwo{
+  visibility: hidden;
+  width: 20vw;
+  height: auto;
+  min-height: auto;
+  display: inline-block;
+  color: rgb(31, 30, 28);
+    margin: 0 auto;
+    border-right-width: 100px;
+    position: relative;
+  text-align: center;
+  text-justify: inter-word;
+  font-size: 0.5em;
+}
+.imgtwo:hover .textImgtwo{
+  visibility: visible;
+  }
+  .imgtwo:hover{
+  
+    background-image:  url(https://aw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
+    
+  }
 .img:hover .textImg{
   visibility: visible;
-
   }
 .img:hover{
   
-  background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/aaa.jpeg);
+  background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
   
 }
 #visit{
