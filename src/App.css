@@ -11,7 +11,7 @@ html, body, #root, #root>div {
 
 .img{ border-radius: 15px ;
   height: 30vh;
-  width:30vw;
+  width:20vw;
   background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/web.jpeg);
   background-repeat: no-repeat;
   -webkit-transition:  all .2s ease-in-out;;
@@ -19,16 +19,31 @@ html, body, #root, #root>div {
   transition: all .2s ease-in-out;;
   background-color: rgb(80, 25, 233);
   background-size: 100% 100%;
-  position: relative;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   min-height: auto;
 
 }
+.imgtwo{
+  border-radius: 15px ;
+  height: 30vh;
+  width:20vw;
+  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/web.jpeg);
+  background-repeat: no-repeat;
+  -webkit-transition:  all .2s ease-in-out;;
+  -moz-transition: all .2s ease-in-out;;
+  transition: all .2s ease-in-out;;
+  background-color: rgb(80, 25, 233);
+  background-size: 100% 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  min-height: auto;
+}
 .textImg{
   visibility: hidden;
-  width: 30vw;
+  width: 20vw;
   height: auto;
   min-height: auto;
   display: inline-block;
