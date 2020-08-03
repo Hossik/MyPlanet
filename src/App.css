@@ -7,20 +7,50 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
-#imgcover{
-  background:rgba(41,41,41, 0.9) ;
-  z-index: 100;   
 
 
-}
-.img {
-  border-radius: 65px ;
+.img{ border-radius: 15px ;
   height: 30vh;
   width:30vw;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  z-index: -1;   
+  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/web.jpeg);
+  background-repeat: no-repeat;
+  -webkit-transition:  all .2s ease-in-out;;
+  -moz-transition: all .2s ease-in-out;;
+  transition: all .2s ease-in-out;;
+  background-color: rgb(80, 25, 233);
+  background-size: 100% 100%;
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  min-height: auto;
 
+}
+.textImg{
+  visibility: hidden;
+  width: 30vw;
+  height: auto;
+  min-height: auto;
+  display: inline-block;
+  color: wheat;
+    margin: 0 auto;
+    border-right-width: 100px;
+    position: relative;
+  text-align: center;
+  text-justify: inter-word;
+  font-size: 0.5em;
+}
+.img:hover .textImg{
+  visibility: visible;
+
+  }
+.img:hover{
+  
+  background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/aaa.jpeg);
+  
+}
+#visit{
+  background-color: rgb(30, 255, 0);
 }
 #smallcard{
   width:85vw;
