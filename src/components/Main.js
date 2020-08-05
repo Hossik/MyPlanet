@@ -59,10 +59,9 @@ class Main extends Component {
       }
 
   render() {
-   console.log("height" ,this.state.height)
   return (
       
-  <div className="container">
+  <React.Fragment className="container">
    
 
    
@@ -103,7 +102,7 @@ class Main extends Component {
     
     
 
-  </div>
+  </React.Fragment>
     )
   }
 }
