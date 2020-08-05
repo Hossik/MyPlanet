@@ -15,7 +15,7 @@ const AboutMe = (props) => {
       <MDBTableHead  style={{color:"red",fontFamily :"Metal" }}>
        
           
-          <th style={{fontSize: (props.width <1596 || props.height <750 )? "0.75em" : "1em" }}>What i Do</th>
+          <th style={{fontSize: (props.width <1596 || props.height <750 )? "0.75em" : "1em" }}>What do I do</th>
         
       </MDBTableHead>
       <MDBTableBody style={{color:"white"}}>
@@ -32,7 +32,7 @@ const AboutMe = (props) => {
           <tr>
           
           <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Front-end Development :</span><br/>
-        I like to code things from scratch, and enjoy bringing ideas to life in the browser.To solve problems, I use React and with the help of Redux in some cases. </td>
+        I like to code things from scratch, and enjoy bringing ideas to life in the browser.To solve problems, I usually use React but in some cases, I resort to the use of Redux. </td>
           
         </tr>
         
@@ -40,7 +40,7 @@ const AboutMe = (props) => {
       <MDBTableHead  style={{color:"red",fontFamily :"Metal" }}>
        
           
-      <th style={{fontSize: (props.width <1596 || props.height <750 )? "0.75em" : "1em"  }}>How i Do</th>
+      <th style={{fontSize: (props.width <1596 || props.height <750 )? "0.75em" : "1em"  }}>How do I do</th>
         
       </MDBTableHead>
       <MDBTableBody style={{color:"white"}}>
@@ -67,7 +67,7 @@ const AboutMe = (props) => {
           
    
          <div>
-        <div style={{color:"red",fontFamily :"Metal" ,fontSize:"1em",textAlign:"center",alignItems:"center"}}>What i Do</div>
+        <div style={{color:"red",fontFamily :"Metal" ,fontSize:"1em",textAlign:"center",alignItems:"center"}}>What do I do</div>
             
      <MDBTable  borderless  style={{ marginTop:"1vh", width: "80vw"}}> 
       <MDBTableBody style={{color:"white"}}>
@@ -84,13 +84,13 @@ const AboutMe = (props) => {
        
           
           <td style={{width:"28.33vw", fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Front-end Development :</span><br/>
-          I like to code things from scratch, and enjoy bringing ideas to life in the browser.To solve problems, I use React and with the help of Redux in some cases. </td>
+          I like to code things from scratch, and enjoy bringing ideas to life in the browser.To solve problems, I usually use React but in some cases, I resort to the use of Redux. </td>
         </tr>
          
       
       </MDBTableBody>
     </MDBTable>
-    <div style={{color:"red",fontFamily :"Metal" ,fontSize:"1em",textAlign:"center",alignItems:"center"}}>How i Do</div>
+    <div style={{color:"red",fontFamily :"Metal" ,fontSize:"1em",textAlign:"center",alignItems:"center"}}>How do I do</div>
             
      <MDBTable  borderless  style={{ marginTop:"1vh", width: "80vw"}}> 
       <MDBTableBody style={{color:"white"}}>

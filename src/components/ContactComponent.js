@@ -30,7 +30,7 @@ export const Contacts = () => {
       
       <div className="col-12 infobtn">
         <div className="btn-group" role="group">
-        <ExternalLink href='https://wa.me/380995215245?text=urlencodedtext' ><button className="btn-con btn-success" title="whatsapp"><i class="iconcon fab fa-whatsapp"></i> </button></ExternalLink>
+        <ExternalLink href='https://wa.me/380995215245?text= Hello, create a website for me' ><button className="btn-con btn-success" title="whatsapp"><i class="iconcon fab fa-whatsapp"></i> </button></ExternalLink>
         <ExternalLink href='viber://chat?number=380995215245' ><button  type="button" className="btn-con viber"title="viber"><i class="iconcon fab fa-viber"></i> </button></ExternalLink>
         <ExternalLink href='https://telegram.im/@Hoss2Zedd' ><button className="btn-con btn-primary"title="telegram" ><i class="iconcon fab fa-telegram-plane"></i> </button></ExternalLink>
         </div>

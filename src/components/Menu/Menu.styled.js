@@ -24,7 +24,7 @@ export const StyledMenu = styled.nav`
     }
   }
   .links {
-    font-size: 0.8em;
+    font-size: 0.6em;
     text-transform: uppercase;
     padding: 2vh 0;
     font-weight: bold;
@@ -41,14 +41,12 @@ export const StyledMenu = styled.nav`
       
       justify-content: start;
     }
-    @media (max-height:450) {
-      font-size: 0.3em;
-      
-     
+    @media (max-height:450px) {
+      font-size: 0.5em;
     }
     &:hover {
-        color: rgb(233, 212, 25);
-        filter: drop-shadow(3px 3px 10px  rgb(0, 238, 255));
+        color:green;
+       
       }
     }
     transform: translateX(-100%);

@@ -7,7 +7,7 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
-@media(max-width: 835px){
+@media(max-width: 425px){
   html, body, #root, #root>div {
   animation: none;
   }
@@ -28,9 +28,15 @@ html, body, #root, #root>div {
     font-size: 1em;
   }
   .infobtn{
-    margin-top: 20vh;
+    margin-top: 5vh;
   }
 }
+@media(max-width: 425px){
+  .infobtn{
+    margin-top: 1vh;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5vw;
   max-width: 30px;
@@ -348,6 +354,12 @@ html, body, #root, #root>div {
   border: none;
   outline: none;
   cursor: pointer;
+}
+@media(max-width: 320px){
+  .btn-con{
+    width: 60px;
+  height: 60px;
+  }
 }
 .viber{
   background-color: Indigo;
