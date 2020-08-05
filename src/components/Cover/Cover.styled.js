@@ -111,9 +111,26 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100em;
   
 }
+@media only screen and (max-device-width: 825px) and (orientation: landscape){
+  .light-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30em;
+  }
+}
+@media (max-height: 500px){
+  .light-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30em;
+    }
+}
+
 
 
 .dark-wrapper-design {

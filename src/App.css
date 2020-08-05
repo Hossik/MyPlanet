@@ -1,3 +1,26 @@
+::-webkit-scrollbar {
+  width: 5vw;
+  max-width: 30px;
+
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #13133d; 
+  border-radius: 35px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #4444dd; 
+  border-radius: 35px;
+  height: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7676ff; 
+}
 html, body, #root, #root>div {
   background:black;
   background-image:url("https://i2.wp.com/www.handsomephantom.com/wp-content/uploads/2017/07/Space-Wallpapers-HD-Wallpapers-Art-Prints-Posters-Desktop.jpg?fit=2048%2C1130&ssl=1");
@@ -6,7 +29,7 @@ html, body, #root, #root>div {
   darkrise 90s ease infinite alternate, 
   dark 10s linear  alternate;
   
-  overflow-y: auto;
+  
   
 } 
 @media(max-width: 425px){
@@ -14,12 +37,10 @@ html, body, #root, #root>div {
   animation: none;
   }
 }
-@media only screen and (max-device-width: 819px) 
-                   and (orientation: landscape) {
-
-                    html, body, #root, #root>div {
-                      animation: none;
-                      }
+@media only screen and (max-device-width: 819px) and (orientation: landscape) {
+  html, body, #root, #root>div {
+    animation: none;
+    }
 }
 
 .contact{
@@ -46,29 +67,7 @@ html, body, #root, #root>div {
   }
 }
 
-::-webkit-scrollbar {
-  width: 5vw;
-  max-width: 30px;
 
-}
-
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #13133d; 
-  border-radius: 35px;
-}
- 
-
-::-webkit-scrollbar-thumb {
-  background: #4444dd; 
-  border-radius: 35px;
-  height: 20px;
-}
-
-
-::-webkit-scrollbar-thumb:hover {
-  background: #7676ff; 
-}
 #projects{
   height: 65vh;
   margin-left:20vw;
@@ -304,6 +303,7 @@ html, body, #root, #root>div {
 #card{
   width:85vw;
   height: 77vh;
+  min-height: 7em;
   background:rgba(41,41,41, 0.9) ;
   border-radius: 35px ;
   color :white;

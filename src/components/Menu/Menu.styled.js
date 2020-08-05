@@ -6,7 +6,6 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background: rgba(184, 176, 176);
   height: 77vh;
-  min-height: 250px;
   text-align: left;
   padding: 2rem;
   position: fixed;

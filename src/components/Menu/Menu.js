@@ -19,9 +19,9 @@ const Menu = ({ open, setOpen }) => {
         <i class="fas fa-atom">Works</i>
         </Link>
         
-        <Link  className="links" to="/contacts" onClick={() => setOpen(!open)}>
-        <i class="far fa-address-book">contact</i>
-        </Link>
+      <Link  className="links" to="/contacts" onClick={() => setOpen(!open)}>
+      <i class="far fa-address-book">contact</i>
+      </Link>
     </StyledMenu>
   )
 }
