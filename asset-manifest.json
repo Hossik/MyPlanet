@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/MyPlanet/static/css/main.4db673f2.chunk.css",
-    "main.js": "/MyPlanet/static/js/main.eb12fe33.chunk.js",
-    "main.js.map": "/MyPlanet/static/js/main.eb12fe33.chunk.js.map",
-    "runtime-main.js": "/MyPlanet/static/js/runtime-main.ceebb0a9.js",
-    "runtime-main.js.map": "/MyPlanet/static/js/runtime-main.ceebb0a9.js.map",
-    "static/css/2.29a4ee6f.chunk.css": "/MyPlanet/static/css/2.29a4ee6f.chunk.css",
-    "static/js/2.e2ab02ea.chunk.js": "/MyPlanet/static/js/2.e2ab02ea.chunk.js",
-    "static/js/2.e2ab02ea.chunk.js.map": "/MyPlanet/static/js/2.e2ab02ea.chunk.js.map",
-    "index.html": "/MyPlanet/index.html",
-    "precache-manifest.1e5736cfad428eea73952000068b2bf5.js": "/MyPlanet/precache-manifest.1e5736cfad428eea73952000068b2bf5.js",
-    "service-worker.js": "/MyPlanet/service-worker.js",
-    "static/css/2.29a4ee6f.chunk.css.map": "/MyPlanet/static/css/2.29a4ee6f.chunk.css.map",
-    "static/css/main.4db673f2.chunk.css.map": "/MyPlanet/static/css/main.4db673f2.chunk.css.map",
-    "static/js/2.e2ab02ea.chunk.js.LICENSE.txt": "/MyPlanet/static/js/2.e2ab02ea.chunk.js.LICENSE.txt",
-    "static/media/mdb.css": "/MyPlanet/static/media/arrow_right.8ef6a08c.svg",
-    "static/media/all.min.css": "/MyPlanet/static/media/fa-solid-900.ec763292.svg",
-    "static/media/font-awesome.css": "/MyPlanet/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/myplanet/static/css/main.f16ade26.chunk.css",
+    "main.js": "/myplanet/static/js/main.b33f660b.chunk.js",
+    "main.js.map": "/myplanet/static/js/main.b33f660b.chunk.js.map",
+    "runtime-main.js": "/myplanet/static/js/runtime-main.20576a99.js",
+    "runtime-main.js.map": "/myplanet/static/js/runtime-main.20576a99.js.map",
+    "static/css/2.917078ec.chunk.css": "/myplanet/static/css/2.917078ec.chunk.css",
+    "static/js/2.c3c8fabb.chunk.js": "/myplanet/static/js/2.c3c8fabb.chunk.js",
+    "static/js/2.c3c8fabb.chunk.js.map": "/myplanet/static/js/2.c3c8fabb.chunk.js.map",
+    "index.html": "/myplanet/index.html",
+    "precache-manifest.da4ba1d00e4d7a5c7b14c97d8a67ea47.js": "/myplanet/precache-manifest.da4ba1d00e4d7a5c7b14c97d8a67ea47.js",
+    "service-worker.js": "/myplanet/service-worker.js",
+    "static/css/2.917078ec.chunk.css.map": "/myplanet/static/css/2.917078ec.chunk.css.map",
+    "static/css/main.f16ade26.chunk.css.map": "/myplanet/static/css/main.f16ade26.chunk.css.map",
+    "static/js/2.c3c8fabb.chunk.js.LICENSE.txt": "/myplanet/static/js/2.c3c8fabb.chunk.js.LICENSE.txt",
+    "static/media/mdb.css": "/myplanet/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/myplanet/static/media/fa-solid-900.ec763292.svg",
+    "static/media/font-awesome.css": "/myplanet/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.ceebb0a9.js",
-    "static/css/2.29a4ee6f.chunk.css",
-    "static/js/2.e2ab02ea.chunk.js",
-    "static/css/main.4db673f2.chunk.css",
-    "static/js/main.eb12fe33.chunk.js"
+    "static/js/runtime-main.20576a99.js",
+    "static/css/2.917078ec.chunk.css",
+    "static/js/2.c3c8fabb.chunk.js",
+    "static/css/main.f16ade26.chunk.css",
+    "static/js/main.b33f660b.chunk.js"
   ]
 }
