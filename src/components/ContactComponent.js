@@ -4,7 +4,6 @@ import { ExternalLink } from 'react-external-link';
 
 export const Contacts = () => {
   
-  
   return (
 
   <div className="contact" >
