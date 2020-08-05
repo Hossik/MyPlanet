@@ -14,8 +14,7 @@ export const StyledMenu = styled.nav`
   left: 0;
   border-radius: 35px 45% 45% 35px;
   transition: transform 0.3s ease-in-out;
-
- 
+  
   span{
     justify-content: start;
     @media (max-width: ${({ theme }) => theme.mobile}) {
