@@ -7,6 +7,12 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
+@media(max-width: 835px){
+  html, body, #root, #root>div {
+  animation: none;
+  }
+}
+
 .contact{
   margin: auto;
   width: 86vw;
