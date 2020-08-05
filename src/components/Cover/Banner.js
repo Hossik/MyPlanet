@@ -204,8 +204,6 @@ updateWindowDimensions() {
    
     console.log("width:", this.state.width)
   return (
-    
-   
     <div className= "dark-wrapper-design"> 
     
     <div className="container">
