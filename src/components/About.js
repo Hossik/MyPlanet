@@ -46,14 +46,14 @@ const AboutMe = (props) => {
       <MDBTableBody style={{color:"white"}}>
        
           <tr>
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Languages :</span> <br/> <i class="fab fa-html5"></i>HTML  &nbsp; <i class="fab fa-css3-alt"></i> CSS  &nbsp;  <i class="fab fa-sass"></i> Sass &nbsp; <i class="fab fa-js"></i> JavaScript &nbsp;</td>
+          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Languages :</span> <br/> <i classNameName="fab fa-html5"></i>HTML  &nbsp; <i className="fab fa-css3-alt"></i> CSS  &nbsp;  <i className="fab fa-sass"></i> Sass &nbsp; <i className="fab fa-js"></i> JavaScript &nbsp;</td>
           </tr>
           
           
           
           <tr>
           
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Frameworks and Libraries : </span> <br/><i class="fab fa-bootstrap"></i>    BootStrap   &nbsp; <i class="fab fa-react"></i>  React + Redux </td>
+          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Frameworks and Libraries : </span> <br/><i className="fab fa-bootstrap"></i>    BootStrap   &nbsp; <i className="fab fa-react"></i>  React + Redux </td>
           
         </tr>
         
@@ -96,9 +96,9 @@ const AboutMe = (props) => {
       <MDBTableBody style={{color:"white"}}>
        
           <tr>
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Languages :</span> <br/> <i class="fab fa-html5"></i>HTML  &nbsp; <i class="fab fa-css3-alt"></i> CSS  &nbsp;  <i class="fab fa-sass"></i> Sass &nbsp; <i class="fab fa-js"></i> JavaScript &nbsp;</td>
+          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Languages :</span> <br/> <i className="fab fa-html5"></i>HTML  &nbsp; <i className="fab fa-css3-alt"></i> CSS  &nbsp;  <i className="fab fa-sass"></i> Sass &nbsp; <i className="fab fa-js"></i> JavaScript &nbsp;</td>
        
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Frameworks and Libraries : </span> <br/><i class="fab fa-bootstrap"></i>    BootStrap   &nbsp; <i class="fab fa-react"></i>  React + Redux </td>
+          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Frameworks and Libraries : </span> <br/><i className="fab fa-bootstrap"></i>    BootStrap   &nbsp; <i className="fab fa-react"></i>  React + Redux </td>
         </tr>
          
       

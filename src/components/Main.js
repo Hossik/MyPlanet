@@ -62,7 +62,7 @@ class Main extends Component {
    console.log("height" ,this.state.height)
   return (
       
-  <React.Fragment className="container">
+  <div className="container">
    
 
    
@@ -103,7 +103,7 @@ class Main extends Component {
     
     
 
-  </React.Fragment>
+  </div>
     )
   }
 }

@@ -21,9 +21,9 @@ svg {
 
 .linkedmobile{
   font-size: 1em;
- font-family: 'Codystar';
+ font-family: 'Righteous';
  font-weight: bold;
- fill: #fff;
+ fill: #DEBF40;
 }
 
 .neonsmobile{
