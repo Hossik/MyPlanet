@@ -8,17 +8,17 @@ const Menu = ({ open, setOpen }) => {
     <StyledMenu open={open}>
       <Link className="links" to="/about" onClick={() => setOpen(!open)}>
         
-        <span  id="fo">About</span><img id="me" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" />
+      <i class="fas fa-address-card">About</i>
       </Link>
       
       
       <Link  className="links" to="/tools" onClick={() => setOpen(!open)}>
-        <i class="fas fa-atom"></i>
-        Works
+        <i class="fas fa-atom">Works</i>
+        
         </Link>
         <Link  className="links" to="/contacts" onClick={() => setOpen(!open)}>
-        <span role="img" aria-label="contact">&#x1f4e9;</span>
-        Contact
+        <i class="far fa-address-book">
+        Contact</i>
         </Link>
     </StyledMenu>
   )

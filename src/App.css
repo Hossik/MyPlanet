@@ -7,40 +7,96 @@ html, body, #root, #root>div {
   dark 10s linear  alternate;
   background-position:-100% -100%;
 } 
+.contact{
+  margin: auto;
+  width: 86vw;
+  font-size: 1.5em;
+}
 
-
-.img{ border-radius: 15px ;
-  height: 30vh;
-  width:20vw;
-  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/web.jpeg);
-  background-repeat: no-repeat;
-  -webkit-transition:  all .2s ease-in-out;;
-  -moz-transition: all .2s ease-in-out;;
-  transition: all .2s ease-in-out;;
-  background-color: rgb(80, 25, 233);
-  background-size: 100% 100%;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  min-height: auto;
+.adress{
+  font-size: 0.5em;
+}
+@media(max-width: 835px){
+  .contact{
+   
+    font-size: 1em;
+  }
+  .infobtn{
+    margin-top: 20vh;
+  }
+}
+::-webkit-scrollbar {
+  width: 5vw;
+  max-width: 30px;
 
 }
-.imgtwo{
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #13133d; 
+  border-radius: 35px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+  background: #4444dd; 
+  border-radius: 35px;
+  height: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7676ff; 
+}
+#projects{
+  height: 65vh;
+  margin-left:20vw;
+  margin-top:10vh;
+}
+@media (max-width: 835px){
+  #projects{
+    margin-left:20vw;
+    margin-top:1vh;
+  }
+
+}
+
+
+.img{ 
+  width: 20vw;
   border-radius: 15px ;
-  height: 30vh;
-  width:20vw;
-  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/myplanet.jpeg);
-  background-repeat: no-repeat;
+  height: 300px;
+  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/web.jpeg);
+  background-size: contain;
+  background-repeat:   no-repeat;
+  background-position: center center;
   -webkit-transition:  all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;;
-  background-color: rgb(233, 195, 25);
+  transition: all .2s ease-in-out;
   background-size: 100% 100%;
-  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  min-height: auto;
+
+}
+
+.imgtwo{
+  width: 20vw;
+  border-radius: 15px ;
+  height: 300px;
+  background-image: url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/myplanet.png);
+  background-size: contain;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  -webkit-transition:  all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  background-size: 100% 100%;
   vertical-align: middle;
   text-align: center;
   min-height: auto;
 }
+
 .textImg{
   visibility: hidden;
   width: 20vw;
@@ -48,55 +104,63 @@ html, body, #root, #root>div {
   min-height: auto;
   display: inline-block;
   color: wheat;
-    margin: 0 auto;
-    border-right-width: 100px;
-    position: relative;
+  margin: 0 auto;
+  position: relative;
   text-align: center;
   text-justify: inter-word;
   font-size: 0.5em;
 }
 .textImgtwo{
-  visibility: hidden;
   width: 20vw;
+  visibility: hidden;
   height: auto;
   min-height: auto;
   display: inline-block;
   color: rgb(31, 30, 28);
-    margin: 0 auto;
-    border-right-width: 100px;
-    position: relative;
+  margin: 0 auto;
+  position: relative;
   text-align: center;
   text-justify: inter-word;
   font-size: 0.5em;
 }
+
 .imgtwo:hover .textImgtwo{
   visibility: visible;
   }
-  .imgtwo:hover{
+.imgtwo:hover{
+  background-color: rgb(233, 195, 25);
+  background-image:  url(https://aw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
   
-    background-image:  url(https://aw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
-    
-  }
+}
 .img:hover .textImg{
   visibility: visible;
   }
 .img:hover{
-  
+  background-color: rgb(80, 25, 233);
   background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
   
 }
+@media (max-width: 835px){
+  .img {
+    width: 50vw;
+  }
+  .imgtwo{
+    width: 50vw;
+    margin-top: 5vh;
+  }
+  .textImg{
+    width: 40vw;
+  }
+  .textImgtwo{
+    width: 40vw;
+  }
+
+}
+
 #visit{
   background-color: rgb(30, 255, 0);
 }
-#smallcard{
-  width:85vw;
-  height: 77vh;
-  background:rgba(41,41,41, 0.9) ;
-  border-radius: 35px ;
-  color :white;
-  font-size: 3.5rem;
-  margin-bottom: 30%;
-}
+
 
 
 .reddittex {
@@ -157,15 +221,7 @@ html, body, #root, #root>div {
 
 
 
-@media (max-width: 767px){
-  html, body, #root, #root>div {
-    background:black;
-    background-image:url("https://i2.wp.com/www.handsomephantom.com/wp-content/uploads/2017/07/Space-Wallpapers-HD-Wallpapers-Art-Prints-Posters-Desktop.jpg?fit=2048%2C1130&ssl=1");
-    background-size: cover; 
-    animation: not;
-    background-position:-100% -100%;}
-   
-}
+
 @media (max-width: 1366px){
   
     
@@ -217,6 +273,7 @@ html, body, #root, #root>div {
   font-size: 3.5rem;
   margin-bottom: 30%;
 }
+
 /* @media (max-width: 685px){
   #card{overflow-y: auto}
   #smallcard{overflow-y: auto}
@@ -241,6 +298,13 @@ html, body, #root, #root>div {
   padding: 2rem; 
 }
 
+  #card{
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+
+
 #hossik{
     font-size:3vmin ;
     color: rgb(233, 25, 25);
@@ -258,7 +322,9 @@ html, body, #root, #root>div {
 .btn-circle.btn-xl {
   top: 2%;
   width: 25vh;
+  min-width: 200px;
   height: 10vh;
+  min-height: 60px;
   padding: 10px 16px;
   border-radius: 35px;
   border: none;
@@ -266,7 +332,23 @@ html, body, #root, #root>div {
   cursor: pointer;
   transition: background-color 350ms;
 }
-
+.btn-con {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+ margin-right: 2vw;
+  font-size: 22px;
+  border-radius: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.viber{
+  background-color: Indigo;
+}
+.iconcon{
+  font-size: 42px;
+}
 .links{
   color: inherit;
   text-decoration: inherit;
@@ -333,8 +415,8 @@ section.route-section {
 }
 
 #man{
-  height: 8vmin;
-  width: 8vmin;
+  height: 5rem;
+  width: 5rem;
   border-radius: 35px;
 }
 #me{
@@ -621,7 +703,7 @@ section.route-section {
   font-family: "Clip";
   font-weight: bold;
   text-transform: uppercase;
-  font-size:3vh;
+  font-size:1.80em;
   color: #fff2e6; 
   text-shadow: 0 0 0.4rem #ffe6f4, 0 0 0.5rem #ff65a5,
     -0.2rem 0.1rem 1rem #ff65a5, 0.2rem 0.1rem 1rem #ff65ad,
@@ -678,7 +760,7 @@ section.route-section {
   font-family: "Clip";
   font-weight: bold;
   text-transform: uppercase;
-  font-size:3vh;
+  font-size:1.80em;
   color: #e6fffb; 
   text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
     -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,

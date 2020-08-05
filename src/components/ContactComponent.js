@@ -1,53 +1,46 @@
-import React, { Component } from 'react';
-import Typist from 'react-typist';
+import React from 'react';
+import {Breadcrumb, BreadcrumbItem } from 'reactstrap'
+import { ExternalLink } from 'react-external-link';
 
-export class Contacts extends Component {
-  state ={
-    blinking : "|" 
-  }
-  blink = () => {
-    this.setState({
-      blinking :"_"
-    })
-  } 
-  blinkFinish = () => {
-    this.setState({
-      blinking :"|"
-    })
-  } 
-  render(){
+
+export const Contacts = () => {
+  
+  
   return (
-    <div >
-    <Typist className="textCard"
-      stdTypingDelay="100" 
-      startDelay="1000"
-      cursor={{
-        show: false
-      }}>
-        <p  id="zir" >
-        Its Me Typist will animate any text 
-        </p>
-    </Typist>
-        <br/>
-      {<Typist  
-      className="textCardtwo"
-      stdTypingDelay="100" 
-      startDelay="2500"
-      cursor={{
-        show: true,
-        blink: true,
-        element: this.state.blinking,
-        hideWhenDone: true,
-        hideWhenDoneDelay: '1000',
-      }}
-      onCharacterTyped={this.blink}
-      onLineTyped={this.blinkFinish}
-      onTypingDone={this.blinkFinish}
-      >        
-      <span >Typist will animate any text present in its descendents. Each text node will be animated</span><Typist.Delay ms={2500} /><Typist.Backspace count={8} delay={200} /><br/><Typist.Delay ms={2500} /><span>as it is encountered in depth-first traversal of the children tree, one after the other.</span>
-      </Typist>}
+
+  <div className="contact" >
+    <div className="row justify-content-center">
+      <div className=" col-12">
+        <h3>Contact Me</h3>
+        <hr />
       </div>
+    </div>
+  
+    <div className="row row-content">
+      
+      <div className="col-12  ">
+        <h5>My Address:</h5>
+        <address className= "adress">
+        Vita Poshtova<br />
+        Kyiv<br />
+        Ukraine<br />
+        <i className="fa fa-phone"></i>: +380 995215245<br />
+        
+        <i className="fa fa-envelope"></i>: <a href="mailto:hossik1983@gmail.com">hossik1983@gmail.com</a>
+        </address>
+      </div>
+      
+      <div className="col-12 infobtn">
+        <div className="btn-group" role="group">
+        <ExternalLink href='https://wa.me/380995215245?text=urlencodedtext' ><button className="btn-con btn-success" title="whatsapp"><i class="iconcon fab fa-whatsapp"></i> </button></ExternalLink>
+        <ExternalLink href='viber://chat?number=380995215245' ><button  type="button" className="btn-con viber"title="viber"><i class="iconcon fab fa-viber"></i> </button></ExternalLink>
+        <ExternalLink href='https://telegram.im/@Hoss2Zedd' ><button className="btn-con btn-primary"title="telegram" ><i class="iconcon fab fa-telegram-plane"></i> </button></ExternalLink>
+        </div>
+      </div>
+    </div>
+   
+    </div>
     )
-  }
+  
 }
 export default Contacts;

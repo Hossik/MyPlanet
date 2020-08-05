@@ -20,10 +20,9 @@ class Main extends Component {
       collapseID: false,
       highlightedHobby: false,
       tbn:false,
-
     };
   };
-
+ 
   listSwitch = () => {
     this.setState(state => ({
       highlightedHobby: !state.highlightedHobby
@@ -73,47 +72,11 @@ class Main extends Component {
       <i> <Test
       isOpen={this.state.collapseID}/></i>    
     </MDBBtn> : <div></div>}
-    {this.state.width>835?
-    <CSSTransition
-          in={this.state.collapseID}
-          timeout={300}
-          classNames="list-transition"
-          unmountOnExit
-          appear
-          onEntered={this.listSwitch}
-          onExit={this.listSwitch}
-        >
-     
-    <div className=" list-body"  >
-          
-        <Card  id="card" >
-          <Header id="head" width={this.state.width} />
-          <div >
-          <TransitionGroup  >
-            <CSSTransition  key={this.props.location.pathname} classNames="fade" timeout={{ enter: 300, exit: 300 }}>
-            <section className="route-section">
-          <Switch location={this.props.location}>
-          <Route exact path="/home" render={(props) => <Home {...props} height={this.state.height} width={this.state.width} collapseID={this.state.collapseID}/>} /> 
-            <Route exact path="/about" render={(props) => <AboutMe {...props} height={this.state.height} width={this.state.width} />} />            
-            <Route path="/tools" component={Tools} />
-            <Route path="/contacts" component={Contacts} />
-            <Redirect to="/home" />
-          </Switch>
-         
-          </section>
-          </CSSTransition>
-          </TransitionGroup>
-          </div>
-          
-        </Card>
-      </div>
     
-    </CSSTransition>
-    :
     
     
     <MDBCollapse id="basicCollapse" isOpen={this.state.collapseID}>
-        <Card  id="smallcard" >
+        <Card  id="card"  >
           <Header id="head" width={this.state.width}/>
           <div >
           <TransitionGroup  >
@@ -138,7 +101,7 @@ class Main extends Component {
       
     
     
-    }
+    
 
   </React.Fragment>
     )

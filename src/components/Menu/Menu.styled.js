@@ -6,12 +6,13 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background: rgba(184, 176, 176);
   height: 77vh;
+  min-height: 250px;
   text-align: left;
   padding: 2rem;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  
   left: 0;
-  border-radius: 0% 45% 45% 0%;
+  border-radius: 35px 45% 45% 35px;
   transition: transform 0.3s ease-in-out;
 
  
@@ -23,7 +24,7 @@ export const StyledMenu = styled.nav`
     }
   }
   .links {
-    font-size: 5vmin;
+    font-size: 0.8em;
     text-transform: uppercase;
     padding: 2vh 0;
     font-weight: bold;
@@ -31,11 +32,19 @@ export const StyledMenu = styled.nav`
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
-    
+    @media  (max-device-width: 850px) and (orientation: landscape) {
+      font-size: 0.5em;
+
+    }
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 0.5em;
       
       justify-content: start;
+    }
+    @media (max-height:450) {
+      font-size: 0.3em;
+      
+     
     }
     &:hover {
         color: rgb(233, 212, 25);

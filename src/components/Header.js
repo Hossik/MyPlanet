@@ -5,8 +5,7 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks';
 
 function Header(props) {
-    const [open, setOpen] = useState(true);
-    const [close, setClose] = useState(false);
+    const [open, setOpen] = useState(false);
 
     const node = useRef(); 
     useOnClickOutside(node, () => setOpen(false));
@@ -18,8 +17,8 @@ function Header(props) {
       <>  
         <div id="head" ref={node} >
         
-        <Burger  open={props.width>835? open : close} setOpen={props.width>835?setOpen : setClose} />
-        <Menu  open={props.width>835? open : close} setOpen={props.width>835?setOpen : setClose} />
+        <Burger  open={ open} setOpen={setOpen} />
+        <Menu  open={ open} setOpen={setOpen}/>
       
       
         </div>

@@ -111,17 +111,8 @@ export class Cover extends Component {
         
         </StyledCover>
         )
-  
         
     }
 }
 
 export default Cover
-
-
-
-
-
-
-
-

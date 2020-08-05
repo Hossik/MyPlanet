@@ -128,12 +128,7 @@ export class BannerImage extends Component  {
       apearreddit: true
     }); }, 11000);
    
-      this.intervalTITLE = setInterval(() => {this.setState({
-        titletime: true
-      }); }, 2000);
-      this.intervalRTITLE = setInterval(() => {this.setState({
-        titletime: false
-      }); }, 8000);
+     
       this.intervalPlayer = setInterval(() => {this.setState({
         player: true
       }); }, 10000);
@@ -214,7 +209,7 @@ updateWindowDimensions() {
     <div className= "dark-wrapper-design"> 
     
     <div className="container">
-      <svg width="100vw" height="100vh" viewBox="0 10 582 500">
+      <svg width="100vw" height="100vh" viewBox="0 -40 582 500">
         <defs>
           <path
             d="M 151 55 C 129.6667 62.6667 116 74.3333 110 90 C 104 105.6667 103 118.5 133 111 L 225.5 96 C 219.8333 79 209.6667 67 195 60 C 180.3333 53 165.6667 51.3333 151 55 L 137 0 L 379 8 L 382 150 L 227 187.5 L 61.5 191 C 4.5 175 -12.6667 147.8333 10 109.5 C 32.6667 71.1667 75 34.6667 137 0 L 151 55 Z"

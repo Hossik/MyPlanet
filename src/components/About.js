@@ -10,8 +10,8 @@ const AboutMe = (props) => {
     <React.Fragment >
 
 
-      {(props.width <1596 || props.height <750 ) ? 
-      <MDBTable  scrollY  maxHeight="70vh" borderless style={{ marginTop: props.width<768? "50px" :""  , width: "80vw"}}> 
+      {(props.width <1596  ) ? 
+      <MDBTable   maxHeight="70vh" borderless style={{ marginTop: props.width<768? "50px" :""  , width: "80vw"}}> 
       <MDBTableHead  style={{color:"red",fontFamily :"Metal" }}>
        
           
@@ -73,17 +73,17 @@ const AboutMe = (props) => {
       <MDBTableBody style={{color:"white"}}>
        
           <tr>
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>User interface (UI) Design:</span> <br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.Let's make something special.</td>
+          <td style={{width:"28.33vw", fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>User interface (UI) Design:</span> <br/>I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.Let's make something special.</td>
           
           
         
       
           
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>User experience (UX) Design:</span> <br/>This is the important thing to ensure the outcomes (websites) usable, consistent and desirable for the Users.</td>
+          <td style={{width:"28.33vw", fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>User experience (UX) Design:</span> <br/>This is the important thing to ensure the outcomes (websites) usable, consistent and desirable for the Users.</td>
          
        
           
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Front-end Development :</span><br/>
+          <td style={{width:"28.33vw", fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Front-end Development :</span><br/>
           I like to code things from scratch, and enjoy bringing ideas to life in the browser.To solve problems, I use React and with the help of Redux in some cases. </td>
         </tr>
          
