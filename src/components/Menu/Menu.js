@@ -20,7 +20,7 @@ const Menu = ({ open, setOpen }) => {
         </Link>
         
         <Link  className="links" to="/contacts" onClick={() => setOpen(!open)}>
-        <i class="far fa-address-book">contacts</i>
+        <i class="far fa-address-book">contact</i>
         </Link>
     </StyledMenu>
   )

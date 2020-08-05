@@ -5,7 +5,9 @@ html, body, #root, #root>div {
   animation: 
   darkrise 90s ease infinite alternate, 
   dark 10s linear  alternate;
-  background-position:-100% -100%;
+  
+  overflow-y: auto;
+  
 } 
 @media(max-width: 425px){
   html, body, #root, #root>div {
@@ -89,6 +91,8 @@ html, body, #root, #root>div {
   vertical-align: middle;
   text-align: center;
   min-height: auto;
+  min-width: 13rem;
+    min-height: 13rem;
 
 }
 
@@ -107,6 +111,8 @@ html, body, #root, #root>div {
   vertical-align: middle;
   text-align: center;
   min-height: auto;
+  min-width: 13rem;
+    min-height: 13rem;
 }
 
 .textImg{
@@ -156,11 +162,12 @@ html, body, #root, #root>div {
   .img {
     width: 40vw;
     height: 40vw;
+   
   }
   .imgtwo{
     width: 40vw;
     height: 40vw;
-
+    
     margin-top: 5vh;
   }
   .textImg{
@@ -262,7 +269,6 @@ html, body, #root, #root>div {
       background-size: 100%; 
     }  
     50%{
-      background-position:-80% -80%;
       background-size: 150%; 
       }
     100%{
