@@ -131,8 +131,6 @@ svg {
     }
 }
 
-
-
 .dark-wrapper-design {
   display: flex;
   width: 100vw;
