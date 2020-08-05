@@ -14,6 +14,13 @@ html, body, #root, #root>div {
   animation: none;
   }
 }
+@media only screen and (max-device-width: 819px) 
+                   and (orientation: landscape) {
+
+                    html, body, #root, #root>div {
+                      animation: none;
+                      }
+}
 
 .contact{
   margin: auto;
