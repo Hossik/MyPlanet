@@ -46,7 +46,7 @@ const AboutMe = (props) => {
       <MDBTableBody style={{color:"white"}}>
        
           <tr>
-          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Languages :</span> <br/> <i classNameName="fab fa-html5"></i>HTML  &nbsp; <i className="fab fa-css3-alt"></i> CSS  &nbsp;  <i className="fab fa-sass"></i> Sass &nbsp; <i className="fab fa-js"></i> JavaScript &nbsp;</td>
+          <td style={{ fontSize:"0.5em"}}><span style={{color:"#4444dd", fontWeight:"bold"}}>Languages :</span> <br/> <i className="fab fa-html5"></i>HTML  &nbsp; <i className="fab fa-css3-alt"></i> CSS  &nbsp;  <i className="fab fa-sass"></i> Sass &nbsp; <i className="fab fa-js"></i> JavaScript &nbsp;</td>
           </tr>
           
           
