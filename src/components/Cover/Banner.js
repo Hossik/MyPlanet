@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TweenOne from 'rc-tween-one';
 import PathPlugin from 'rc-tween-one/lib/plugin/PathPlugin';
 import { ExternalLink } from 'react-external-link';
-
 import './rainbow.scss';
 
 
