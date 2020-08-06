@@ -217,7 +217,7 @@ updateWindowDimensions() {
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
   
-          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width>767? animate.insta : ""}>
+          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width>425? animate.insta : ""}>
           <filter id="my-secondinsta">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -286,7 +286,7 @@ updateWindowDimensions() {
             
               </TweenOne> : <div></div>}
 
-              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width>767? animate.facebook : ""} >
+              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width>425? animate.facebook : ""} >
               <filter id="my-facebook">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -338,11 +338,11 @@ updateWindowDimensions() {
          
         
        
- <text transform="translate(-20,0)" className={this.state.width>767?"facetext" :"facetextmobile"}>Click to facebook </text><text transform="translate(40,30)" className={this.state.width>767?"facetext" :"facetextmobile"}> &#x2926;</text></g>  
+ <text transform="translate(-20,0)" className={this.state.width>425?"facetext" :"facetextmobile"}>Click to facebook </text><text transform="translate(40,30)" className={this.state.width>425?"facetext" :"facetextmobile"}> &#x2926;</text></g>  
           </TweenOne></ExternalLink>: <div></div> }
            
 
-          { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width>767? animate.reddit :""} >
+          { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width>425? animate.reddit :""} >
            
           
              
@@ -366,13 +366,13 @@ updateWindowDimensions() {
   <circle data-name="layer2" cx="41" cy="36.4" r="4.3" fill="#FF4500"></circle>
   <path data-name="layer1" d="M40.3 46c-9.1 6-16.5.3-16.8.1a1.7 1.7 0 0 0-2.3.2 1.607 1.607 0 0 0 .2 2.3A17.783 17.783 0 0 0 31.8 52a18.23 18.23 0 0 0 10.3-3.3 1.623 1.623 0 1 0-1.8-2.7z"
   fill="#FF4500"></path>
-  <g transform="translate(-20,95)"><text  className={this.state.width>767?"reddittex reddit reddittexone" : "reddittex reddit"}>Go  </text></g><g transform="translate(20,95)"><text style={{fill: "#FF4500"}}className={this.state.width>767?"reddittex reddit reddittextwo" : "reddittex reddit"}> reddit</text></g>
+  <g transform="translate(-20,95)"><text  className={this.state.width>425?"reddittex reddit reddittexone" : "reddittex reddit"}>Go  </text></g><g transform="translate(20,95)"><text style={{fill: "#FF4500"}}className={this.state.width>425?"reddittex reddit reddittextwo" : "reddittex reddit"}> reddit</text></g>
        </g>
        
        </TweenOne></ExternalLink>: <div></div> }
           </g>
      
-  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width>767? animate.linkedin :"" } >
+  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width>425? animate.linkedin :"" } >
   <filter id="my-filter">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" />
@@ -417,7 +417,7 @@ updateWindowDimensions() {
   </g> <g transform="translate(0, -50) rotate(16.000000) " className="rain" >
   <path id="MyPath" fill="none" 
         d="M 7 67 Q 22 21 65 21 Q 102 21 119 69" />
-        {this.state.width>767? <g className="c-rainbow crain" style={{textDecoration: "none"}}>
+        {this.state.width>425? <g className="c-rainbow crain" style={{textDecoration: "none"}}>
         <text className="c-rainbow__layer c-rainbow__layer--white"><textPath href="#MyPath"> Inter Linkedin </textPath></text>
         <text className="c-rainbow__layer c-rainbow__layer--orange"><textPath href="#MyPath">Inter Linkedin</textPath></text>
         <text className="c-rainbow__layer c-rainbow__layer--red"><textPath href="#MyPath">Inter Linkedin</textPath></text>
@@ -432,7 +432,7 @@ updateWindowDimensions() {
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width>767? animate.git : ""} className="stop" >
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width>425? animate.git : ""} className="stop" >
               <filter id="my-git">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -455,18 +455,18 @@ updateWindowDimensions() {
                 height="126px"
               /></ExternalLink>
              <g>
-               <text className={this.state.width>767?"neons" : "neonsmobile"}  x="-80" y="90">
+               <text className={this.state.width>425?"neons" : "neonsmobile"}  x="-80" y="90">
                {`-Here ,\n
              `}
              </text>
              <br/>
-             <text className={this.state.width>767?"neons" : "neonsmobile"}  x="-80" y="115">
+             <text className={this.state.width>425?"neons" : "neonsmobile"}  x="-80" y="115">
                {`
              is my \n
             `}
              </text>
              <br/>
-             <text className={this.state.width>767?"neons" : "neonsmobile"}  x="-80" y="145">
+             <text className={this.state.width>425?"neons" : "neonsmobile"}  x="-80" y="145">
                
              codes ------
             
