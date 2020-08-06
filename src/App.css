@@ -164,6 +164,68 @@ html, body, #root, #root>div {
   background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
   
 }
+@media (max-width: 350px){
+  .img{ 
+    
+    min-width: 11rem;
+  
+  }
+  .imgtwo{ 
+    
+    min-width: 11rem;
+  
+  }
+}
+@media (max-width: 425px){
+  .textImg{
+    visibility: hidden;
+    width: 35vw;
+    font-size: 0.4em;
+  }
+  .textImgtwo{
+    visibility: hidden;
+    width: 35vw;
+    font-size: 0.35em;
+  }
+}
+@media (max-width: 315px){
+  .textImg{
+    
+    width: 45vw;
+   
+    font-size: 0.35em;
+  }
+}
+@media (max-width: 280px){
+  .textImg{
+    font-size: 0.3em;
+  }
+  .textImgtwo{
+  
+    font-size: 0.3em;
+  }
+}
+@media (max-width: 300px){
+  .textImg{
+    visibility: visible;
+    }
+    .textImgtwo{
+      visibility: visible;
+    }
+    .imgtwo{
+      width: 5vw;
+      background-color: rgb(233, 195, 25);
+      background-image:  url(https://aw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
+      min-width: 7rem;
+    }
+    
+    .img{
+      width: 5vw;
+      background-color: rgb(80, 25, 233);
+      background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
+      min-width: 7rem;
+    }
+}
 @media (max-width: 835px){
   .img {
     width: 40vw;
@@ -304,6 +366,7 @@ html, body, #root, #root>div {
   width:85vw;
   height: 77vh;
   min-height: 7em;
+  min-width: 5em;
   background:rgba(41,41,41, 0.9) ;
   border-radius: 35px ;
   color :white;
