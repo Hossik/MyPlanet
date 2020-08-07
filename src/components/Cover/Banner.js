@@ -343,7 +343,7 @@ updateWindowDimensions() {
           filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
                   alt="globe"
                   id="id2"
-                  xlinkHref="https://w7.pngwing.com/pngs/804/148/png-transparent-social-media-facebook-computer-icons-logo-facebook-outline-facebook-logo-blue-angle-white-thumbnail.png"
+                  xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/face.png"
                   x="6"
                   y="2"
                   width="226px"
