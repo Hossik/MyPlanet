@@ -216,7 +216,7 @@ updateWindowDimensions() {
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
   
-          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width>425? animate.insta : ""}>
+          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width<425? "" :(this.state.width<825 && this.state.height<415)? "": animate.insta}>
           <filter id="my-secondinsta">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -239,10 +239,23 @@ updateWindowDimensions() {
             <feGaussianBlur stdDeviation="5"/>
             <feComposite operator="out" in2="boostedInput"/>
           </filter>
-          <g transform={this.state.width<500? "translate(0, 400)":"translate(0, 150)"}>
+          <g transform={this.state.width<500? "translate(0, 400)":(this.state.width<825 && this.state.height<415)?"translate(-100, 150)":"translate(0, 150)"}>
 
           <ExternalLink   href="https://www.instagram.com/hossikz/">
           {this.state.width<500?
+          <image
+          className="insta"
+          filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
+          alt="globe"
+          id="id2"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/Profilio/master/public/instegram.png"
+          x="6"
+          y="2"
+          width="226px"
+          height="226px"
+          />
+          :
+          (this.state.width<825 && this.state.height<415)?
           <image
           className="insta"
           filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
@@ -268,8 +281,8 @@ updateWindowDimensions() {
           />}
             </ExternalLink>
             {this.state.titleinsta ?
-            this.state.width<500? <div></div>
-            :
+            this.state.width<500? <g></g>
+            : (this.state.width<825 && this.state.height<415)?<g></g>:
             <g> <defs>
             
             <marker  id="pointer" markerWidth="30" markerHeight="8" refX="5.5" refY="7.1" orient="-35" markerUnits="userSpaceOnUse">
@@ -300,7 +313,7 @@ updateWindowDimensions() {
             
               </TweenOne> : <div></div>}
 
-              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width>425? animate.facebook : ""} >
+              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.facebook  } >
               <filter id="my-facebook">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -325,7 +338,7 @@ updateWindowDimensions() {
               
               </filter>
               
-              <g transform={this.state.width<500?"translate(340.000000, 340)":"translate(250.000000, 200)"} >
+              <g transform={this.state.width<500?"translate(340.000000, 340)":(this.state.width<825 && this.state.height<415)?"translate(170.000000, 150)":"translate(250.000000, 200)"} >
               <rect
                 fill="red"
                 fillOpacity="0"
@@ -347,7 +360,17 @@ updateWindowDimensions() {
             width="226px"
             height="226px"
           />
-          
+          :
+          (this.state.width<825 && this.state.height<415)?
+          <image
+            alt="globe"
+            id="id2"
+            xlinkHref="https://icon-library.com/images/facebook-icon-outline/facebook-icon-outline-3.jpg"
+            x="6"
+            y="2"
+            width="226px"
+            height="226px"
+          />
           :
           <g>
           <path
@@ -369,11 +392,24 @@ updateWindowDimensions() {
         </g>  
           </TweenOne></ExternalLink>: <div></div> }
            
-        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width>425? animate.reddit :""} >
+        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.reddit } >
           
         {this.state.width<500
         ?
         <g transform="translate(0, 100)">
+          <image
+          alt="reddit"
+          id="idred"
+          xlinkHref="https://icon-library.com/images/reddit-icon-vector/reddit-icon-vector-9.jpg"
+          x="6"
+          y="2"
+          width="226px"
+          height="226px"
+         />
+        </g>
+        :
+        (this.state.width<825 && this.state.height<415)?
+        <g transform="translate(430, 150)">
           <image
           alt="reddit"
           id="idred"
@@ -413,7 +449,7 @@ updateWindowDimensions() {
        </TweenOne></ExternalLink>: <div></div> }
           </g>
      
-  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width>425? animate.linkedin :"" } >
+  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.linkedin  } >
   <filter id="my-filter">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" />
@@ -450,6 +486,18 @@ updateWindowDimensions() {
       height="226px"
       />
   </g>
+  :(this.state.width<825 && this.state.height<415)?
+  <g transform= "translate(450, -40)">
+    <image
+      alt="linkedin"
+      id="linkedin"
+      xlinkHref="https://icon-library.com/images/linkedin-icon-png/linkedin-icon-png-18.jpg"
+      x="6"
+      y="2"
+      width="220px"
+      height="220px"
+      />
+  </g>
   :<g transform= "translate(360, 80)" >
   <rect
   fill="red"
@@ -484,7 +532,7 @@ updateWindowDimensions() {
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width>425? animate.git : ""} className="stop" >
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.git } className="stop" >
               <filter id="my-git">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -493,7 +541,7 @@ updateWindowDimensions() {
                 </feComponentTransfer>
                 <feGaussianBlur stdDeviation="3"/>
               </filter>
-              <g transform ={this.state.width<500?"translate(100, -190)" :"translate(100, 5)"}  >  
+              <g transform ={this.state.width<500?"translate(100, -190)":(this.state.width<825 && this.state.height<415)?"translate(-130, -100)" :"translate(100, 5)"}  >  
               <ExternalLink   href="https://github.com/Hossik">
              
               <image
@@ -503,11 +551,14 @@ updateWindowDimensions() {
                 xlinkHref="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/GitHub-Mark-Light-120px-plus.png"
                 x="46"
                 y="62"
-                width={this.state.width<500?"250":"126px"}
-                height={this.state.width<500?"250":"126px"}
+                width={this.state.width<500?"250":(this.state.width<825 && this.state.height<415)?"220":"126px"}
+                height={this.state.width<500?"250":(this.state.width<825 && this.state.height<415)?"220":"126px"}
               />
               </ExternalLink>
              {this.state.width<500?
+             <g></g>
+             :
+             (this.state.width<825 && this.state.height<415)?
              <g></g>
              :
              <g>
