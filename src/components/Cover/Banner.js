@@ -239,9 +239,22 @@ updateWindowDimensions() {
             <feGaussianBlur stdDeviation="5"/>
             <feComposite operator="out" in2="boostedInput"/>
           </filter>
-          <g transform="translate(0, 150)">
+          <g transform={this.state.width<500? "translate(0, 300)":"translate(0, 150)"}>
 
           <ExternalLink   href="https://www.instagram.com/hossikz/">
+          {this.state.width<500?
+          <image
+          className="insta"
+          filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
+                  alt="globe"
+                  id="id2"
+                  xlinkHref="https://raw.githubusercontent.com/Hossik/Profilio/master/public/instegram.png"
+                  x="6"
+                  y="2"
+                  width="226px"
+                  height="226px"
+                />
+          :
           <image
           className="insta"
           filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
@@ -252,8 +265,10 @@ updateWindowDimensions() {
                   y="2"
                   width="126px"
                   height="126px"
-                /></ExternalLink>
+                />}
+                </ExternalLink>
                 {this.state.titleinsta ?
+                this.state.width<500? <div></div>:
                 <g> <defs>
                 
                 <marker  id="pointer" markerWidth="30" markerHeight="8" 
@@ -321,7 +336,20 @@ updateWindowDimensions() {
                   height="104.4"
                   rx="105.6"
                 /> 
-          <path
+          {this.state.width<500?
+          
+          <image
+          className="insta"
+          filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
+                  alt="globe"
+                  id="id2"
+                  xlinkHref="https://w7.pngwing.com/pngs/804/148/png-transparent-social-media-facebook-computer-icons-logo-facebook-outline-facebook-logo-blue-angle-white-thumbnail.png"
+                  x="6"
+                  y="2"
+                  width="226px"
+                  height="226px"
+                />
+          :<path
           filter={this.state.pauseface ? "url(#my-facebook)" : "url(#my-facebooksecond)"}
             d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
             v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
@@ -333,7 +361,7 @@ updateWindowDimensions() {
             strokeWidth="3.35"
             strokeLinecap="round"
             transform="translate(127.105708, 73.561453) rotate(-16.000000) translate(-127.105708, -73.561453) "
-          />
+          />}
          
         
        
