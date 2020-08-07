@@ -29,8 +29,6 @@ html, body, #root, #root>div {
   darkrise 90s ease infinite alternate, 
   dark 10s linear  alternate;
   
-  
-  
 } 
 @media(max-width: 425px){
   html, body, #root, #root>div {
