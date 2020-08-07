@@ -339,11 +339,11 @@ updateWindowDimensions() {
           {this.state.width<500?
           
           <image
-          className="insta"
-          filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
+          
+          
                   alt="globe"
                   id="id2"
-                  xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/face.png"
+                  xlinkHref="https://icon-library.com/images/facebook-icon-outline/facebook-icon-outline-3.jpg"
                   x="6"
                   y="2"
                   width="226px"
