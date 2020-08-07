@@ -18,7 +18,7 @@ export class Home extends Component {
            
         {this.props.collapseID? <Typist 
           className="TypistExample-header"
-          avgTypingDelay={this.props.width>425? 20:140}
+          avgTypingDelay={this.props.width<425? 140:(this.props.width<825 && this.props.height<415)?140:20}
           
           onTypingDone={this.onHeaderTyped}
           cursor={{ hideWhenDone: true }}>
@@ -33,7 +33,7 @@ export class Home extends Component {
               className="TypistExample-message"
               cursor={{ hideWhenDone: true }}
               startDelay={2000}
-              avgTypingDelay={this.props.width>425? 70:140}
+              avgTypingDelay={this.props.width<425? 140 :(this.props.width<825 && this.props.height<415)? 140 : 70}
             >
               <span className="star">*</span>I am a Front-end engineer
               <Typist.Delay ms={1250} />
