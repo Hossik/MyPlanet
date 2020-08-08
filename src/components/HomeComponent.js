@@ -35,7 +35,23 @@ export class Home extends Component {
               startDelay={2000}
               avgTypingDelay={this.props.width<425? 140 :(this.props.width<825 && this.props.height<415)? 140 : 70}
             >
-              <span className="star">*</span>I am a Front-end engineer
+             { this.props.width<825 ?
+             <div><span className="star">*</span> I am a Front-end engineer
+             <Typist.Delay ms={1250} />
+             <br />
+             <span className="star">*</span>UX/UI Web Designer
+             <Typist.Delay ms={1250} />
+             <br />
+             <span className="star">*</span> Live &#38; Work in <Typist.Delay ms={500} />Ukraine
+             <Typist.Backspace count={7} delay={1000} />
+             <Typist.Delay ms={750} />
+             Kyiv
+             <Typist.Delay ms={1250} /> 
+            
+             <div className="more">For more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="smallman" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
+             </div>
+             :
+             <div><span className="star">*</span> I am a Front-end engineer
               <Typist.Delay ms={1250} />
               <br />
               <span className="star">*</span>UX/UI &nbsp; Web &nbsp; Designer
@@ -48,7 +64,8 @@ export class Home extends Component {
               <Typist.Delay ms={1250} /> 
              
               <div className="more">For more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
-              
+              </div>
+              }
               {''}
             </Typist>
           ) : null : null}

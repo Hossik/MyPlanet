@@ -122,14 +122,7 @@ svg {
   height: 30em;
   }
 }
-@media (max-height: 500px){
-  .light-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 30em;
-    }
-}
+
 
 .dark-wrapper-design {
   display: flex;

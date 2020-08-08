@@ -523,6 +523,11 @@ section.route-section {
   width: 5rem;
   border-radius: 35px;
 }
+#smallman{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 35px;
+}
 #me{
   height: 8vmin;
   width: 8vmin;

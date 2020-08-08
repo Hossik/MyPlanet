@@ -16,7 +16,7 @@ $bl-color: #FFDC00;
 }
 @media (max-width: 850px){
   .more{
-    margin-top: 20%;
+    margin-top: 11%;
   }
   .marginMessage{
     margin-top: 5%;
@@ -48,7 +48,7 @@ $bl-color: #FFDC00;
     width: 90vw;
     @media (max-width: 1023px) {
       line-height: 6vh;
-      width: 85vw;
+      width: 90vw;
       font-size: 0.80em;
 
     }
@@ -57,6 +57,12 @@ $bl-color: #FFDC00;
       margin-top: 5vh;
     }
     @media (max-width: 425px ){
+      font-size: 10vw;
+      
+      margin-top: 8vh;
+    }
+    @media (max-width: 361px ){
+      font-size: 9vw;
       
       margin-top: 8vh;
     }
