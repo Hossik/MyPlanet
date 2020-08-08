@@ -84,7 +84,8 @@ export class BannerImage extends Component  {
     super(props);
   
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    
+    this.updateWindowOrientat = this.updateWindowOrientat.bind(this);
+
     this.state = {
       apearGit:false,
       apearlinked:false,
@@ -103,7 +104,8 @@ export class BannerImage extends Component  {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions.bind(this));
-
+    this.updateWindowOrientat();
+    window.addEventListener("orientationchange", this.updateWindowOrientat.bind(this));
     
     this.intervalGit = setInterval(() => {this.setState({
       apearGit: true
@@ -156,10 +158,14 @@ export class BannerImage extends Component  {
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateWindowDimensions.bind(this));
+    window.removeEventListener("resize", this.updateWindowOrientat.bind(this));
 }
 
 updateWindowDimensions() {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
+}
+updateWindowOrientat() {
+  this.setState({ orientation: window.orientation });
 }
 
  
@@ -202,6 +208,7 @@ updateWindowDimensions() {
   render (){
    
     console.log("width:", this.state.width)
+    console.log("orientation", this.state.orientation)
   return (
     <div className= "dark-wrapper-design"> 
     
@@ -216,7 +223,7 @@ updateWindowDimensions() {
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
   
-          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width<425? "" :(this.state.width<825 && this.state.height<415)? "": animate.insta}>
+          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {this.state.width<425? "" :(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)? "": animate.insta}>
           <filter id="my-secondinsta">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -239,7 +246,7 @@ updateWindowDimensions() {
             <feGaussianBlur stdDeviation="5"/>
             <feComposite operator="out" in2="boostedInput"/>
           </filter>
-          <g transform={this.state.width<500? "translate(0, 400)":(this.state.width<825 && this.state.height<415)?"translate(-100, 150)":"translate(0, 150)"}>
+          <g transform={this.state.width<500? "translate(0, 400)":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"translate(-100, 150)":"translate(0, 150)"}>
 
           <ExternalLink   href="https://www.instagram.com/hossikz/">
           {this.state.width<500?
@@ -255,7 +262,7 @@ updateWindowDimensions() {
           height="226px"
           />
           :
-          (this.state.width<825 && this.state.height<415)?
+          (this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?
           <image
           className="insta"
           filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
@@ -282,7 +289,7 @@ updateWindowDimensions() {
             </ExternalLink>
             {this.state.titleinsta ?
             this.state.width<500? <g></g>
-            : (this.state.width<825 && this.state.height<415)?<g></g>:
+            : (this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?<g></g>:
             <g> <defs>
             
             <marker  id="pointer" markerWidth="30" markerHeight="8" refX="5.5" refY="7.1" orient="-35" markerUnits="userSpaceOnUse">
@@ -313,7 +320,7 @@ updateWindowDimensions() {
             
               </TweenOne> : <div></div>}
 
-              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.facebook  } >
+              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"": animate.facebook  } >
               <filter id="my-facebook">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -338,7 +345,7 @@ updateWindowDimensions() {
               
               </filter>
               
-              <g transform={this.state.width<500?"translate(340.000000, 340)":(this.state.width<825 && this.state.height<415)?"translate(170.000000, 150)":"translate(250.000000, 200)"} >
+              <g transform={this.state.width<500?"translate(340.000000, 340)":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"translate(170.000000, 150)":"translate(250.000000, 200)"} >
               <rect
                 fill="red"
                 fillOpacity="0"
@@ -361,7 +368,7 @@ updateWindowDimensions() {
             height="226px"
           />
           :
-          (this.state.width<825 && this.state.height<415)?
+          (this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?
           <image
             alt="globe"
             id="id2"
@@ -392,7 +399,7 @@ updateWindowDimensions() {
         </g>  
           </TweenOne></ExternalLink>: <div></div> }
            
-        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.reddit } >
+        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"": animate.reddit } >
           
         {this.state.width<500
         ?
@@ -408,7 +415,7 @@ updateWindowDimensions() {
          />
         </g>
         :
-        (this.state.width<825 && this.state.height<415)?
+        (this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?
         <g transform="translate(430, 150)">
           <image
           alt="reddit"
@@ -449,7 +456,7 @@ updateWindowDimensions() {
        </TweenOne></ExternalLink>: <div></div> }
           </g>
      
-  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.linkedin  } >
+  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"": animate.linkedin  } >
   <filter id="my-filter">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" />
@@ -486,7 +493,7 @@ updateWindowDimensions() {
       height="226px"
       />
   </g>
-  :(this.state.width<825 && this.state.height<415)?
+  :(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?
   <g transform= "translate(450, -40)">
     <image
       alt="linkedin"
@@ -532,7 +539,7 @@ updateWindowDimensions() {
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415)?"": animate.git } className="stop" >
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={this.state.width<425?"":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"": animate.git } className="stop" >
               <filter id="my-git">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -541,7 +548,7 @@ updateWindowDimensions() {
                 </feComponentTransfer>
                 <feGaussianBlur stdDeviation="3"/>
               </filter>
-              <g transform ={this.state.width<500?"translate(100, -190)":(this.state.width<825 && this.state.height<415)?"translate(-130, -100)" :"translate(100, 5)"}  >  
+              <g transform ={this.state.width<500?"translate(100, -190)":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"translate(-130, -100)" :"translate(100, 5)"}  >  
               <ExternalLink   href="https://github.com/Hossik">
              
               <image
@@ -551,14 +558,14 @@ updateWindowDimensions() {
                 xlinkHref="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/GitHub-Mark-Light-120px-plus.png"
                 x="46"
                 y="62"
-                width={this.state.width<500?"250":(this.state.width<825 && this.state.height<415)?"220":"126px"}
-                height={this.state.width<500?"250":(this.state.width<825 && this.state.height<415)?"220":"126px"}
+                width={this.state.width<500?"250":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"220":"126px"}
+                height={this.state.width<500?"250":(this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?"220":"126px"}
               />
               </ExternalLink>
              {this.state.width<500?
              <g></g>
              :
-             (this.state.width<825 && this.state.height<415)?
+             (this.state.width<825 && this.state.height<415 && this.state.orientation === 90)?
              <g></g>
              :
              <g>
