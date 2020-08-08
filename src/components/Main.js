@@ -15,6 +15,7 @@ class Main extends Component {
     
     super(props);
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+    this.updateWindowOrientat = this.updateWindowOrientat.bind(this);
     this.toggleCollapse = this.toggleCollapse.bind(this);
     this.state = {
       collapseID: false,
@@ -48,14 +49,20 @@ class Main extends Component {
             this.updateWindowDimensions();
             window.addEventListener("resize", this.updateWindowDimensions.bind(this));
             this.toggleCollapse = this.toggleCollapse.bind(this);
+            this.updateWindowOrientat();
+    window.addEventListener("orientationchange", this.updateWindowOrientat.bind(this));
         }
         componentWillUnmount() {
           window.removeEventListener("resize", this.updateWindowDimensions.bind(this));
           this.toggleCollapse = this.toggleCollapse.bind(this);
+          window.removeEventListener("resize", this.updateWindowOrientat.bind(this));
       }
   
       updateWindowDimensions() {
           this.setState({ width: window.innerWidth, height: window.innerHeight });
+      }
+      updateWindowOrientat() {
+        this.setState({ orientation: window.orientation });
       }
 
   render() {
@@ -83,8 +90,8 @@ class Main extends Component {
             <section className="route-section">
           <Switch location={this.props.location}>
             
-          <Route exact path="/home" render={(props) => <Home {...props} height={this.state.height} width={this.state.width} collapseID={this.state.collapseID}/>} />
-            <Route exact path="/about" render={(props) => <AboutMe {...props} height={this.state.height} width={this.state.width} />} />
+          <Route exact path="/home" render={(props) => <Home {...props} orientation={this.state.orientation} height={this.state.height} width={this.state.width} collapseID={this.state.collapseID}/>} />
+            <Route exact path="/about" render={(props) => <AboutMe {...props} orientation={this.state.orientation} height={this.state.height} width={this.state.width} />} />
             <Route path="/tools" component={Tools} />
             <Route path="/contacts" component={Contacts} />
             <Redirect to="/home" />

@@ -16,9 +16,10 @@ export class Home extends Component {
        <div>
         <div className="page"> 
            
-        {this.props.collapseID? <Typist 
+        {this.props.collapseID? 
+        <Typist 
           className="TypistExample-header"
-          avgTypingDelay={this.props.width<425? 140:(this.props.width<825 && this.props.height<415)?140:20}
+          avgTypingDelay={(this.props.width<600 && this.props.orientation !== undefined)? 140:(this.props.width<960 && this.props.height<600 && this.props.orientation !== 0 && this.props.orientation !== undefined)?140:20}
           
           onTypingDone={this.onHeaderTyped}
           cursor={{ hideWhenDone: true }}>
@@ -33,9 +34,9 @@ export class Home extends Component {
               className="TypistExample-message"
               cursor={{ hideWhenDone: true }}
               startDelay={2000}
-              avgTypingDelay={this.props.width<425? 140 :(this.props.width<825 && this.props.height<415)? 140 : 70}
+              avgTypingDelay={(this.props.width<600 && this.props.orientation !== undefined)? 140 :(this.props.width<960 && this.props.height<600 && this.props.orientation !== 0 && this.props.orientation !== undefined)? 140 : 70}
             >
-             { this.props.width<825 ?
+             { (this.props.width<600 && this.props.orientation !== undefined) || (this.props.width<960 && this.props.height<600 && this.props.orientation !== 0 && this.props.orientation !== undefined) ?
              <div><span className="star">*</span> I am a Front-end engineer
              <Typist.Delay ms={1250} />
              <br />
