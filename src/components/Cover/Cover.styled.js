@@ -114,7 +114,7 @@ svg {
   height: 100em;
   
 }
-@media only screen and (max-device-width: 825px) and (orientation: landscape){
+@media only screen and (max-device-width: 960px) and (orientation: landscape){
   .light-overlay {
   position: absolute;
   top: 0;
