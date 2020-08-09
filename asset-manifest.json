@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/MyPlanet/static/css/main.03018db7.chunk.css",
-    "main.js": "/MyPlanet/static/js/main.3145df63.chunk.js",
-    "main.js.map": "/MyPlanet/static/js/main.3145df63.chunk.js.map",
+    "main.css": "/MyPlanet/static/css/main.3eda64fe.chunk.css",
+    "main.js": "/MyPlanet/static/js/main.cff06c79.chunk.js",
+    "main.js.map": "/MyPlanet/static/js/main.cff06c79.chunk.js.map",
     "runtime-main.js": "/MyPlanet/static/js/runtime-main.ceebb0a9.js",
     "runtime-main.js.map": "/MyPlanet/static/js/runtime-main.ceebb0a9.js.map",
-    "static/css/2.29a4ee6f.chunk.css": "/MyPlanet/static/css/2.29a4ee6f.chunk.css",
-    "static/js/2.1c2cdf1f.chunk.js": "/MyPlanet/static/js/2.1c2cdf1f.chunk.js",
-    "static/js/2.1c2cdf1f.chunk.js.map": "/MyPlanet/static/js/2.1c2cdf1f.chunk.js.map",
+    "static/css/2.4028865b.chunk.css": "/MyPlanet/static/css/2.4028865b.chunk.css",
+    "static/js/2.02742a07.chunk.js": "/MyPlanet/static/js/2.02742a07.chunk.js",
+    "static/js/2.02742a07.chunk.js.map": "/MyPlanet/static/js/2.02742a07.chunk.js.map",
     "index.html": "/MyPlanet/index.html",
-    "precache-manifest.583e1ad09fe9ad01cd02f36795413a30.js": "/MyPlanet/precache-manifest.583e1ad09fe9ad01cd02f36795413a30.js",
+    "precache-manifest.c290232529a70adbe56761740ce58e9d.js": "/MyPlanet/precache-manifest.c290232529a70adbe56761740ce58e9d.js",
     "service-worker.js": "/MyPlanet/service-worker.js",
-    "static/css/2.29a4ee6f.chunk.css.map": "/MyPlanet/static/css/2.29a4ee6f.chunk.css.map",
-    "static/css/main.03018db7.chunk.css.map": "/MyPlanet/static/css/main.03018db7.chunk.css.map",
-    "static/js/2.1c2cdf1f.chunk.js.LICENSE.txt": "/MyPlanet/static/js/2.1c2cdf1f.chunk.js.LICENSE.txt",
+    "static/css/2.4028865b.chunk.css.map": "/MyPlanet/static/css/2.4028865b.chunk.css.map",
+    "static/css/main.3eda64fe.chunk.css.map": "/MyPlanet/static/css/main.3eda64fe.chunk.css.map",
+    "static/js/2.02742a07.chunk.js.LICENSE.txt": "/MyPlanet/static/js/2.02742a07.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/MyPlanet/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/MyPlanet/static/media/fa-solid-900.ec763292.svg",
     "static/media/font-awesome.css": "/MyPlanet/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.ceebb0a9.js",
-    "static/css/2.29a4ee6f.chunk.css",
-    "static/js/2.1c2cdf1f.chunk.js",
-    "static/css/main.03018db7.chunk.css",
-    "static/js/main.3145df63.chunk.js"
+    "static/css/2.4028865b.chunk.css",
+    "static/js/2.02742a07.chunk.js",
+    "static/css/main.3eda64fe.chunk.css",
+    "static/js/main.cff06c79.chunk.js"
   ]
 }
