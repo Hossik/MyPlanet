@@ -54,11 +54,6 @@ svg {
   }
 }
 
-
-
-
-
-
 .linetext{
   margin-top: 9vh;
   font-family: 'Changa', sans-serif;
