@@ -8,17 +8,14 @@ export class Cover extends Component {
     constructor(props) {
         super(props);
         this.darking = this.darking.bind(this);
-       
-        
-        this.state = {
          
+        this.state = {   
           play:false,
           dark:false,
           textIndex: 0,
           titletime :false,
           player : false,
           helpplayer:false,
-         
           muted:false,
           
         };
@@ -59,44 +56,27 @@ export class Cover extends Component {
         setInterval (this.remove);
         setInterval (this.removetitle, 6000);
         setInterval (this.removertitle, 17000);
-
     }
-
-
-
 
     darking = () => {
       this.setState(state => ({
         dark: !state.dark
       }))
       }
-    
    
-  
-
   muted = () => {
     this.setState(state => ({
       muted: !state.muted
     }))
     }
 
-
-
- 
     render() {
         return (
           
         <StyledCover >
-        
-     
-      
-      
-         
-      
+  
       <React.Fragment>
-       
-      
-      
+ 
       <InnerCover 
           dark={this.state.dark}
           textIndex= {this.state.textIndex}

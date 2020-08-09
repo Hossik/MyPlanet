@@ -74,6 +74,36 @@ const animate = {
     ...loop,
     rotate: 15,
   },
+  mobfacebook: {
+    ...loop,
+    y: 10,
+    duration: 4000,
+    delay: 200,
+  },
+  mobinsta: {
+    ...loop,
+    y: -10,
+    duration: 4000,
+    delay: 200,
+  },
+  mobreddit:{
+    ...loop,
+    y: -10,
+    duration: 4000,
+    delay: 200,
+  },
+  mobgit: {
+    ...loop,
+    x: -10,
+    duration: 4000,
+    delay: 200,
+  },
+  moblinkedin: {
+    ...loop,
+    x: 10,
+    duration: 4000,
+    delay: 400,
+  }
 };
 
 export class BannerImage extends Component  {
@@ -214,7 +244,7 @@ updateWindowOrientat() {
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
   
-          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {(this.state.width<600  && this.state.orientation !== undefined)? "" :(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)? "": animate.insta}>
+          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {(this.state.width<600  && this.state.orientation !== undefined)? animate.mobinsta :(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)? animate.mobinsta: animate.insta}>
           <filter id="my-secondinsta">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -311,7 +341,7 @@ updateWindowOrientat() {
             
               </TweenOne> : <div></div>}
 
-              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?"":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"": animate.facebook  } >
+              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?animate.mobfacebook:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobfacebook: animate.facebook  } >
               <filter id="my-facebook">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -390,7 +420,7 @@ updateWindowOrientat() {
         </g>  
           </TweenOne></ExternalLink>: <div></div> }
            
-        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={(this.state.width<600  && this.state.orientation !== undefined)?"":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"": animate.reddit } >
+        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={(this.state.width<600  && this.state.orientation !== undefined)?animate.mobreddit:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobreddit: animate.reddit } >
           
         {(this.state.orientation !== undefined && this.state.width<600)
         ?
@@ -447,7 +477,7 @@ updateWindowOrientat() {
        </TweenOne></ExternalLink>: <div></div> }
           </g>
      
-  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?"":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"": animate.linkedin  } >
+  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?animate.moblinkedin:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.moblinkedin : animate.linkedin  } >
   <filter id="my-filter">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" />
@@ -530,7 +560,7 @@ updateWindowOrientat() {
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?"":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"": animate.git } className="stop" >
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?animate.mobgit:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobgit: animate.git } className="stop" >
           <filter id="my-git">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
