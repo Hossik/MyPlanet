@@ -16,11 +16,10 @@ svg {
   #gclick{
     margin-bottom: 80px;
   }
-
 }
 
 .linkedmobile{
-  font-size: 1em;
+ font-size: 1em;
  font-family: 'Righteous';
  font-weight: bold;
  fill: #DEBF40;
@@ -31,8 +30,7 @@ svg {
   font-family: 'Codystar';
   font-weight: bold;
   fill: #003cff;
-
- }
+}
 
 .neons{
  font-size: 1.5em;
