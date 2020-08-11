@@ -44,7 +44,7 @@ $bl-color: #FFDC00;
     font-size: 1em;
     cursor: pointer;
     color: $tc-color;
-    line-height: 8vh;
+    
     width: 90vw;
     @media (max-width: 1023px) {
       line-height: 6vh;
@@ -68,7 +68,7 @@ $bl-color: #FFDC00;
     }
     @media only screen and (max-width: 775px) and (max-height:535px ){
       font-size: 0.80em;
-      margin-top: 20vh;
+      margin-top: 10vh;
     }
     @media  (max-device-width: 1023px) and (orientation: landscape) {
       margin-top: 8vh;
