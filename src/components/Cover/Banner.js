@@ -505,7 +505,7 @@ updateWindowOrientat() {
     <image
       alt="linkedin"
       id="linkedin"
-      xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/linkedin.jpg"
+      xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/linkedin.png"
       x="6"
       y="2"
       width="226px"
@@ -517,7 +517,7 @@ updateWindowOrientat() {
     <image
       alt="linkedin"
       id="linkedin"
-      xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/linkedin.jpg"
+      xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/linkedin.png"
       x="6"
       y="2"
       width="220px"
@@ -538,9 +538,17 @@ updateWindowOrientat() {
     height="104.4"
     rx="105.6"
   /> 
-		<path  filter={this.state.pauselinked ? "url(#my-filter)" : "url(#my-secondfilter)"} d="M1.15 21.7h13V61h-13zm46.55-1.3c-5.7 0-9.1 2.1-12.7 6.7v-5.4H22V61h13.1V39.7c0-4.5 2.3-8.9 7.5-8.9s8.3 4.4 8.3 8.8V61H64V38.7c0-15.5-10.5-18.3-16.3-18.3zM7.7 2.6C3.4 2.6 0 5.7 0 9.5s3.4 6.9 7.7 6.9 7.7-3.1 7.7-6.9S12 2.6 7.7 2.6z"
-      stroke="#0e76a8" strokeWidth="3.35" strokeLinecap="round"
-      transform="translate(1.105708, 63.561453) rotate(16.000000) translate(-1.105708, -63.561453) "/>
+		<image
+    filter={this.state.pauselinked ? "url(#my-filter)" : "url(#my-secondfilter)"}
+      alt="linkedin"
+      id="linkedin"
+      xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/linkedin.png"
+      x="-15"
+      y="-5"
+      width="106px"
+      height="106px"
+    
+      />
       <g transform="translate(0, -50) rotate(16.000000) " className="rain" >
   <path id="MyPath" fill="none" 
         d="M 7 67 Q 22 21 65 21 Q 102 21 119 69" />
