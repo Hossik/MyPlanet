@@ -428,7 +428,7 @@ updateWindowOrientat() {
           <image
           alt="reddit"
           id="idred"
-          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/reddit.jpg"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/d52a640ee9bc22b2f45ef534f756be8da9ff28a5/public/assets/reddit-logo.svg"
           x="6"
           y="2"
           width="226px"
@@ -442,7 +442,7 @@ updateWindowOrientat() {
           <image
           alt="reddit"
           id="idred"
-          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/reddit.jpg"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/d52a640ee9bc22b2f45ef534f756be8da9ff28a5/public/assets/reddit-logo.svg"
           x="6"
           y="2"
           width="226px"
