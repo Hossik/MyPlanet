@@ -400,19 +400,16 @@ updateWindowOrientat() {
             height="226px"
           />
           :
-          <g>
-          <path
-          filter={this.state.pauseface ? "url(#my-facebook)" : "url(#my-facebooksecond)"}
-            d="M57.378,0.001H3.352C1.502,0.001,0,1.5,0,3.353v54.026c0,1.853,1.502,3.354,3.352,3.354h29.086V37.214h-7.914v-9.167h7.914
-            v-6.76c0-7.843,4.789-12.116,11.787-12.116c3.355,0,6.232,0.251,7.071,0.36v8.198l-4.854,0.002c-3.805,0-4.539,1.809-4.539,4.462
-            v5.851h9.078l-1.187,9.166h-7.892v23.52h15.475c1.852,0,3.355-1.503,3.355-3.351V3.351C60.731,1.5,59.23,0.001,57.378,0.001z"
-            fill="red"
-            fillOpacity="0"
-            id="line-s"
-            stroke="#3b5998"
-            strokeWidth="3.35"
-            strokeLinecap="round"
-            transform="translate(127.105708, 73.561453) rotate(-16.000000) translate(-127.105708, -73.561453) "
+          <g  transform="translate(100.105708, 73.561453) rotate(-16.000000) translate(-100.105708, -73.561453) ">
+          <image
+           filter={this.state.pauseface ? "url(#my-facebook)" : "url(#my-facebooksecond)"}
+            alt="globe"
+            id="id2"
+            xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/facebook.jpg"
+            x="6"
+            y="2"
+            width="126px"
+            height="126px"
           />
           <text transform="translate(-20,0)" className={this.state.width>425?"facetext" :"facetextmobile"}>Click to facebook </text><text transform="translate(40,30)" className={this.state.width>425?"facetext" :"facetextmobile"}> &#x2926;</text>
           </g>
@@ -428,7 +425,7 @@ updateWindowOrientat() {
           <image
           alt="reddit"
           id="idred"
-          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/d52a640ee9bc22b2f45ef534f756be8da9ff28a5/public/assets/reddit-logo.svg"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/reddit-logo.png"
           x="6"
           y="2"
           width="226px"
@@ -442,7 +439,7 @@ updateWindowOrientat() {
           <image
           alt="reddit"
           id="idred"
-          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/d52a640ee9bc22b2f45ef534f756be8da9ff28a5/public/assets/reddit-logo.svg"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/reddit-logo.png"
           x="6"
           y="2"
           width="226px"
@@ -450,7 +447,7 @@ updateWindowOrientat() {
          />
         </g>
         :
-        <g transform="translate(400, 230)">
+        <g transform="translate(440, 150)">
         <rect
           fill="red"
           fillOpacity="0"
@@ -461,15 +458,17 @@ updateWindowOrientat() {
             height="104.4"
             rx="105.6"
           /> 
-    <circle data-name="layer2"
-    cx="22.5" cy="36.4" r="4.3" fill="#FF4500"></circle> 
-    
-    <path filter={this.state.pausereddit ? "url(#my-facebook)" : "url(#my-facebooksecond)"} data-name="layer1" d="M64 32.9a9.585 9.585 0 0 0-9.4-9.7 8.356 8.356 0 0 0-4.9 1.5 34.055 34.055 0 0 0-16.1-4.4l3.5-10.1 7.3 1.7c0 .2-.1.5-.1.7a7.376 7.376 0 1 0 1.1-3.8L35 6.3l-4.9 14a33.784 33.784 0 0 0-16 4.7c.1-.1.2-.1.2-.2a9.068 9.068 0 0 0-5.1-1.6c-5 0-9.2 4.4-9.2 9.7a9.5 9.5 0 0 0 4.7 8.3c1.1 10 13 17.8 27.5 17.8 14.6 0 26.5-8 27.5-18a9.638 9.638 0 0 0 4.3-8.1zM51.6 8.6a4 4 0 1 1-4 4 4.012 4.012 0 0 1 4-4zM9.4 26.5a7.789 7.789 0 0 1 2.1.4 17.149 17.149 0 0 0-6.7 10.3 6.452 6.452 0 0 1 4.6-10.7zm22.8 29.3c-13.4 0-24.4-7.2-24.4-16.2 0-8.9 10.9-16.2 24.4-16.2 13.4 0 24.3 7.2 24.3 16.2S45.6 55.8 32.2 55.8zm27.2-19a17.742 17.742 0 0 0-6.6-10 5.663 5.663 0 0 1 1.8-.3 6.257 6.257 0 0 1 6.1 6.4 5.44 5.44 0 0 1-1.3 3.9z"
-    fill="white"></path>
-    <circle data-name="layer2" cx="41" cy="36.4" r="4.3" fill="#FF4500"></circle>
-    <path data-name="layer1" d="M40.3 46c-9.1 6-16.5.3-16.8.1a1.7 1.7 0 0 0-2.3.2 1.607 1.607 0 0 0 .2 2.3A17.783 17.783 0 0 0 31.8 52a18.23 18.23 0 0 0 10.3-3.3 1.623 1.623 0 1 0-1.8-2.7z"
-    fill="#FF4500"></path>
-    <g transform="translate(-20,95)"><text  className={this.state.width>425?"reddittex reddit reddittexone" : "reddittex reddit"}>Go  </text></g><g transform="translate(20,95)"><text style={{fill: "#FF4500"}}className={this.state.width>425?"reddittex reddit reddittextwo" : "reddittex reddit"}> reddit
+    <image
+    filter={this.state.pausereddit?"url(#my-git)":" "}
+          alt="reddit"
+          id="idred"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/reddit-logo.png"
+          x="6"
+          y="2"
+          width="126px"
+          height="126px"
+         />
+    <g transform="translate(10,155)"><text  className={this.state.width>425?"reddittex reddit reddittexone" : "reddittex reddit"}>Go  </text></g><g transform="translate(50,155)"><text style={{fill: "#FF4500"}}className={this.state.width>425?"reddittex reddit reddittextwo" : "reddittex reddit"}> reddit
     </text>
     </g>
       </g>}
