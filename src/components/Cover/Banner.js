@@ -179,7 +179,6 @@ export class BannerImage extends Component  {
     clearInterval(this.intervalPlayer)
   }
 
-
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateWindowDimensions.bind(this));
     window.removeEventListener("resize", this.updateWindowOrientat.bind(this));
