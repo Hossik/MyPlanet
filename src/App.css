@@ -32,14 +32,13 @@ html, body, #root, #root>div {
 } 
 @media(max-width: 425px){
   html, body, #root, #root>div {
-  animation: darkrise 100s ease infinite alternate, 
-  dark 15s linear  alternate;
+  animation: darkrise 100s ease infinite alternate;
+  
   }
 }
 @media only screen and (max-device-width: 830px) and (orientation: landscape) {
   html, body, #root, #root>div {
-    animation: darkrise 100s ease infinite alternate, 
-    dark 15s linear  alternate;
+    animation: darkrise 100s ease infinite alternate;
     }
 }
 
