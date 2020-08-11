@@ -24,37 +24,37 @@ const loop = {
 const animate = {
   click: {
     ...loop,
-    x: 25,
+    x: 20,
     duration: 3000,
     delay: 200,
   },
   redSquare: {
     ...loop,
-    y: 25,
+    y: 20,
     duration: 3000,
     delay: 200,
   },
   facebook: {
     ...loop,
-    y: 25,
+    y: 20,
     duration: 4000,
     delay: 200,
   },
   insta: {
     ...loop,
-    y: -25,
+    y: -20,
     duration: 4000,
     delay: 200,
   },
   reddit:{
     ...loop,
-    y: 25,
+    y: 20,
     duration: 4000,
     delay: 200,
   },
   git: {
     ...loop,
-    x: -25,
+    x: -20,
     duration: 4000,
     delay: 200,
   },
@@ -234,7 +234,7 @@ updateWindowOrientat() {
   return (
   <div className= "dark-wrapper-design"> 
     <div className="container">
-      <svg width="100vw" height="100vh" viewBox={(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"0 -100 582 700":(this.state.width<600  && this.state.orientation !== undefined)?"-80 -100 682 700":this.state.height<270?"0 -100 582 700" :this.state.height<325?"0 -70 582 700" : this.state.height<500?"0 -40 582 700":"0 0 582 500"}>
+      <svg width="100vw" height="100vh" viewBox={(this.state.orientation !== 0 && this.state.orientation !== undefined)?"0 -100 582 700":(this.state.width<600  && this.state.orientation === 0 && this.state.orientation !== undefined)?"-80 -100 682 700":this.state.height<270?"0 -100 582 700" :this.state.height<325?"0 -70 582 700" : this.state.height<500?"0 -40 582 700":"0 0 582 500"}>
         <defs>
           <path
             d="M 151 55 C 129.6667 62.6667 116 74.3333 110 90 C 104 105.6667 103 118.5 133 111 L 225.5 96 C 219.8333 79 209.6667 67 195 60 C 180.3333 53 165.6667 51.3333 151 55 L 137 0 L 379 8 L 382 150 L 227 187.5 L 61.5 191 C 4.5 175 -12.6667 147.8333 10 109.5 C 32.6667 71.1667 75 34.6667 137 0 L 151 55 Z"
@@ -244,7 +244,7 @@ updateWindowOrientat() {
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(0, 30)">  
         <g id="Group-13" transform="translate(0.000000, 41.000000)">
   
-          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {(this.state.width<600  && this.state.orientation !== undefined)? animate.mobinsta :(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)? animate.mobinsta: animate.insta}>
+          {this.state.apearinsta ?  <TweenOne  paused={this.state.pause} onMouseLeave={this.onMouseOut} onMouseOver={this.onMouseOver} component="g" animation= {(this.state.width<600 && this.state.orientation === 0 &&  this.state.orientation !== undefined)? animate.mobinsta :( this.state.orientation !== 0 && this.state.orientation !== undefined)? animate.mobinsta: animate.insta}>
           <filter id="my-secondinsta">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -267,10 +267,10 @@ updateWindowOrientat() {
             <feGaussianBlur stdDeviation="5"/>
             <feComposite operator="out" in2="boostedInput"/>
           </filter>
-          <g transform={(this.state.width<600  && this.state.orientation !== undefined)? "translate(0, 400)":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"translate(-150, 180)":"translate(0, 150)"}>
+          <g transform={(this.state.width<600 && this.state.orientation === 0 && this.state.orientation !== undefined)? "translate(0, 400)":(this.state.orientation !== 0 && this.state.orientation !== undefined)?"translate(-150, 180)":"translate(0, 150)"}>
 
           <ExternalLink   href="https://www.instagram.com/hossikz/">
-          {(this.state.width<600  && this.state.orientation !== undefined)?
+          {(this.state.width<600 && this.state.orientation === 0 && this.state.orientation !== undefined)?
           <image
           className="insta"
           filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
@@ -283,7 +283,7 @@ updateWindowOrientat() {
           height="226px"
           />
           :
-          (this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?
+          (this.state.orientation !== 0 && this.state.orientation !== undefined)?
           <image
           className="insta"
           filter={this.state.pause? "url(#my-insta)":"url(#my-secondinsta)"}
@@ -309,9 +309,9 @@ updateWindowOrientat() {
           />}
             </ExternalLink>
             {this.state.titleinsta ?
-            (this.state.width<600 &&  this.state.orientation !== undefined)? <g></g>
+            (this.state.width<600 && this.state.orientation === 0 &&  this.state.orientation !== undefined)? <g></g>
             : 
-            (this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)
+            ( this.state.orientation !== 0 && this.state.orientation !== undefined)
             ?
             <g></g>
             :
@@ -341,7 +341,7 @@ updateWindowOrientat() {
             
               </TweenOne> : <div></div>}
 
-              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?animate.mobfacebook:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobfacebook: animate.facebook  } >
+              { this.state.apearface ? <ExternalLink   href="https://www.facebook.com/Hossikz"><TweenOne  paused={this.state.pauseface} onMouseLeave={this.onMouseOutface} onMouseOver={this.onMouseOverface} component="g" animation={(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?animate.mobfacebook:( this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobfacebook: animate.facebook  } >
               <filter id="my-facebook">
                 <feComponentTransfer>
                   <feFuncR type="linear" slope="4" />
@@ -366,7 +366,7 @@ updateWindowOrientat() {
               
               </filter>
               
-              <g transform={(this.state.width<600  && this.state.orientation !== undefined)?"translate(340.000000, 340)":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"translate(170.000000, 190)":"translate(250.000000, 200)"} >
+              <g transform={(this.state.width<600 && this.state.orientation === 0 && this.state.orientation !== undefined)?"translate(340.000000, 340)":( this.state.orientation !== 0 && this.state.orientation !== undefined)?"translate(170.000000, 190)":"translate(250.000000, 200)"} >
               <rect
                 fill="red"
                 fillOpacity="0"
@@ -377,7 +377,7 @@ updateWindowOrientat() {
                 height="104.4"
                 rx="105.6"
                 /> 
-          {(this.state.orientation !== undefined && this.state.width<600)?
+          {(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?
           
           <image
             alt="globe"
@@ -389,7 +389,7 @@ updateWindowOrientat() {
             height="226px"
           />
           :
-          (this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?
+          ( this.state.orientation !== 0 && this.state.orientation !== undefined)?
           <image
             alt="globe"
             id="id2"
@@ -420,9 +420,9 @@ updateWindowOrientat() {
         </g>  
           </TweenOne></ExternalLink>: <div></div> }
            
-        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={(this.state.width<600  && this.state.orientation !== undefined)?animate.mobreddit:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobreddit: animate.reddit } >
+        { this.state.apearreddit ? <ExternalLink   href="https://www.reddit.com/user/HossikZ"><TweenOne onMouseLeave={this.onMouseOutreddit} onMouseOver={this.onMouseOverreddit} paused={this.state.pausereddit}  component="g" animation={(this.state.width<600 && this.state.orientation === 0 && this.state.orientation !== undefined)?animate.mobreddit:( this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobreddit: animate.reddit } >
           
-        {(this.state.orientation !== undefined && this.state.width<600)
+        {(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)
         ?
         <g transform="translate(0, 100)">
           <image
@@ -436,7 +436,7 @@ updateWindowOrientat() {
          />
         </g>
         :
-        (this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)
+        ( this.state.orientation !== 0 && this.state.orientation !== undefined)
         ?
         <g transform="translate(460, 190)">
           <image
@@ -477,7 +477,7 @@ updateWindowOrientat() {
        </TweenOne></ExternalLink>: <div></div> }
           </g>
      
-  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?animate.moblinkedin:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.moblinkedin : animate.linkedin  } >
+  {this.state.apearlinked ? <TweenOne paused={this.state.pauselinked} onMouseLeave={this.onMouseOutlinked} onMouseOver={this.onMouseOverlinked} component="g" animation={(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?animate.moblinkedin:( this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.moblinkedin : animate.linkedin  } >
   <filter id="my-filter">
     <feComponentTransfer>
       <feFuncR type="linear" slope="2" />
@@ -501,7 +501,7 @@ updateWindowOrientat() {
     </feComponentTransfer>
   </filter>
   <ExternalLink   href="https://www.linkedin.com/in/hossik">
-  {(this.state.orientation !== undefined && this.state.width<600)?
+  {(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?
   <g transform= "translate(320, 100)">
     <image
       alt="linkedin"
@@ -513,7 +513,7 @@ updateWindowOrientat() {
       height="226px"
       />
   </g>
-  :(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?
+  :( this.state.orientation !== 0 && this.state.orientation !== undefined)?
   <g transform= "translate(490, -40)">
     <image
       alt="linkedin"
@@ -560,7 +560,7 @@ updateWindowOrientat() {
   
   </TweenOne> : <div></div>}
 
-  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={(this.state.orientation !== undefined && this.state.width<600)?animate.mobgit:(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobgit: animate.git } className="stop" >
+  {this.state.apearGit ? <TweenOne paused={this.state.pausegit} onMouseLeave={this.onMouseOutgit} onMouseOver={this.onMouseOvergit} component="g" animation={(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?animate.mobgit:( this.state.orientation !== 0 && this.state.orientation !== undefined)?animate.mobgit: animate.git } className="stop" >
           <filter id="my-git">
             <feComponentTransfer>
               <feFuncR type="linear" slope="4" />
@@ -569,7 +569,7 @@ updateWindowOrientat() {
             </feComponentTransfer>
             <feGaussianBlur stdDeviation="3"/>
           </filter>
-          <g transform ={(this.state.orientation !== undefined && this.state.width<600)?"translate(100, -190)":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"translate(-180, -100)" :"translate(100, 5)"}  >  
+          <g transform ={(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?"translate(100, -190)":( this.state.orientation !== 0 && this.state.orientation !== undefined)?"translate(-180, -100)" :"translate(100, 5)"}  >  
           <ExternalLink   href="https://github.com/Hossik">
           
           <image
@@ -579,14 +579,14 @@ updateWindowOrientat() {
             xlinkHref="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/GitHub-Mark-Light-120px-plus.png"
             x="46"
             y="62"
-            width={(this.state.orientation !== undefined && this.state.width<600)?"250":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"220":"126px"}
-            height={(this.state.orientation !== undefined && this.state.width<600)?"250":(this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?"220":"126px"}
+            width={(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?"250":( this.state.orientation !== 0 && this.state.orientation !== undefined)?"220":"126px"}
+            height={(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?"250":( this.state.orientation !== 0 && this.state.orientation !== undefined)?"220":"126px"}
           />
           </ExternalLink>
-          {(this.state.orientation !== undefined && this.state.width<600)?
+          {(this.state.orientation !== undefined && this.state.width<600 && this.state.orientation === 0)?
           <g></g>
           :
-          (this.state.width<960 && this.state.height<600 && this.state.orientation !== 0 && this.state.orientation !== undefined)?
+          ( this.state.orientation !== 0 && this.state.orientation !== undefined)?
           <g></g>
           :
           <g>
