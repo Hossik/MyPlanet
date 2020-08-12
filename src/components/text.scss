@@ -38,7 +38,7 @@ $bl-color: #FFDC00;
 .TypistExample {   
   
   &-header {
-    padding-top: 2%;
+    padding-top: 20px;
     filter: drop-shadow(3px 3px 1px #4444dd);
     text-align: center;
     font-size: 1em;
@@ -57,17 +57,17 @@ $bl-color: #FFDC00;
       margin-top: 5vh;
     }
     @media (max-width: 425px ){
-      font-size: 10vw;
+      font-size: 0.50em;
       
-      margin-top: 8vh;
+      margin-top: 30px;
     }
     @media (max-width: 361px ){
-      font-size: 9vw;
+      font-size: 0.50em;
       
-      margin-top: 8vh;
+      margin-top: 30px;
     }
     @media only screen and (max-width: 775px) and (max-height:535px ){
-      font-size: 0.80em;
+      font-size: 0.50em;
       margin-top: 10vh;
     }
     @media  (max-device-width: 1023px) and (orientation: landscape) {
