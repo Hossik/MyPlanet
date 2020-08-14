@@ -31,7 +31,6 @@ return (
           <div className="textImgtree">
           
            Website created for Gemini Truffle Company 
-
           <br/>
           <ExternalLink  href="https://hossik.github.io/truffle" > 
           <Button color="secondary" >Go to Website &#62;
