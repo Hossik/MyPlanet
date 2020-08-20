@@ -24,7 +24,7 @@ export const Contacts = () => {
         Ukraine<br />
         <i className="fa fa-phone"></i>: +380 995215245<br />
         
-        <i className="fa fa-envelope"></i>: <a href="mailto:hossik1983@gmail.com">hossik1983@gmail.com</a>
+        <i className="fa fa-envelope"></i>: <a style={{color:"#0fafff", fontWeight:"bold",textDecoration:'none',letterSpacing: '2px'}} href="mailto:hossik1983@gmail.com">hossik1983@gmail.com</a>
         </address>
       </div>
       

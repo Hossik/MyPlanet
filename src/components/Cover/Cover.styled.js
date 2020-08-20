@@ -54,7 +54,7 @@ svg {
 
 .linetext{
   margin-top: 9vh;
-  font-family: 'Changa', sans-serif;
+  font-family: Sonsie One;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -62,18 +62,21 @@ svg {
 
 }
 #up{
-  font-size:13vmin ;
-  color: rgb(233, 25, 25);
+  font-size:12.5vmin ;
+  color: orange;
   font-weight: bold;
   z-index: -1;
-  filter: drop-shadow(3px 3px 10px rgb(233, 25, 25)) brightness(3);
+  filter: drop-shadow(3px 3px 10px orange) brightness(1);
+  font-family:Sonsie One;
 }
 #down{ 
   font-size: 14.5vmin;
-  color: rgb(255, 220, 0);
+  color: #9d9ce6;
   font-weight: bold;
   z-index: -1;
-  filter: drop-shadow(3px 3px 10px  rgb(255, 220, 0)) brightness(3);
+  filter: drop-shadow(3px 3px 10px  #9d9ce6) brightness(1);
+  font-family:Sonsie One;
+
 }
 
 .inner{

@@ -1,5 +1,5 @@
 $tc-color: rgb(255, 255, 255);
-$bl-color: #FFDC00;
+$bl-color: orange;
 
 .more{
   margin-top: 15%;
@@ -44,7 +44,7 @@ $bl-color: #FFDC00;
     font-size: 1em;
     cursor: pointer;
     color: $tc-color;
-    
+    font-family :Roboto;
     width: 90vw;
     @media (max-width: 1023px) {
       line-height: 6vh;

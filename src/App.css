@@ -46,6 +46,8 @@ html, body, #root, #root>div {
   margin: auto;
   width: 86vw;
   font-size: 1.5em;
+  font-family: "Times New Roman";
+  
 }
 
 .adress{
@@ -448,7 +450,7 @@ html, body, #root, #root>div {
   height: 77vh;
   min-height: 7em;
   min-width: 5em;
-  background:rgba(41,41,41, 0.9) ;
+  background:rgba(14,11,64, 0.9) ;
   border-radius: 35px ;
   color :white;
   font-size: 3.5rem;
@@ -512,7 +514,11 @@ html, body, #root, #root>div {
   outline: none;
   cursor: pointer;
   transition: background-color 350ms;
+  text-align: center;
+  background: #0e0b40 !important;
+  
 }
+
 .btn-con {
   width: 80px;
   height: 80px;
@@ -808,7 +814,7 @@ section.route-section {
 .alertup-enter-active {
   opacity: 1;
   transform: translateY(0%);
-  transition: all 300ms ease-in;
+  transition: all 600ms ease-in;
 }
 .alertup-exit {
   opacity: 1;
@@ -817,7 +823,7 @@ section.route-section {
 .alertup-exit-active {
   opacity: 0;
   transform: translateY(-100%);
-    transition: all 500ms ease-in-out;
+    transition: all 1000ms ease-in-out;
 }
 
 
@@ -829,7 +835,7 @@ section.route-section {
 .alertdown-enter-active {
   opacity: 1;
   transform: translateY(0%);
-  transition: all 300ms ease-in;
+  transition: all 600ms ease-in;
 }
 .alertdown-exit {
   opacity: 1;
@@ -838,7 +844,7 @@ section.route-section {
 .alertdown-exit-active {
   opacity: 0;
   transform: translateY(100%);
-    transition: all 500ms ease-in-out;
+    transition: all 1000ms ease-in-out;
 }
 
 .helpplayer-enter {
@@ -863,19 +869,11 @@ section.route-section {
 
 
 @font-face {
-  font-family: Clip;
-  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+  font-family: 'Bungee Outline', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
 }
 
-.body {
-  background-color: #141114;
-  background-image: linear-gradient(335deg, black 23px, transparent 23px),
-    linear-gradient(155deg, black 23px, transparent 23px),
-    linear-gradient(335deg, black 23px, transparent 23px),
-    linear-gradient(155deg, black 23px, transparent 23px);
-  background-size: 58px 58px;
-  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
-}
+
 .signclose {
   position: absolute;
   display: flex;
@@ -892,10 +890,10 @@ section.route-section {
   letter-spacing: 2;
   left: 50%;
   top: 50%;
-  font-family: "Clip";
+  font-family: "Bungee Outline";
   font-weight: bold;
   text-transform: uppercase;
-  font-size:1.80em;
+  font-size:1.60em;
   color: #fff2e6; 
   text-shadow: 0 0 0.4rem #ffe6f4, 0 0 0.5rem #ff65a5,
     -0.2rem 0.1rem 1rem #ff65a5, 0.2rem 0.1rem 1rem #ff65ad,
@@ -940,23 +938,19 @@ section.route-section {
   align-items: center;
   width: 50%;
   height: 50%;
-  background-image: radial-gradient(
-    ellipse 50% 35% at 50% 50%,
-    #186b4b,
-    transparent
-  );
+  
   transform: translate(-50%, -50%);
   letter-spacing: 2;
   left: 50%;
   top: 50%;
-  font-family: "Clip";
+    font-family: "Bungee Outline";
   font-weight: bold;
   text-transform: uppercase;
-  font-size:1.80em;
-  color: #e6fffb; 
-  text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
-    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
-    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;
+  font-size:1.60em;
+  color: #9ad6cc; 
+  text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #9ae4de,
+    -0.2rem 0.1rem 1rem #a6dfe9, 0.2rem 0.1rem 1rem #aaf0f0,
+    0 -0.5rem 2rem #b0f5e0, 0 0.5rem 1.5rem #a5b8f5;
   animation: shine 2s forwards, flicker 3s infinite;
 }
 
@@ -965,19 +959,19 @@ section.route-section {
   22%,
   36%,
   75% {
-    color: #e6fff8;
-    text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
-    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
-    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;
+    color: #e6fbff;
+    text-shadow: 0 0 0.4rem #e6fbff, 0 0 0.5rem #65baff,
+    -0.2rem 0.1rem 1rem #65c1ff, 0.2rem 0.1rem 1rem #65b5ff,
+    0 -0.5rem 2rem #24afff, 0 0.5rem 1.5rem #24ccff;
   }
   28%,
   33% {
-    color: #65ffea;
+    color: #65ceff;
     text-shadow: none;
   }
   82%,
   97% {
-    color: #24ffb6;
+    color: #2483ff;
     text-shadow: none;
   }
 }
@@ -993,14 +987,14 @@ section.route-section {
 
 @keyframes shine {
   0% {
-    color: #186b4b;
+    color: #186b6b;
     text-shadow: none;
   }
   100% {
-    color: #ffe6ff;
-    text-shadow: 0 0 0.4rem #e6fff5, 0 0 0.5rem #65fff2,
-    -0.2rem 0.1rem 1rem #65ffde, 0.2rem 0.1rem 1rem #65fff7,
-    0 -0.5rem 2rem #24ffbd, 0 0.5rem 1.5rem #24ff99;;
+    color: #e6f3ff;
+    text-shadow: 0 0 0.4rem #e6f4ff, 0 0 0.5rem #65a8ff,
+    -0.2rem 0.1rem 1rem #65a3ff, 0.2rem 0.1rem 1rem #65adff,
+    0 -0.5rem 2rem #249cff, 0 0.5rem 1.5rem #249cff;;
   }
 }
 

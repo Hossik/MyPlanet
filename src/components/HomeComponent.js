@@ -32,7 +32,7 @@ export class Home extends Component {
           this.state.renderMsg ? this.props.collapseID ?(
             <Typist
               className="TypistExample-message"
-              cursor={{ hideWhenDone: true }}
+              cursor={{ show: false }}
               startDelay={2000}
               avgTypingDelay={(this.props.width<600 && this.props.orientation !== undefined)? 140 :(this.props.width<960 && this.props.height<600 && this.props.orientation !== 0 && this.props.orientation !== undefined)? 140 : 70}
             >
@@ -40,7 +40,7 @@ export class Home extends Component {
              <div><span className="star">*</span> I am a Front-end engineer
              <Typist.Delay ms={1250} />
              <br />
-             <span className="star">*</span>UX/UI Web Designer
+             <span className="star">*</span>UI/UX Web Designer
              <Typist.Delay ms={1250} />
              <br />
              <span className="star">*</span> Live &#38; Work in <Typist.Delay ms={500} />Ukraine
@@ -55,7 +55,7 @@ export class Home extends Component {
              <div><span className="star">*</span> I am a Front-end engineer
               <Typist.Delay ms={1250} />
               <br />
-              <span className="star">*</span>UX/UI &nbsp; Web &nbsp; Designer
+              <span className="star">*</span>UI/UX&nbsp; Web &nbsp; Designer
               <Typist.Delay ms={1250} />
               <br />
               <span className="star">*</span> Live &#38; Work in <Typist.Delay ms={500} />Ukraine
@@ -64,7 +64,7 @@ export class Home extends Component {
               Kyiv
               <Typist.Delay ms={1250} /> 
              
-              <div className="more">For more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
+              <div className="more">For more information < Link to="/about" style={{color:'orange', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
               </div>
               }
               {''}

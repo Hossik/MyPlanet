@@ -73,7 +73,7 @@ class Main extends Component {
 
    
      
-    {this.state.tbn ? <MDBBtn className= " btn  btn-circle btn-xl" color="elegant"
+    {this.state.tbn ? <MDBBtn className= " btn  btn-circle btn-xl" 
       onClick={this.toggleCollapse}>
       <i> <Test
       isOpen={this.state.collapseID}/></i>    

@@ -7,8 +7,7 @@ import {  CSSTransition }from 'react-transition-group';
 
 import { BannerImage } from './Banner';
 
-const hossik = ["MY PLANET"]
-const welcome = ["WELCOME TO"]
+
 
  const InnerCover = (props) => {
    
@@ -37,7 +36,7 @@ const welcome = ["WELCOME TO"]
           appear     
         >
               <section  id= "up" className="linetext">
-              {welcome}
+              WELCOME <br/> TO
               </section>
               </CSSTransition>
               <CSSTransition
@@ -48,7 +47,7 @@ const welcome = ["WELCOME TO"]
           appear     
         >
               <section id="down" className="linetext">
-              {hossik}      
+              MY <br/> PLANET      
               </section>
               </CSSTransition> 
              

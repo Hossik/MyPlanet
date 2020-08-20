@@ -10,17 +10,18 @@ export class Test extends Component  {
       
         return (
         <React.Fragment>
-            {this.props.isOpen ? <div className="body">
-              <div className="signclose">
-        <span className="fast-flickerclose">C</span>lOS<span className="flickerclose">E</span><span>-</span>Here
+            {this.props.isOpen ? 
+              <div className="signclose" style={{ letterSpacing: '2px'}}>
+                <span className="fast-flicker">C</span>
+        <span >l</span><span className="fast-flickerclose">OSE</span><span>-</span>Here
               </div>
-            </div >
+            
             :
-            <div className="body">
-              <div className="sign">
+            
+              <div className="sign" style={{ letterSpacing: '2px'}}>
         <span className="fast-flicker">C</span>lic<span className="flicker">K</span><span>-</span>Here
               </div>
-            </div >}
+            }
         </React.Fragment>
         )
     }

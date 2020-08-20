@@ -3,7 +3,7 @@ export const theme = {
     primaryLight: '#EFFFFA',
     primaryHover: '#343078',
     mobile: '576px',
-    open:'#FFDC00',
+    open:'orange',
     close:'rgb(233, 25, 25)',
     
   }
