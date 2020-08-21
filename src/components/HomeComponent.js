@@ -11,7 +11,27 @@ export const Home = (props) => {
           className="insta"
           alt="globe"
           id="id2"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/moon.png"
+          x="2300"
+          y="80"
+          width="30vw"
+          height="20vw"
+          />
+      <image
+          className="insta"
+          alt="globe"
+          id="id2"
           xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/freelancer.svg"
+          x="1900"
+          y="500"
+          width="60vw"
+          height="40vw"
+          />
+           <image
+          className="insta"
+          alt="globe"
+          id="id2"
+          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/grow.svg"
           x="1900"
           y="500"
           width="60vw"
