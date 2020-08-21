@@ -32,8 +32,8 @@ export const Home = (props) => {
           alt="globe"
           id="id2"
           xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/grow.svg"
-          x="1900"
-          y="500"
+          x="-650"
+          y="400"
           width="60vw"
           height="40vw"
           />
