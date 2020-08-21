@@ -458,11 +458,10 @@ html, body, #root, #root>div {
 }
 .freelancer{
   position: absolute;
-  top: 0;
+  top:  0;
   right: 0;
-  
-  height: 600px;
-  display: block;    
+  margin-top:200px;
+  height: 100px;
 
 }
 

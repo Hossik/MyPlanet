@@ -5,7 +5,7 @@ export const Home = (props) => {
   return (
     <div>
     <div className="freelancer">
-    <img src={'https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/Freelancer.png'} />
+    <img src={'https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/freelancer.png'} alt={"freelancer"}/>
     </div>
     <TypistText orientation={props.orientation} height={props.height}  width={props.width} collapseID={props.collapseID}/>
   </div>
