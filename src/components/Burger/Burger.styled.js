@@ -19,6 +19,7 @@ export const StyledBurger = styled.button`
   &:focus {
     outline: none;
   }
+  
 
   div {
     width: 3rem;
@@ -33,9 +34,9 @@ export const StyledBurger = styled.button`
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     @keyframes blinker {
-      0% { filter: drop-shadow(3px 3px 10px  rgb(0, 238, 255)) ; }
-      50% { filter: drop-shadow(3px 3px 10px  rgb(5, 5, 5)) ;}
-      100% { filter: drop-shadow(3px 3px 10px  rgb(0, 238, 255)) ; }
+      0% { filter: drop-shadow(3px 3px 10px  rgb(5, 32, 54)) ; }
+      50% { filter: drop-shadow(3px 3px 10px  #B2B9CE) ;}
+      100% { filter: drop-shadow(3px 3px 10px  rgb(5, 32, 54)) ; }
     }
     :first-child {
       transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};

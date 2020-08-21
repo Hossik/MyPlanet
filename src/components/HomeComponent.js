@@ -27,16 +27,7 @@ export const Home = (props) => {
           width="60vw"
           height="40vw"
           />
-           <image
-          className="insta"
-          alt="globe"
-          id="id2"
-          xlinkHref="https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/grow.svg"
-          x="-650"
-          y="400"
-          width="60vw"
-          height="40vw"
-          />
+          
     </g>
     </svg>
     </div>
