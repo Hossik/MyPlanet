@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { MDBBtn,MDBCollapse} from 'mdbreact';
-import { Card} from 'reactstrap';
+import { Card } from 'reactstrap';
 import { withRouter} from 'react-router-dom';
 import { Contacts } from './ContactComponent';
 import { Home } from './HomeComponent';
@@ -101,7 +101,7 @@ class Main extends Component {
           </CSSTransition>
           </TransitionGroup>
           </div>
-        
+         
         </Card>
         </MDBCollapse>
       
