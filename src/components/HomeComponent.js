@@ -4,6 +4,9 @@ import TypistText from './Type'
 export const Home = (props) => {    
   return (
     <div>
+      <div className="corner">
+        <img src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/cor1.png"} alt={"corner"}/>
+      </div>
     <div >
     <svg width="100vw" height="70vh" viewBox={"1000 0 1000 1400"} >
       <g>

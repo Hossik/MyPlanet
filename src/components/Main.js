@@ -83,9 +83,7 @@ class Main extends Component {
     
     <MDBCollapse id="basicCollapse" isOpen={this.state.collapseID}>
         <Card  id="card"  >
-          <div className="corner">
-        <img src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/cor.png"} alt={"corner"}/>
-      </div>
+          
           <Header id="head" width={this.state.width}/>
           <div >
           <TransitionGroup  >
