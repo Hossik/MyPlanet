@@ -63,7 +63,7 @@ export const TypistText = (props) => {
             Kyiv
             <Typist.Delay ms={1250} /> 
             
-            <div className="more">For more information < Link to="/about" style={{color:'orange', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ></span></Link></div>
+            <div className="more">For more information < Link to="/about" style={{color:'orange', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
             </div>
             }
             {''}
