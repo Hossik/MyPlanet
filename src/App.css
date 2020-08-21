@@ -459,8 +459,7 @@ html, body, #root, #root>div {
 .corner{
   display: flex;
   flex-direction: column;
-  width: 200px;
-  height: 300px;
+  
   text-align: left;
   position: fixed;
   left: 0;
