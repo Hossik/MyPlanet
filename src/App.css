@@ -458,14 +458,27 @@ html, body, #root, #root>div {
 }
 .corner{
   display: flex;
-  flex-direction: column;
-  width: 20vw;
   text-align: left;
   position: fixed;
   left: 0;
-  border-radius: 35px 0 0 35px;
- 
+  top:20;
+  
+}
 
+.cornimg{
+  width:40vw;
+  border-radius: 35px 0 0 35px;
+  height: 70vh;
+  min-height: 7em;
+}
+/* @media (max-width: 1023px) {
+  .corner{
+  width: 400px;
+  }
+  
+} */
+.freelancer{
+  margin-right: 1000px;
 }
 
 /* @media (max-width: 685px){
@@ -492,25 +505,23 @@ html, body, #root, #root>div {
   padding: 2rem; 
 }
 
-  #card{
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-
+#card{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
 #hossik{
-    font-size:3vmin ;
-    color: rgb(233, 25, 25);
-    font-weight: bold;
-    z-index: -1;   
+  font-size:3vmin ;
+  color: rgb(233, 25, 25);
+  font-weight: bold;
+  z-index: -1;   
 }
 
 #nohossik{
   font-size: 4.5vmin;
-    color: rgb(255, 220, 0);
-    font-weight: bold;
-    z-index: -1;
+  color: rgb(255, 220, 0);
+  font-weight: bold;
+  z-index: -1;
 }
 
 .btn-circle.btn-xl {

@@ -36,19 +36,16 @@ export const TypistText = (props) => {
             avgTypingDelay={(props.width<600 && props.orientation !== undefined)? 140 :(props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined)? 140 : 70}
           >
             { (props.width<600 && props.orientation !== undefined) || (props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined) ?
-            <div><span className="star">*</span> <div>I am a Front-end engineer</div>
+            <div><span className="star">*</span> I am a Front-end engineer
             <Typist.Delay ms={1250} />
             <br />
-            <span className="star">*</span><div>UI/UX Web Designer</div>
+            <span className="star">*</span>UI/UX Web Designer
             <Typist.Delay ms={1250} />
             <br />
-            <span className="star">*</span><div>Live &#38; Work in </div> <Typist.Delay ms={500} /><div>Ukraine</div>
-            <Typist.Backspace count={7} delay={1000} />
-            <Typist.Delay ms={750} />
-            <div>Kyiv</div>
+            <span className="star">*</span>Live &#38; Work in Kyiv
             <Typist.Delay ms={1250} /> 
           
-            <div className="more">For more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="smallman" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
+            <div className="more">For more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}><br/><span className="flash"  >please visit </span></Link></div>
             </div>
             :
             <div><span className="star">*</span> I am a Front-end engineer
@@ -57,13 +54,10 @@ export const TypistText = (props) => {
             <span className="star">*</span>UI/UX&nbsp; Web &nbsp; Designer
             <Typist.Delay ms={1250} />
             <br />
-            <span className="star">*</span> Live &#38; Work in <Typist.Delay ms={500} />Ukraine
-            <Typist.Backspace count={7} delay={1000} />
-            <Typist.Delay ms={750} />
-            Kyiv
+            <span className="star">*</span> Live &#38; Work in Kyiv
             <Typist.Delay ms={1250} /> 
             
-            <div className="more">For more information < Link to="/about" style={{color:'orange', textDecoration:"none"}}>please visit <span className="flash" to={"/aboutMe"} ><img id="man" alt="hossik" src="https://raw.githubusercontent.com/Hossik/Profilio/master/public/assets/hossik.jpeg" /></span></Link></div>
+            <div className="more">For more information < Link to="/about" style={{color:'orange', textDecoration:"none"}} className="flash" >please visit </Link></div>
             </div>
             }
             {''}
