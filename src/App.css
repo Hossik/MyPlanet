@@ -41,7 +41,23 @@ html, body, #root, #root>div {
     animation: darkrise 100s ease infinite alternate;
     }
 }
+.seemore{
+  width: 66vw;
+  margin-top:4vh;
+  font-family: 'Roboto';
+  color: orange;
+font-size: 1em;
 
+}
+.morelink{
+  color: #17b3f8;
+  font-style: italic;
+
+}
+.morelink :hover{
+  color: #1726f8;
+  font-style: normal;
+}
 .contact{
   margin: auto;
   width: 86vw;
@@ -71,25 +87,92 @@ html, body, #root, #root>div {
 
 #projects{
   height: 65vh;
-  margin-left:100px;
-  margin-top:100px;
+  padding: 0 !important;
+  margin-left:300px;
+
 }
-@media (max-width: 1104px){
-  #projects{
-    margin-left:80px;
+.row{
+  
+  width: 85vw;
+}
+.works0{
+  margin-top:50px;
+
+}
+.works{
+  margin-top:50px;
+
+  margin-left: 20px;
+}
+.works2{
+  margin-left: 40px;
+  margin-top:50px;
+
+}
+@media (max-width: 1140px){
+  .works0{
     margin-top:50px;
+  
+  }
+  .works{
+    margin-top:50px;
+  
+    margin-left: 40px;
+  }
+  .works2{
+    margin-left: 90px;
+    margin-top:50px;
+  
   }
 }
-@media (max-width: 992px){
+@media (max-width: 1660px){
   #projects{
-    margin-left:110px;
-    margin-top:50px;
+    margin-left:300px;
+    
+  }
+}
+@media (max-width: 1513px){
+  #projects{
+    margin-left:100px;
+    
+  }
+}
+@media (max-width: 1180px){
+  #projects{
+    margin-left:80px;
+    width:100vw;
+    
+  }
+}
+
+@media (max-width: 991px){
+  #projects{
+    margin-left:240px;
+    
+  }
+  .works{
+    margin-left: 0px;
+  }
+  .works2{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 645px){
+  #projects{
+    margin-left:150px;
+    
+  }
+}
+@media (max-width: 520px){
+  #projects{
+    margin-left:120px;
+    
   }
 }
 @media (max-width: 423px){
   #projects{
-    margin-left:60px;
-    margin-top:50px;
+    margin-left:80px;
+    
   }
 }
 
@@ -107,10 +190,8 @@ html, body, #root, #root>div {
   background-size: 100% 100%;
   vertical-align: middle;
   text-align: center;
-  min-width: 13rem;
-  min-height: 13rem;
-
-  
+  min-width: 16rem;
+  min-height: 16rem;
 }
 
 .imgtwo{
@@ -127,8 +208,8 @@ html, body, #root, #root>div {
   background-size: 100% 100%;
   vertical-align: middle;
   text-align: center;
-  min-width: 13rem;
-  min-height: 13rem;
+  min-width: 16rem;
+  min-height: 16rem;
 }
 .imgtree{
   width: 20vw;
@@ -145,8 +226,8 @@ html, body, #root, #root>div {
   vertical-align: middle;
   text-align: center;
   min-height: auto;
-  min-width: 13rem;
-  min-height: 13rem;
+  min-width: 16rem;
+  min-height: 16rem;
 
 }
 
@@ -213,23 +294,7 @@ html, body, #root, #root>div {
   background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
   
 }
-@media (max-width: 350px){
-  .img{ 
-    
-    min-width: 11rem;
-  
-  }
-  .imgtwo{ 
-    
-    min-width: 11rem;
-  
-  }
-  .imgtree{ 
-    
-    min-width: 11rem;
-  
-  }
-}
+
 @media (max-width: 425px){
   .textImg{
     visibility: hidden;
@@ -298,22 +363,25 @@ html, body, #root, #root>div {
       min-width: 7rem;
     }
 }
-@media (max-width: 992px){
+@media (max-width: 991px){
   .img {
     width: 40vw;
     height: 40vw;
-   
+    min-width: 13rem;
+    min-height: 13rem;
   }
   .imgtwo{
     width: 40vw;
     height: 40vw;
-    
+    min-width: 13rem;
+  min-height: 13rem;
     margin-top: 5vh;
   }
   .imgtree{
     width: 40vw;
     height: 40vw;
-    
+    min-width: 13rem;
+  min-height: 13rem;
     margin-top: 5vh;
   }
   .textImg{
@@ -326,6 +394,23 @@ html, body, #root, #root>div {
     width: 40vw;
   }
 
+}
+@media (max-width: 350px){
+  .img{ 
+    
+    min-width: 11rem;
+  
+  }
+  .imgtwo{ 
+    
+    min-width: 11rem;
+  
+  }
+  .imgtree{ 
+    
+    min-width: 11rem;
+  
+  }
 }
 @media (max-width: 635px){
   .img {

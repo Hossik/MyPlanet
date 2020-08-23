@@ -3,10 +3,14 @@ import {Col,Button} from 'reactstrap';
 import { ExternalLink } from 'react-external-link';
 export const Tools = () => {
 return (
-  <div className="container  " id="projects" >  
+<div>
+  
+  <div className="container-fluid  " id="projects" >  <div className="corner">
+        <img className="cornimg" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/corr.png"} alt={"corner"}/>
+      </div>
     <div className="row">
-      <Col xs={{size: '10'}} lg={{ size: 4}} >
-        <div alt="img" className="img"  >
+      <Col xs={{size: '10'}} lg={{ size: 3}} >
+        <div alt="img" className="img works0"  >
          <div className="textImg"> Website created during by React Course 
           <ExternalLink  href="https://hossik.github.io/confusion/">
              <br/><Button  color="primary" >Visit Website &#62;
@@ -15,8 +19,8 @@ return (
           </div> 
         </div>
       </Col>
-      <Col  xs={{size: '10'}} lg={{ size: 4}}  >
-        <div alt="imgtwo" className="imgtwo"   >
+      <Col  xs={{size: '10'}} lg={{ size: 3}}  >
+        <div alt="imgtwo" className="imgtwo works"   >
           <div className="textImgtwo"><ExternalLink  href="https://github.com/Hossik/myplanet" > 
           <Button  color="warning" >Go to codes &#62;
           </Button>
@@ -26,9 +30,9 @@ return (
           </div>
         </div>
       </Col>
-      <Col  xs={{size: '10'}} lg={{ size: 4}}  >
-        <div alt="imgtree" className="imgtree"   >
-          <div className="textImgtree">
+      <Col  xs={{size: '10'}} lg={{ size: 3}}  >
+        <div alt="imgtree" className="works2  imgtree"   >
+          <div className="textImgtree ">
           
            Website created for Gemini Truffle Company 
           <br/>
@@ -39,6 +43,8 @@ return (
         </div>
       </Col>
      </div>
+       <div className="seemore ">SEE MORE IN
+      <ExternalLink style={{textDecoration: 'none'}} className="morelink"  href="https://www.linkedin.com/in/hossik"><span>&nbsp;LINKEDIN </span></ExternalLink></div></div>
   </div>
 )
 }

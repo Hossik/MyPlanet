@@ -19,8 +19,7 @@ function Header(props) {
         
         <Burger  open={ open} setOpen={setOpen} />
         <Menu  open={ open} setOpen={setOpen}/>
-      
-      
+   
         </div>
       </>
       

@@ -17,7 +17,7 @@ export const TypistText = (props) => {
       {props.collapseID? 
       <Typist 
         className="TypistExample-header"
-        avgTypingDelay={(props.width<600 && props.orientation !== undefined)? 140:(props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined)?140:20}
+        avgTypingDelay={(props.width<600 && props.orientation !== undefined)|| props.width<500 ? 140:(props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined)?140:20}
         
         onTypingDone={onHeaderTyped}
         cursor={{ hideWhenDone: true }}>
@@ -33,9 +33,9 @@ export const TypistText = (props) => {
             className="TypistExample-message"
             cursor={{ show: false }}
             startDelay={2000}
-            avgTypingDelay={(props.width<600 && props.orientation !== undefined)? 140 :(props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined)? 140 : 70}
+            avgTypingDelay={(props.width<600 && props.orientation !== undefined)|| props.width<500? 140 :(props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined)? 140 : 70}
           >
-            { (props.width<600 && props.orientation !== undefined) || (props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined) ?
+            { (props.width<600 && props.orientation !== undefined)|| props.width<500 || (props.width<960 && props.height<600 && props.orientation !== 0 && props.orientation !== undefined) ?
             <div><span className="star">*</span> I am a Front-end engineer
             <Typist.Delay ms={1250} />
             <br />
@@ -45,7 +45,7 @@ export const TypistText = (props) => {
             <span className="star">*</span>Live &#38; Work in Kyiv
             <Typist.Delay ms={1250} /> 
           
-            <div className="more">For more information < Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}}><br/><span className="flash"  >please visit </span></Link></div>
+            <div className="more">For more information <br/>< Link to="/about" style={{color:'#FFDC00', textDecoration:"none"}} className="flash">  please visit </Link></div>
             </div>
             :
             <div><span className="star">*</span> I am a Front-end engineer
