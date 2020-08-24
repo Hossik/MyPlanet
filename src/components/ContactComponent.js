@@ -5,11 +5,16 @@ import { ExternalLink } from 'react-external-link';
 export const Contacts = () => {
   
   return (
-
-  <div className="contact" >
-     <div className="corner">
+    <div>
+<div className="corner">
       <img className="cornimg" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/corr.png"} alt={"corner"}/>
     </div>
+    <div className="cornercont">
+      <img className="cornimgcont" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/cornercont.png"} alt={"contacts"}/>
+    </div>
+  <div className="contact" >
+     
+    
     <div className="row justify-content-center">
       <div className=" col-12">
         <h3 className="headcontact">Contact Me</h3>
@@ -39,7 +44,8 @@ export const Contacts = () => {
         </div>
       </div>
     </div>
-   
+    
+    </div>
     </div>
     )
   

@@ -606,11 +606,24 @@ html, body, #root, #root>div {
   left: 0;
   top:20;
 }
+.cornercont{
+  display: flex;
+  text-align: right;
+  position: fixed;
+  right: 0;
+  top:20;
+}
+.cornimgcont{
+  width:29vw;
+  border-radius: 35px 0 0 35px;
+  min-height: 7em;
+  height: 77vh;
 
+}
 .cornimg{
   width:40vw;
   border-radius: 35px 0 0 35px;
-  height: 70vh;
+  height: 69vh;
   min-height: 7em;
 }
 /* @media (max-width: 1023px) {
