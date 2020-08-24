@@ -105,6 +105,11 @@ html, body, #root, #root>div {
     margin-left: 20px;
   }
 }
+@media  (max-device-width: 900px) and (orientation: landscape) {
+  .headcontact{
+    font-size: 0.5em;
+  }
+}
 .contact{
   margin: auto;
   width: 86vw;
@@ -112,7 +117,16 @@ html, body, #root, #root>div {
   font-family: "Times New Roman";
 }
 .adress{
-  font-size: 0.5em;
+  font-size: 0.4em;
+}
+@media(max-width: 414px){
+  .adress{
+    font-size: 0.5em;
+  }
+}
+
+.infobtn{
+  margin-top: 80px;
 }
 @media(max-width: 835px){
   .contact{
@@ -120,15 +134,29 @@ html, body, #root, #root>div {
     font-size: 1em;
   }
   .infobtn{
-    margin-top: 5vh;
+    margin-top:200px;
+  }
+}
+@media(max-width: 605px){
+  .infobtn{
+    margin-top: 280px;
   }
 }
 @media(max-width: 425px){
   .infobtn{
-    margin-top: 1vh;
+    margin-top: 270px;
   }
 }
-
+@media(max-width: 414px){
+  .infobtn{
+    margin-top: 5px;
+  }
+}
+@media  (max-device-width: 900px) and (orientation: landscape) {
+  .infobtn{
+    margin-top: 5px;
+  }
+}
 
 #projects{
   height: 65vh;
@@ -599,32 +627,272 @@ html, body, #root, #root>div {
   font-size: 3.5rem;
   margin-bottom: 30%;
 }
+.fbut{
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background:red;
+  height: 17vh;
+  width: 9vw;
+  position: fixed;
+  left: 92.14%;
+  top: 145.54%;
+  transform: translate(-48%, 240%);
+z-index: 100;
+}
+.ibut{
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background:rgb(255, 0, 179);
+  height: 15vh;
+  width: 7vw;
+  position: fixed;
+  left: 92.14%;
+  top: 145.54%;
+  transform: translate(-153%, 313%);
+z-index: 100;
+}
+.lbut{
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background:rgb(0, 255, 242);
+  height: 13vh;
+  width: 6.5vw;
+  position: fixed;
+  left: 92.14%;
+  top: 145.54%;
+  transform: translate(-2%, 433%);
+z-index: 100;
+}
+.rbut{
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background:rgb(143, 62, 62);
+  height: 16.5vh;
+  width: 7.8vw;
+  position: fixed;
+  left: 92.14%;
+  top: 145.54%;
+  transform: translate(-98%, 363%);
+z-index: 100;
+
+}
+.gbut{
+  opacity: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background:rgb(255, 252, 252);
+  height: 16vh;
+  width: 8vw;
+  position: fixed;
+  left: 92.14%;
+  top: 145.54%;
+  transform: translate(-16%, 433%);
+z-index: 100;
+}
+
 .corner{
   display: flex;
   text-align: left;
   position: fixed;
   left: 0;
   top:20;
+  
 }
-.cornercont{
+
+.cornimgcont{
   display: flex;
   text-align: right;
   position: fixed;
   right: 0;
   top:20;
-}
-.cornimgcont{
   width:29vw;
   border-radius: 35px 0 0 35px;
   min-height: 7em;
   height: 77vh;
-
 }
+
 .cornimg{
   width:40vw;
   border-radius: 35px 0 0 35px;
   height: 69vh;
   min-height: 7em;
+}
+@media (max-width: 1230px){
+  .nom{
+    font-size: 1em;
+  }
+  .cornimgcont{
+    display: flex;
+    text-align: right;
+    position: fixed;
+    right: 0;
+    top:20;
+    width:39vw;
+    border-radius: 35px 0 0 35px;
+    min-height: 7em;
+    height: 77vh;
+  }
+  .fbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:red;
+    height: 17vh;
+    width: 11vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-70%, 240%);
+  z-index: 100;
+  }
+  .ibut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(255, 0, 179);
+    height: 15vh;
+    width: 9vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-185%, 313%);
+  z-index: 100;
+  }
+  .lbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(0, 255, 242);
+    height: 13vh;
+    width: 8.5vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-28%, 433%);
+  z-index: 100;
+  }
+  .rbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(143, 62, 62);
+    height: 16.5vh;
+    width: 10.8vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-118%, 363%);
+  z-index: 100;
+  
+  }
+  .gbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(255, 252, 252);
+    height: 16vh;
+    width: 10vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-36%, 433%);
+  z-index: 100;
+  }
+}
+@media (max-width: 463px){
+  .nom{
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 414px){
+  .nom{
+    font-size: 1;
+  }
+}
+@media (max-width: 720px){
+ 
+  .cornimgcont{
+    display: flex;
+    text-align: right;
+    position: fixed;
+    right: 0;
+    top:20;
+    width:55vw;
+    border-radius: 35px 0 0 35px;
+    min-height: 7em;
+    height: 77vh;
+  }
+  .fbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:red;
+    height: 17vh;
+    width: 21vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-70%, 240%);
+  z-index: 100;
+  }
+  .ibut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(255, 0, 179);
+    height: 15vh;
+    width: 15vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-185%, 313%);
+  z-index: 100;
+  }
+  .lbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(0, 255, 242);
+    height: 13vh;
+    width: 15.5vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-41%, 437%);
+  z-index: 100;
+  }
+  .rbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(143, 62, 62);
+    height: 16.5vh;
+    width: 16.8vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-128%, 363%);
+  z-index: 100;
+  
+  }
+  .gbut{
+    cursor: pointer;
+    border-radius: 50%;
+    background:rgb(255, 252, 252);
+    height: 16vh;
+    width: 18vw;
+    position: fixed;
+    left: 92.14%;
+    top: 145.54%;
+    transform: translate(-46%, 436%);
+  z-index: 100;
+  }
+}
+@media (max-width: 414px){
+ 
+  .cornimgcont{
+    display: none;
+  }
+}
+@media  (max-device-width: 900px) and (orientation: landscape) {
+  .cornimgcont{
+    display: none;
+  }
 }
 /* @media (max-width: 1023px) {
   .corner{
@@ -707,12 +975,13 @@ html, body, #root, #root>div {
   outline: none;
   cursor: pointer;
 }
-@media(max-width: 320px){
+@media(max-width: 720px){
   .btn-con{
-    width: 60px;
-  height: 60px;
+    width: 70px;
+  height: 70px;
   }
 }
+
 .viber{
   background-color: Indigo;
 }
@@ -1299,4 +1568,9 @@ section.route-section {
   to {
     opacity: 1;
   }
+}
+@media (max-width: 414px){
+   .allcon{
+     margin-left: 4vw;
+   }
 }

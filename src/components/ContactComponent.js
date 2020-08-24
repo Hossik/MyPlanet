@@ -6,13 +6,30 @@ export const Contacts = () => {
   
   return (
     <div>
+       
 <div className="corner">
       <img className="cornimg" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/corr.png"} alt={"corner"}/>
     </div>
-    <div className="cornercont">
+
+
+    <div >
+       <ExternalLink   href="https://www.facebook.com/Hossikz"> <div title="facebook" className="fbut" href="https://www.facebook.com/Hossikz"></div>
+    </ExternalLink>
+    <ExternalLink  href="https://www.instagram.com/hossikz/"><div title="instagram" className="ibut"></div>
+    </ExternalLink>
+    <ExternalLink   href="https://www.linkedin.com/in/hossik">
+  <div title="linkedin" className="lbut"></div>
+  </ExternalLink>
+  <ExternalLink   href="https://www.reddit.com/user/HossikZ">
+    <div className="rbut"></div>
+    </ExternalLink>
+  <ExternalLink   href="https://github.com/Hossik">
+<div  title="github" className="gbut"></div>
+</ExternalLink>
+        </div>
+
       <img className="cornimgcont" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/cornercont.png"} alt={"contacts"}/>
-    </div>
-  <div className="contact" >
+  <div className="contact allcon" >
      
     
     <div className="row justify-content-center">
@@ -24,15 +41,15 @@ export const Contacts = () => {
   
     <div className="row row-content">
       
-      <div className="col-12  ">
+      <div className=" col-12  offset-lg-2 col-lg-8">
         <h5>My Address:</h5>
         <address className= "adress">
         Vita Poshtova<br />
         Kyiv<br />
         Ukraine<br />
-        <i className="fa fa-phone"></i>: +380 995215245<br />
+        <div className="nom"><i className="fa fa-phone nom"></i>: +380 995215245</div>
         
-        <i className="fa fa-envelope"></i>: <a style={{color:"#0fafff", fontWeight:"bold",textDecoration:'none',letterSpacing: '2px'}} href="mailto:hossik1983@gmail.com">hossik1983@gmail.com</a>
+        <a style={{color:"#0fafff", fontWeight:"bold",textDecoration:'none'}} href="mailto:hossik1983@gmail.com"><div className="nom"><i className="fa fa-envelope "></i>: hossik1983@gmail.com</div></a>
         </address>
       </div>
       
