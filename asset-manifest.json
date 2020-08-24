@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/MyPlanet/static/css/main.ea4c41b7.chunk.css",
-    "main.js": "/MyPlanet/static/js/main.3efa4192.chunk.js",
-    "main.js.map": "/MyPlanet/static/js/main.3efa4192.chunk.js.map",
+    "main.css": "/MyPlanet/static/css/main.3774fb71.chunk.css",
+    "main.js": "/MyPlanet/static/js/main.94842fa3.chunk.js",
+    "main.js.map": "/MyPlanet/static/js/main.94842fa3.chunk.js.map",
     "runtime-main.js": "/MyPlanet/static/js/runtime-main.ceebb0a9.js",
     "runtime-main.js.map": "/MyPlanet/static/js/runtime-main.ceebb0a9.js.map",
     "static/css/2.6df54245.chunk.css": "/MyPlanet/static/css/2.6df54245.chunk.css",
-    "static/js/2.4fb5c0bb.chunk.js": "/MyPlanet/static/js/2.4fb5c0bb.chunk.js",
-    "static/js/2.4fb5c0bb.chunk.js.map": "/MyPlanet/static/js/2.4fb5c0bb.chunk.js.map",
+    "static/js/2.29b25751.chunk.js": "/MyPlanet/static/js/2.29b25751.chunk.js",
+    "static/js/2.29b25751.chunk.js.map": "/MyPlanet/static/js/2.29b25751.chunk.js.map",
     "index.html": "/MyPlanet/index.html",
-    "precache-manifest.9c2c388e597e3bb7992e41975549197b.js": "/MyPlanet/precache-manifest.9c2c388e597e3bb7992e41975549197b.js",
+    "precache-manifest.eedaa33a802f3d2f49ce847b8980c22b.js": "/MyPlanet/precache-manifest.eedaa33a802f3d2f49ce847b8980c22b.js",
     "service-worker.js": "/MyPlanet/service-worker.js",
     "static/css/2.6df54245.chunk.css.map": "/MyPlanet/static/css/2.6df54245.chunk.css.map",
-    "static/css/main.ea4c41b7.chunk.css.map": "/MyPlanet/static/css/main.ea4c41b7.chunk.css.map",
-    "static/js/2.4fb5c0bb.chunk.js.LICENSE.txt": "/MyPlanet/static/js/2.4fb5c0bb.chunk.js.LICENSE.txt",
+    "static/css/main.3774fb71.chunk.css.map": "/MyPlanet/static/css/main.3774fb71.chunk.css.map",
+    "static/js/2.29b25751.chunk.js.LICENSE.txt": "/MyPlanet/static/js/2.29b25751.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "/MyPlanet/static/media/arrow_right.8ef6a08c.svg",
     "static/media/all.min.css": "/MyPlanet/static/media/fa-solid-900.ec763292.svg",
     "static/media/font-awesome.css": "/MyPlanet/static/media/fontawesome-webfont.fee66e71.woff"
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.ceebb0a9.js",
     "static/css/2.6df54245.chunk.css",
-    "static/js/2.4fb5c0bb.chunk.js",
-    "static/css/main.ea4c41b7.chunk.css",
-    "static/js/main.3efa4192.chunk.js"
+    "static/js/2.29b25751.chunk.js",
+    "static/css/main.3774fb71.chunk.css",
+    "static/js/main.94842fa3.chunk.js"
   ]
 }
