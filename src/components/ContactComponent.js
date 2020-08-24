@@ -7,9 +7,12 @@ export const Contacts = () => {
   return (
 
   <div className="contact" >
+     <div className="corner">
+      <img className="cornimg" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/corr.png"} alt={"corner"}/>
+    </div>
     <div className="row justify-content-center">
       <div className=" col-12">
-        <h3>Contact Me</h3>
+        <h3 className="headcontact">Contact Me</h3>
         <hr />
       </div>
     </div>

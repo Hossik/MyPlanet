@@ -92,8 +92,8 @@ class Main extends Component {
           <Switch location={this.props.location}>
             
           <Route exact path="/home" render={(props) => <Home {...props} orientation={this.state.orientation} height={this.state.height} width={this.state.width} collapseID={this.state.collapseID}/>} />
-            <Route exact path="/about" render={(props) => <AboutMe {...props} orientation={this.state.orientation} height={this.state.height} width={this.state.width} />} />
-            <Route path="/tools" component={Tools} />
+          <Route exact path="/about" render={(props) => <AboutMe {...props} orientation={this.state.orientation} height={this.state.height} width={this.state.width} />} />
+          <Route exact path="/tools" render={(props) => <Tools {...props} orientation={this.state.orientation} height={this.state.height} width={this.state.width} />} />
             <Route path="/contacts" component={Contacts} />
             <Redirect to="/home" />
           </Switch>

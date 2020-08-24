@@ -46,26 +46,71 @@ html, body, #root, #root>div {
   margin-top:4vh;
   font-family: 'Roboto';
   color: orange;
-font-size: 1em;
+  font-size: 1em;
+}
+@media(max-width: 991px){
+  .seemore{
+    width: 40vw;
+  }
+}
+@media(max-width: 991px){
+  .seemore{
+    width: 40vw;
+    font-size: 0.8em;
 
+  }
+}
+@media(max-width: 667px){
+  .seemore{
+    width: 40vw;
+    font-size: 0.6em;
+
+  }
+}
+@media (max-width: 645px){
+  .seemore{
+    width: 48vw;
+    font-size: 0.6em;
+
+  }
+}
+@media (max-width: 418px){
+  .seemore{
+    width: 48vw;
+    font-size: 0.5em;
+
+  }
+}
+@media (max-width: 348px){
+  .seemore{
+    width: 58vw;
+    font-size: 0.5em;
+
+  }
 }
 .morelink{
   color: #17b3f8;
   font-style: italic;
-
 }
 .morelink :hover{
   color: #1726f8;
   font-style: normal;
+}
+.headcontact{
+  font-size: 0.8em;
+}
+@media (max-width: 600px){
+  .headcontact{
+    font-size: 0.5em;
+    margin-left: 20px;
+  }
 }
 .contact{
   margin: auto;
   width: 86vw;
   font-size: 1.5em;
   font-family: "Times New Roman";
-  
 }
-
 .adress{
   font-size: 0.5em;
 }
@@ -96,35 +141,20 @@ font-size: 1em;
   width: 85vw;
 }
 .works0{
-  margin-top:50px;
+  margin-top:5vw;
 
 }
 .works{
-  margin-top:50px;
+  margin-top:5vw;
 
   margin-left: 20px;
 }
 .works2{
   margin-left: 40px;
-  margin-top:50px;
+  margin-top:5vw;
 
 }
-@media (max-width: 1140px){
-  .works0{
-    margin-top:50px;
-  
-  }
-  .works{
-    margin-top:50px;
-  
-    margin-left: 40px;
-  }
-  .works2{
-    margin-left: 90px;
-    margin-top:50px;
-  
-  }
-}
+
 @media (max-width: 1660px){
   #projects{
     margin-left:300px;
@@ -133,18 +163,29 @@ font-size: 1em;
 }
 @media (max-width: 1513px){
   #projects{
-    margin-left:100px;
+    margin-left:200px;
     
   }
 }
 @media (max-width: 1180px){
   #projects{
-    margin-left:80px;
+    margin-left:180px;
     width:100vw;
     
   }
 }
-
+@media (max-width: 1136px){
+  .works0{
+    margin-top:10vw;
+    
+  }
+  .works{
+    margin-top: 10vw;
+  }
+  .works2{
+    margin-top: 10vw;
+  }
+}
 @media (max-width: 991px){
   #projects{
     margin-left:240px;
@@ -362,6 +403,23 @@ font-size: 1em;
       background-image:  url(https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/mypt.jpeg);
       min-width: 7rem;
     }
+}
+@media (max-width: 1135px){
+  .img {
+   
+    min-width: 13rem;
+    min-height: 13rem;
+  }
+  .imgtwo{
+   
+    min-width: 13rem;
+  min-height: 13rem;
+  }
+  .imgtree{
+   
+    min-width: 13rem;
+  min-height: 13rem;
+  }
 }
 @media (max-width: 991px){
   .img {

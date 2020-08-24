@@ -1,13 +1,14 @@
 import React from 'react'
 import {Col,Button} from 'reactstrap';
 import { ExternalLink } from 'react-external-link';
-export const Tools = () => {
+export const Tools = (props) => {
 return (
 <div>
   
-  <div className="container-fluid  " id="projects" >  <div className="corner">
-        <img className="cornimg" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/corr.png"} alt={"corner"}/>
-      </div>
+    <div className="container-fluid" id="projects" >  
+    <div className="corner">
+      <img className="cornimg" src={"https://raw.githubusercontent.com/Hossik/MyPlanet/master/public/assets/corr.png"} alt={"corner"}/>
+    </div>
     <div className="row">
       <Col xs={{size: '10'}} lg={{ size: 3}} >
         <div alt="img" className="img works0"  >
@@ -44,7 +45,13 @@ return (
       </Col>
      </div>
        <div className="seemore ">SEE MORE IN
-      <ExternalLink style={{textDecoration: 'none'}} className="morelink"  href="https://www.linkedin.com/in/hossik"><span>&nbsp;LINKEDIN </span></ExternalLink></div></div>
+      {props.width<991 ?<ExternalLink style={{textDecoration: 'none'}} className="morelink"  href="https://www.linkedin.com/in/hossik"><span> <br/>
+       LINKEDIN </span></ExternalLink>
+       :
+       <ExternalLink style={{textDecoration: 'none'}} className="morelink"  href="https://www.linkedin.com/in/hossik"><span> &nbsp; 
+       LINKEDIN </span></ExternalLink>}
+       
+       </div></div>
   </div>
 )
 }
